@@ -1,0 +1,11 @@
+// Description:
+//    Test d'affichage de littéraux entiers avec print et println.
+//
+// Resultats:
+//    Pas d'erreur. Affiche 1, puis 2 avec saut de ligne, puis 3.
+
+{
+    print(1);
+    println(2);
+    print(3);////
+}

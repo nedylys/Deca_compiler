@@ -1,0 +1,29 @@
+// Description:
+//    Test de comparaison avec null et vérification après création d'objet.
+//
+// Resultats:
+//    Pas d'erreur.
+//    - p = null, donc p == null est vrai → affiche 1
+//    - p = new P(), donc p != null est vrai → affiche 1
+//    Affiche : 1, puis 1
+
+class P { }
+
+{
+    P p = null;
+    if (p == null) {
+        println(1);
+    } 
+    else {
+        println(0);
+    }
+
+    p = new P();
+    if (p != null) {
+        println(1);
+    } 
+    else {
+        println(0);
+    }
+}
+ 

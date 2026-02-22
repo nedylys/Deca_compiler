@@ -1,0 +1,13 @@
+// Description:
+//    Demande à l'utilisateur d'entrer un entier positif avec validation en boucle.
+//
+// Resultats:
+//    Pas d'erreur. Le programme demande un entier positif et redemande tant que
+//    l'utilisateur entre une valeur négative.
+
+{
+    println("Enter a positive integer : ") ;
+    while (readInt() < 0) {
+        println("Enter a positive integer not a negative : ") ;
+    }
+}

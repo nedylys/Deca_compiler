@@ -1,0 +1,14 @@
+// Test : bool_rhs_invalid_and
+// But : vérifier que : si le LHS est false, le RHS ne doit pas être évalué.
+// Couvre : génération de &&, prévention d'une évaluation incorrecte.
+// Résultat attendu : affiche 0 et le programme ne doit absolument pas planter.
+
+{
+    boolean c = false && ((1 / 0) == 0) ;
+    if (c) { 
+        println(1) ; 
+    } 
+    else { 
+        println(0) ; 
+    }
+}

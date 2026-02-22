@@ -1,0 +1,12 @@
+{
+   boolean b ; 
+
+   b = true ; 
+   b = (boolean)(b) ; 
+
+   if ((boolean)(b)) {
+      print("ok ") ; 
+   } else {
+      print("erreur ") ; 
+   }
+}

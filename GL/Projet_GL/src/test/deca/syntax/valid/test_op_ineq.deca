@@ -1,0 +1,22 @@
+// Description:
+//    Test de la grammaire des arbres de syntaxe abstraite
+//    Programme minimaliste testant le non terminal OP_INEQ de la grammaire d'arbre.
+//
+// Programme syntaxiquement et contextuellment correct.
+//
+// Historique:
+//    cree le 02/01/2026
+{
+    int a = 1;
+    int b = 2;
+    int c = 3;
+    int d = 4;
+    boolean e;
+    e = a >=b;
+    e = a <= b;
+    e = a < b;
+    e = a > b;
+    e = (a - b) > (c -d);
+    e = a <= (a - b);
+    e = (a / d * c ) > b;
+}

@@ -1,0 +1,15 @@
+// Description:
+//    Declaration de parametre
+//
+// Resultats:
+//    Ligne X: Type inconnu.
+//    Erreur affichée: Type Toto is not defined in the environmentType
+//
+
+class A {
+    int f(Toto x) {
+        return 0;
+    }
+}
+{
+}

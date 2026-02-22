@@ -1,0 +1,9 @@
+// Test : valid_not_equals_operator
+// But : autoriser l’opérateur != entre entiers.
+// Couvre : opérateur de comparaison.
+// Résultat attendu : programme valide.
+
+{
+    boolean b;
+    b = 3 != 4;
+}

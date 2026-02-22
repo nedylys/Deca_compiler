@@ -1,0 +1,17 @@
+// Description:
+//    Test de l'opérateur supérieur (>) entre deux variables.
+//
+// Resultats:
+//    Pas d'erreur. a = 3, b = 2, donc b > a (2 > 3) est faux.
+//    Affiche "Ok" (branche else).
+
+{
+    int a = 3 ;
+    int b = 2 ;
+    if (b > a) {
+        println("Pas ok");
+    }
+    else {
+        println("Ok") ;
+    }
+}

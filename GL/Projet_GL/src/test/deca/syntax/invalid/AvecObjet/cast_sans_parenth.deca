@@ -1,0 +1,21 @@
+// Test : Parenthèses manquantes pour le cast
+// But : détecter l'oubli de parenthèses pour l'expr sur le cast
+// Type d'erreur : erreur syntaxique
+// Résultat attendu : no viable alternative at input 'a'
+
+
+class A{
+   int x;
+
+}
+
+class B extends A{
+    int y;
+    int z = 4;
+    int x = 3;
+}
+
+{
+    A a = new B();
+    B b = (B) a;
+}

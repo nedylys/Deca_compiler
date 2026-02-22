@@ -1,0 +1,13 @@
+// Test : arith_int_mod
+// But : tester le modulo sur int.
+// Couvre : REM, temporaires, println.
+// Résultat attendu : affiche 1, 0, 0, 0, 1, 0
+
+{
+    println(7 % 3) ;
+    println(2 % 2) ;
+    println(100 % 1) ;
+    println(15 % 5) ;
+    println(1 % 100) ;
+    println(0 % 9) ;
+}

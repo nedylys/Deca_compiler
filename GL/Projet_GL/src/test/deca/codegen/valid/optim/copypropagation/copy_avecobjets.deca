@@ -1,0 +1,34 @@
+// Description :
+// Test combiné de CopyPropagation Propagation et Dead Store Elimination,
+// dans un programme avec objets.
+//
+// Objectif du test :
+// - Vérifier que la propagation de copy ne se fait pas dans le cas d'un prog avec Objets
+// en effet il y a trops de restrictions liées aux labels et branchements qui emechent que ça se fait
+//
+// Résultat attendu après optimisations :
+//  - pas de programmation effective car le DeadStore ne peu pas agir en mode avec objets (meme s'il n'y a pas d'appel de méthodes ni de champs)
+// Sortie attendue :
+// 1
+
+class A {
+    int x;
+    void setX(int v) { x = v; }
+}
+
+{
+    int a;
+    int b;
+    int c;
+    int d;
+    int e;
+    int f;
+    int y;
+
+    a = 1;
+    b = a;
+    c = b;
+    d = c;
+    e = d;
+    println(e);
+}

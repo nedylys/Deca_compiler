@@ -1,0 +1,11 @@
+// Test : literal_string
+// But : tester la génération pour un littéral string.
+// Couvre : gestion de string literal, println(string), print(string).
+// Résultat attendu : affiche Hello, Deca! sur 3 lignes.
+
+{
+    println("Hello, Deca!") ;
+    print("Hello") ;
+    println(", Deca!") ;
+    print("Hello", ", Deca", "!") ;
+}

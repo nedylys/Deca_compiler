@@ -1,0 +1,9 @@
+// Test : assign_int_to_float
+// But : tester la conversion implicite int vers float.
+// Couvre : compatibilité des types, conversion implicite.
+// Résultat attendu : compilation sans erreur.
+
+{
+    float f;
+    f = 3;
+}

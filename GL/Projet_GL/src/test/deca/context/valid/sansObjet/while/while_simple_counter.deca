@@ -1,0 +1,16 @@
+// Test : while_simple_counter
+// But : tester une boucle while avec compteur.
+// Couvre : while, affectation, comparaison.
+// Résultat attendu : compilation sans erreur.
+
+{
+    int i;
+    i = 0;
+    while (i < 5){
+        if (i==2){
+            println(i);
+        }
+
+        i = i+1;
+    }
+}

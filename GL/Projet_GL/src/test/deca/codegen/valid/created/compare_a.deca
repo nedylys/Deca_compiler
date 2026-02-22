@@ -1,0 +1,15 @@
+// Description:
+//    Test de comparaison simple avec opérateur supérieur (>).
+//
+// Resultats:
+//    Pas d'erreur. a = 1 > 0 est vrai, donc affiche "Positif".
+
+{
+    int a = 1 ;
+    if (a > 0) {
+        println("Positif") ;
+    }
+    else {
+        println("Négatif") ;
+    }
+}

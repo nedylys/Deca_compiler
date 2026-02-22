@@ -1,0 +1,16 @@
+// Test : arith_float_mul
+// But : tester la multiplication de floats.
+// Couvre : MUL float, temporaires, println.
+// Résultat attendu : affiche 2.0, -1.0, 0.0, 1.0, 0.5
+
+{
+    float a = 1.0 ;
+    float b = 2.0 ;
+    float c = 0.0 ;
+    float d = -0.5 ;
+    println(a * b) ;
+    println(b * d) ;
+    println(d * c) ;
+    println(-a * -a) ;
+    println(-d * a) ;
+}

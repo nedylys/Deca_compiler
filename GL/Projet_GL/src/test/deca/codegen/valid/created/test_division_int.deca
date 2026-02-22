@@ -1,0 +1,9 @@
+// Description:
+//    Test de divisions entières successives.
+//
+// Resultats:
+//    Pas d'erreur. 9 / 3 = 3, puis 3 / 3 = 1. Affiche 1.
+
+{
+    println(9 / 3 / 3) ;
+}

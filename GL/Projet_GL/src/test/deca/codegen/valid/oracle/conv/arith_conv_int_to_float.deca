@@ -1,0 +1,13 @@
+// Test : arith_conv_int_to_float
+// But : tester la conversion implicite int -> float dans une expression mixte.
+// Couvre : conversion, ADD float, temporaires, println.
+// Résultat attendu : affiche 2.5, 1.5, 1.0, 4.0.
+
+{
+    int i = 2 ;
+    float f = 0.5 ;
+    println(i + f) ;
+    println(i - f) ;
+    println(i * f) ;
+    println(i / f) ;
+}

@@ -1,0 +1,10 @@
+// Test : control_if_true
+// But : tester un if sans else dont la condition est vraie.
+// Couvre : génération de saut conditionnel, exécution du bloc then, absence de else.
+// Résultat attendu : affiche "ok".
+
+{
+    if (3 < 5) {
+        println("ok") ;
+    }
+}

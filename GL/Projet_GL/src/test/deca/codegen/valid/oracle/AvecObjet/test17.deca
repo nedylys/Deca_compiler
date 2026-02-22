@@ -1,0 +1,23 @@
+// Description:
+//    Test 17 : null.
+//    Test de comparaison avec null avant et après création d'objet.
+//
+// Resultats:
+//    Pas d'erreur.
+//    - o = null, donc o == null → affiche "o est null"
+//    - o = new Obj(), donc o != null → affiche "o n'est plus null"
+
+class Obj {
+    int v;
+}
+
+{
+    Obj o = null;
+    if (o == null) {
+        println("o est null");
+    }
+    o = new Obj();
+    if (o != null) {
+        println("o n'est plus null");
+    }
+}

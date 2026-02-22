@@ -1,0 +1,13 @@
+// Test : load_add0
+// But : tester la performance de Peephole optimizer dans le cas 
+// de sommations interompu par un store
+// Couvre : le cas de ADD #0 .
+// Résultat attendu : 5
+
+
+
+{
+    int a;
+    a = 5;
+    println(0 + a);
+}

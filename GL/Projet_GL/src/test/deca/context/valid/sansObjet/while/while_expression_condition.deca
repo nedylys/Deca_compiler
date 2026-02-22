@@ -1,0 +1,11 @@
+// Test : while_expression_condition
+// But : tester une boucle while avec condition expressionnelle.
+// Couvre : comparaison, boucle, mise à jour variable.
+// Résultat attendu : compilation sans erreur.
+
+{
+    int a = 1;
+    while (a < 10) {
+        a = a + 1;
+    }
+}

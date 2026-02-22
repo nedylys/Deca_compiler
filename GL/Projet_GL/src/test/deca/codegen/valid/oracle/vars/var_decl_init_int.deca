@@ -1,0 +1,9 @@
+// Test : var_decl_init_int
+// But : vérifier la génération de code pour une déclaration + initialisation d'une variable int.
+// Couvre : allocation/offset variable locale, stockage de la valeur initiale, chargement pour println.
+// Résultat attendu : affiche 7.
+
+{
+    int x = 7 ;
+    println(x) ; 
+}

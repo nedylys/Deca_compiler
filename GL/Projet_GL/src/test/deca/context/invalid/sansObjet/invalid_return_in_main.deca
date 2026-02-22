@@ -1,0 +1,10 @@
+// Test : return_in_main
+// But : interdire l’instruction return dans le bloc principal.
+// Couvre : règles sémantiques du main.
+// Résultat attendu : erreur contextuelle.
+// Erreur affichée: Return Statement is not allowed in main
+
+{
+    return 0;
+}
+

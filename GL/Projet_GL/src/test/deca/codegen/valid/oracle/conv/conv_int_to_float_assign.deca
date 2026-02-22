@@ -1,0 +1,10 @@
+// Test : conv_int_to_float_assign
+// But : tester la conversion implicite int -> float lors d'une affectation (initialisation).
+// Couvre : génération de la conversion (FLOAT), stockage en variable float, println(float).
+// Résultat attendu : affiche 3.0, 0.0.
+
+{
+    float f = 3;
+    println(f);
+    println(-f + 3) ;
+}

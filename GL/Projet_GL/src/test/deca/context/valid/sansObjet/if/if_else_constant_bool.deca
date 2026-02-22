@@ -1,0 +1,13 @@
+// Test : if_else_constant_bool
+// But : tester un if/else avec condition booléenne constante.
+// Couvre : if, else, booléens constants.
+// Résultat attendu : compilation sans erreur.
+
+{
+    int a;
+    if (false) {
+        a = 1;
+    } else {
+        a = 2;
+    }
+}

@@ -1,0 +1,13 @@
+// Description:
+// Test contextuel : héritage vers une classe inexistante.
+//
+// Resultats:
+//    Ligne 7: Classe B non definie.
+//    Erreur: Field cannot be declared with type void
+//
+
+class A extends B {
+}
+
+{
+}

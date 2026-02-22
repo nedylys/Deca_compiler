@@ -1,0 +1,23 @@
+// Description :
+// Test de dead code elimination après return (code inatteignable).
+//
+// Résultat attendu :
+// - Tout ce qui suit "return 1;" est inatteignable => suppression de println("dead1") et println("dead2").
+// - Le programme doit afficher "start", puis revenir, puis afficher "main".
+//
+// Remarque :
+// - Certains compilateurs gardent un label de fin de fonction, mais aucune instruction d’affichage
+//   ne doit subsister après le return.
+
+class A {
+  int f() {
+    println("start");
+    return 1;
+    println("dead1");
+    println("dead2");
+  }
+}
+{
+  new A().f();
+  println("main");
+}

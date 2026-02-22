@@ -1,0 +1,9 @@
+// Test : float_decl_init_constant
+// But : vérifier la déclaration d’une variable int non initialisée et l’initialisation d’une variable float par constante.
+// Couvre : déclarations locales, initialisation par littéral float.
+// Résultat attendu : compilation sans erreur.
+
+{
+    int x;
+    float y = 3.5;
+}

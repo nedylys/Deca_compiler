@@ -1,0 +1,12 @@
+// Description :
+// Test de constant folding sur addition chaînée.
+//
+// Resultats :
+// 1+2+3 est plié à 6 : chargement immédiat de 6 (LOAD #6, R2) puis stockage dans a,
+// sans ADD liée à ce calcul.
+
+{
+  int a;
+  a = 1 + 2 + 3;
+  println(a);
+}

@@ -1,0 +1,8 @@
+// Test : print_boolean
+// But : print sans arguments.
+// Couvre : print.
+// Résultat attendu : n'affiche rien.
+
+{
+    print();
+}

@@ -1,0 +1,14 @@
+// Description:
+//    Affectation et typage
+//
+// Resultats:
+//    Ligne 15: Affectation de types incompatibles.
+//    Erreur affichée: Incompatible assignment: expected int, got float
+//
+
+{
+   int a;
+
+   // Doit etre refuse.
+   a = 3.5;
+}

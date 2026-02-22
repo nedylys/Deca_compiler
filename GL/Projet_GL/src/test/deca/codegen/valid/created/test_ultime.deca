@@ -1,0 +1,23 @@
+// Description:
+//    Test ultime combinant while, conditions complexes avec && et ||,
+//    et expressions arithmétiques imbriquées.
+//
+// Resultats:
+//    Pas d'erreur. La boucle s'exécute tant que :
+//    - (i + 10) < 36 (somme 1+2+3+4+5+6+7+8) ET
+//    - (i == 0 OU (100 / (i+1)) > 0) ET
+//    - !((i+1) >= 30)
+//    Affiche i et la somme (i+1)+(i+2)+...+(i+6) à chaque itération.
+
+{
+  int i = 0;
+  while (
+      ((i + 10) < (((1+2)+(3+4))+((5+6)+(7+8)))) &&
+      ( (i == 0) || ((100 / (i+1)) > 0) ) &&
+      !((i+1) >= 30)
+  ) {
+    println(i);
+    println(((i+1)+(i+2))+((i+3)+(i+4))+((i+5)+(i+6)));
+    i = i + 1;
+  }
+}

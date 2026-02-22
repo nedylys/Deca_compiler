@@ -1,0 +1,11 @@
+// Test : if_condition_int
+// But : interdire une condition if de type int.
+// Couvre : vérification des conditions.
+// Résultat attendu : erreur contextuelle.
+// Erreur affichée: If condition must be of type boolean
+
+{
+   if (3) {
+      ;
+   }
+}

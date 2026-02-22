@@ -1,0 +1,19 @@
+// Description :
+// Test contextuel : redéfinition invalide de méthode (type de retour incompatible).
+//
+// Résultat attendu :
+//      Erreur contextuelle : la méthode f redéfinie doit avoir un type de retour compatible avec celui de la super-classe
+//      (typiquement même type ou sous-type selon les règles du langage).
+//      Erreur affichée: Name already used for a method in super class
+
+class A {
+    int f() {
+        return 0;
+    }
+}
+class B extends A {
+    int f;
+}
+{
+}
+

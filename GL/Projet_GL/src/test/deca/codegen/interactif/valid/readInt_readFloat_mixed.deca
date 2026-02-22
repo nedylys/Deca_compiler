@@ -1,0 +1,23 @@
+// Description:
+//    Lecture mixte d'un entier et d'un float avec condition combinée.
+//
+// Resultats:
+//    Pas d'erreur. Le programme lit un int n et un float t, puis affiche "ok"
+//    si n > 0 et t >= 0.0, sinon affiche "ko".
+
+{
+    int n ;
+    float t ;
+
+    println("Enter an integer : ") ;
+    n = readInt() ;
+    println("Enter a float : ") ;
+    t = readFloat() ;
+
+    if ((n > 0) && (t >= 0.0)) {
+        println("ok ", n, " ", t) ;
+    }
+    else {
+        println("ko ", n, " ", t) ;
+    }
+}

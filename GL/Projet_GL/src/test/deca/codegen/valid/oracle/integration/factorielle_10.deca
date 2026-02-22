@@ -1,0 +1,12 @@
+// Test d'intégration : Calcule la factorielle de 10
+// Résultat attendu : 3628800
+
+{
+    int fact_10 = 1 ;
+    int i = 10 ;
+    while (i > 0) {
+        fact_10 = fact_10 * i ;
+        i = i - 1 ;
+    }
+    println("10! = ", fact_10) ;
+}

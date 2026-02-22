@@ -1,0 +1,10 @@
+// Test : assign_int_expression
+// But : tester une affectation avec expression arithmétique.
+// Couvre : opérateurs + *, priorités, affectation.
+// Résultat attendu : compilation sans erreur.
+
+{
+    int a;
+    a = 1 + 2 * 3;
+    println("f");
+}

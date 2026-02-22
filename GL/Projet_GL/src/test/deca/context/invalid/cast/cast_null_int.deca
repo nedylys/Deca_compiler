@@ -1,0 +1,10 @@
+// Description :
+// Test contextuel : cast explicite de null vers int.
+//
+// Résultat attendu :
+// Erreur contextuelle : cast impossible (null n'est compatible qu'avec des types objets/classe, pas avec int).
+// Localisation : ligne du cast.
+
+{
+    int x = (int) (null);
+}

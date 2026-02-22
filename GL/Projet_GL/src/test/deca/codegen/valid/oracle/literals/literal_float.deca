@@ -1,0 +1,10 @@
+// Test : literal_float
+// But : tester la génération de code pour un littéral float positif.
+// Couvre : LOAD immediate float, gestion de registre, printlnx(float).
+// Résultat attendu : affiche la représentation
+// décimale et hexadécimale de 1.5.
+
+{
+    println(1.5) ;
+    printlnx(1.5) ;
+}

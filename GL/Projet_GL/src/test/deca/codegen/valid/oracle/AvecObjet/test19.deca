@@ -1,0 +1,28 @@
+// Description:
+//    Test 19 : Objet en paramètre.
+//    Classe Pair avec champs a et b, PairUtil avec sum(Pair p).
+//
+// Resultats:
+//    Pas d'erreur. p.a = 10, p.b = 20, u.sum(p) = 30.
+//    Affiche : sum = 30
+
+class Pair {
+    int a;
+    int b;
+}
+
+class PairUtil {
+    int sum(Pair p) {
+        return p.a + p.b;
+    }
+}
+
+{
+    Pair p = new Pair();
+    PairUtil u = new PairUtil();
+    p.a = 10;
+    p.b = 20;
+    
+    
+    println("sum = ", u.sum(p));
+}

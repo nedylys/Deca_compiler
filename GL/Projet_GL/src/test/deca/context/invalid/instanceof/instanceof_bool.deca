@@ -1,0 +1,16 @@
+// Description :
+// Test contextuel : instanceof appliqué à un boolean.
+//
+// Résultat attendu :
+// Erreur contextuelle : instanceof ne s'applique pas aux types primitifs (ici boolean).
+// Localisation : ligne du instanceof.
+
+class A {}
+
+{
+    boolean b = true;
+
+    if (b instanceof A) {
+        println("ça marche pas");
+    }
+}

@@ -1,0 +1,20 @@
+// Test : bool_literals
+// But : tester l'utilisation de true et false en condition.
+// Couvre : encodage bool, branchement if/else.
+// Résultat attendu : affiche 1, 0.
+
+{
+    if (true) {
+        println(1) ;
+    }
+    else {
+        println(0) ;
+    }
+
+    if (false) {
+        println(1) ;
+    }
+    else {
+        println(0) ;
+    }
+}

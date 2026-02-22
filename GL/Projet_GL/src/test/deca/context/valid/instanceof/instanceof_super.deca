@@ -1,0 +1,16 @@
+// Test : instanceof_var_subclass
+// But : vérifier instanceof quand la variable est d’un type B mais testée contre A.
+// Couvre : héritage, instanceof sur variable.
+// Résultat attendu : compilation sans erreur.
+// Exécution attendue : true, affiche "ça marche".
+
+class A {}
+class B extends A {}
+
+{
+    B b = new B();
+
+    if (b instanceof A) {
+        println("ça marche");
+    }
+}

@@ -1,0 +1,17 @@
+// Description:
+//    Test de division par zéro dans une condition OR (||).
+//    L'opérande de gauche vaut false (!!!!false = false), donc l'opérande de droite sera évaluée.
+//
+// Resultats:
+//    Erreur à l'exécution : division par zéro. Car b est false, la condition
+//    (1 / 0) == 0 sera forcément évaluée, provoquant une erreur.
+
+{
+    boolean b = !!!!false ;
+    if (b || ((1 / 0) == 0)) {
+        println("pas ok") ;
+    } 
+    else {
+        println("pas ok") ;
+    }
+}

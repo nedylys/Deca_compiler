@@ -1,0 +1,13 @@
+// Test : if_constant_false_with_else
+// But : vérifier que les deux branches d’un if sont analysées même si la condition est constante.
+// Couvre : typage du if, condition booléenne littérale, vérification des deux branches.
+// Résultat attendu : programme valide.
+
+{
+    int a;
+    if (false) {
+        a = 1;
+    } else {
+        a = 2;
+    }
+}

@@ -1,0 +1,13 @@
+// Test : control_if_complex_cond
+// But : tester une condition composée avec parenthèses.
+// Couvre : génération bool (comparaisons), && / ||, priorités, branchement final.
+// Résultat attendu: affiche "ok".
+
+{
+    if ((3 < 5 && 2 == 2) || (10 < 0)) {
+        println("ok") ;
+    } 
+    else {
+        println("pas ok") ;
+    }
+}

@@ -1,0 +1,13 @@
+// Description:
+//    Lecture d'un entier et calcul d'une expression arithmétique (0.5 * x²).
+//
+// Resultats:
+//    Pas d'erreur. Le programme lit un entier x et affiche 0.5 * (x * x).
+//
+
+
+{
+    int x ;
+    x = readInt() ;
+    println(0.5 * (x * x)) ;
+}

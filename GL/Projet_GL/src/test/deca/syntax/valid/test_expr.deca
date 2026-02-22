@@ -1,0 +1,22 @@
+// Description:
+//    Test de la grammaire des arbres de syntaxe abstraite
+//    Programme minimaliste testant les non terminaux EXPR et BINARY EXPR de la grammaire d'arbre.
+//    Et le #include
+//
+// Programme syntaxiquement correct.
+//
+// Historique:
+//    cree le 02/01/2026
+#include "Person.decah"
+{
+  Object o;
+  boolean x = true;
+  float y = 3.2;
+  int z = 76;
+  Person p = new Person();
+  Person m = null;
+  Person r;
+  r = null;
+  x = p instanceof Person;
+  o = (Object) (p);
+}

@@ -1,0 +1,12 @@
+// Test : arith_int_div_01
+// But : Tester la division entière.
+// Couvre : QUO entier, troncature, println.
+// Résultat attendu : affiche 9, 2, 0.
+{
+    int a = 18 ;
+    int b = 2 ;
+    int c = 7 ;
+    println(a / b) ;
+    println(a / c) ;
+    println(b / a) ;
+}

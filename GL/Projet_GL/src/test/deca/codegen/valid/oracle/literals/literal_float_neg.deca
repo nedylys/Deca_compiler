@@ -1,0 +1,10 @@
+// Test : literal_float
+// But : tester la génération de code pour un littéral float négatif.
+// Couvre : exactitude de Unary Minus sur float, printlnx(float).
+// Résultat attendu : affiche la représentation
+// décimale et hexadécimale de -7.2.
+
+{
+    println(-7.2) ;
+    printlnx(-7.2) ;
+}

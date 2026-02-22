@@ -1,0 +1,17 @@
+// Description:
+//    Test de l'évaluation paresseuse (short-circuit) du AND (&&).
+//    Si x == 0, la division 10/x ne doit pas être évaluée.
+//
+// Resultats:
+//    Pas d'erreur. x = 0, donc (x != 0) est faux.
+//    Grâce à l'évaluation paresseuse, (10 / x) > 1 n'est pas évaluée.
+//    Affiche 2 (branche else).
+
+{
+  int x = 0;
+  if ( (x != 0) && ((10 / x) > 1) ) {
+    println(1);
+  } else {
+    println(2);
+  }
+}

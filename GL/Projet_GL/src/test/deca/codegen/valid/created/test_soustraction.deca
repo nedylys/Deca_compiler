@@ -1,0 +1,9 @@
+// Description:
+//    Test de soustraction simple.
+//
+// Resultats:
+//    Pas d'erreur. 3 - 5 - 2 = -4. Affiche -4.
+
+{
+    println(3 - 5 - 2) ;
+}

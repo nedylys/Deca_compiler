@@ -1,0 +1,15 @@
+// Test : literal_bool_false
+// But : tester la génération de code pour le booléen littéral false.
+// Couvre : encodage d'un littéral booléen, affectation, 
+// évaluation de condition, println(int).
+// Résultat attendu : affiche 0.
+
+{
+    boolean b = false ;
+    if (b) {
+        println(1) ;
+    } 
+    else {
+        println(0) ;
+    }
+}

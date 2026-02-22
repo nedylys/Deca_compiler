@@ -1,0 +1,22 @@
+// Description:
+//    Test 15 : Appel de méthode dans une méthode.
+//    Classe MathUtil avec double(n) et quadruple(n) qui appelle double(double(n)).
+//
+// Resultats:
+//    Pas d'erreur. m.quadruple(3) = double(double(3)) = double(6) = 12.
+//    Affiche : quad(3) = 12
+
+class MathUtil {
+    int double(int n) {
+        return n * 2;
+    }
+    
+    int quadruple(int n) {
+        return double(double(n));
+    }
+}
+
+{
+    MathUtil m = new MathUtil();
+    println("quad(3) = ", m.quadruple(3));
+}

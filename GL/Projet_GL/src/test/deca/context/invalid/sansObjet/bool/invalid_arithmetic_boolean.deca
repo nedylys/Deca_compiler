@@ -1,0 +1,10 @@
+// Test : boolean_in_arithmetic
+// But : interdire l’utilisation d’un booléen dans un calcul arithmétique.
+// Couvre : règles de typage des opérateurs arithmétiques.
+// Résultat attendu : erreur contextuelle.
+// Erreur affichée: Invalid right operand type for boolean operation: expected boolean
+
+{
+    int a;
+    a = false * 3;
+}

@@ -1,0 +1,32 @@
+// Test : rp_fibo_30
+// But : calcul du 30ème terme de Fibonacci : pressions sur les registres
+// via une expression complexe inutilisée et existence de plusieurs variables.
+// Résultat attendu : 832040
+
+{
+    int n = 30 ;
+    int i = 2 ;
+    int a = 0 ;   // F_0
+    int b = 1 ;   // F_1
+    int c = 0 ;
+
+    int d = 2 ;
+    int u = 2 ;
+    int v = 3 ;
+    int w = 4 ;
+    int x = 5 ;
+
+    int disturb = 0 ;
+
+    while (i <= n) {
+        c = a + b ;
+        a = b ;
+        b = c ;
+
+        disturb = ((i + u) * (i + v)) - ((i + w) * (i + x)) + ((i + i) / (i + i)) ;
+
+        i = i + 1 ;
+    }
+
+    println(b) ;    // F_30
+}

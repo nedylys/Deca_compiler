@@ -1,0 +1,10 @@
+// Test : print_all_types
+// But : tester l’affichage de plusieurs types.
+// Couvre : print, println, int, float, string.
+// Résultat attendu : affiche les valeurs.
+
+{
+    print(3);
+    println(3.5);
+    println("hello");
+}

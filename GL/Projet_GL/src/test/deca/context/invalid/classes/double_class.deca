@@ -1,0 +1,16 @@
+// Description:
+// Test contextuel : définition multiple d'une classe.
+//
+// Resultats:
+//    Ligne 8: Classe A deja definie.
+//    Erreur affichée: Class already defined: A
+//
+
+class A {
+}
+
+class A {
+}
+
+{
+}

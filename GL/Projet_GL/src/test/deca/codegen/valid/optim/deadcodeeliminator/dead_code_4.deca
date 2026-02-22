@@ -1,0 +1,18 @@
+// Description :
+// Test de dead code elimination sur if(true).
+//
+// Résultat attendu :
+// - Le test est constant (true) => suppression de la branche morte et simplification du contrôle.
+// - Le bloc du if est exécuté tel quel.
+// - Attention : ici "println(\"dead\")" n’est PAS du code mort (il est dans la branche true), donc il doit rester.
+//
+// Remarque :
+// - Pas de suppression possible de "dead2" : il est toujours exécuté après le if.
+
+{
+  if (true) {
+    println("a");
+    println("dead");
+  }
+  println("dead2");
+}

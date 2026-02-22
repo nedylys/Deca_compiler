@@ -1,0 +1,18 @@
+// Description:
+//    Test métamorphique : inversion if/else (version 2).
+//    Doit produire le même résultat que mr_ifelse_inversion_1.deca
+//    en utilisant if(!b) avec branches inversées.
+//
+// Resultats:
+//    Pas d'erreur. Affiche : Correct !
+//    (Identique à mr_ifelse_inversion_1.deca)
+
+{
+    boolean b = true ;
+    if (!b) {
+        println("Incorrect !") ;
+    }
+    else {
+        println("Correct !") ;
+    }
+}

@@ -1,0 +1,13 @@
+// Test : upcast_assignment
+// But : vérifier qu’une affectation d’une instance de sous-classe dans une variable de super-classe est valide.
+// Couvre : sous-typage (B <: A), affectation.
+// Résultat attendu : compilation sans erreur.
+
+class A {
+}
+class B extends A {
+}
+{
+    A a;
+    a = new B();
+}

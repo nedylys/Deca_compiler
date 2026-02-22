@@ -1,0 +1,9 @@
+// Test : arith_int_mixed
+// But : tester une expression arithmétique imbriquée pour stresser temporaires.
+// Couvre : combinaison +,-,*,/, parenthèses (et sans), stockage intermédiaire, println.
+// Résultat attendu : affiche 23, 35.
+
+{
+    println((5 * 6) + (9 / 3) - (4 + 6)) ;
+    println(5 * 6 + 9 / 3 - 4 + 6) ;
+}

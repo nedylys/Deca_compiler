@@ -1,0 +1,15 @@
+// Test : arith_float_add
+// But : tester l'addition de floats.
+// Couvre : opérations float, déclaration / affectation, registres, println.
+// Résultat attendu : affiche 2.0, -0.5, 0.0, -2.0, 0.0.
+
+{
+    float a = 1.5 ;
+    float b = 0.5 ;
+    float c = -2.0 ;
+    println(a + b) ;
+    println(c + a) ;
+    println(a + b + c) ;
+    println(-a + -b) ;
+    println(-a + a) ;
+}

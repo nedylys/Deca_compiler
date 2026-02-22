@@ -1,0 +1,16 @@
+// Test : arith_int_add 
+// But : tester la génération de code pour l'addition d'entiers.
+// Couvre : évaluation gauche / droite, ADD, gestion registres temporaires,
+// Unary Minus, println(int).
+// Résultat attendu : affiche 13, -13, 0, 0, 4.
+
+{
+    int a = 5 ;
+    int b = 8 ;
+    int c = -1 ;
+    println(a + b) ;
+    println(-a + -b) ;
+    println(c + -c) ;
+    println(-c + c) ;
+    println(a + c) ;
+}

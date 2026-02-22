@@ -1,0 +1,10 @@
+// Test : assign_bool_to_int
+// But : interdire l’affectation d’un bool à un int.
+// Couvre : typage des affectations.
+// Résultat attendu : erreur contextuelle.
+// Erreur affichée: Incompatible assignment: expected  int, got boolean
+
+{
+    int a;
+    a = true;
+}

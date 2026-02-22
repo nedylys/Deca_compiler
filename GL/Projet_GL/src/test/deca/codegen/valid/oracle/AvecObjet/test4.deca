@@ -1,0 +1,21 @@
+// Description:
+//    Test 4 : Méthode avec retour int.
+//    Une classe Number avec une méthode getVal() qui retourne la valeur du champ.
+//
+// Resultats:
+//    Pas d'erreur. n.val = 10, n.getVal() = 10.
+//    Affiche : getVal: 10
+
+class Number {
+    int val;
+    
+    int getVal() {
+        return val;
+    }
+}
+
+{
+    Number n = new Number();
+    n.val = 10;
+    println("getVal: ", n.getVal());
+}

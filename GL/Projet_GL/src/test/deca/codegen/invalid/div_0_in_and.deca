@@ -1,0 +1,17 @@
+// Description:
+//    Test de division par zéro dans une condition AND (&&).
+//    L'opérande de gauche vaut true, donc l'opérande de droite sera évaluée.
+//
+// Resultats:
+//    Erreur à l'exécution : division par zéro. Car b est true, la condition
+//    (1 / 0) == 0 sera évaluée, provoquant une erreur.
+
+{
+    boolean b = true;
+    if (b && ((1 / 0) == 0)) {
+        println("pas ok") ;
+    } 
+    else {
+        println("pas ok") ;
+    }
+}

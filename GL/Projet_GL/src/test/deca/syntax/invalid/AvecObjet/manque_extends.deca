@@ -1,0 +1,19 @@
+// Test : manque le mot clé extends poru la déclaration de classe
+// But : détecter quand il n'y a pas le mot clé extends pour la déclaration de 
+// classe
+// Type d'erreur : erreur syntaxique
+// Résultat attendu : no viable alternative at input 'Point2D'
+
+class Point2D {
+   float x;
+   float y;
+}
+
+class Point3D Point2D{
+    float z;
+}
+
+
+{
+    Point3D p3 = new Point3D();
+}

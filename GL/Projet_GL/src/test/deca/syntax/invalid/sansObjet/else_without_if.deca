@@ -1,0 +1,10 @@
+// Test : syntax_invalid_else_without_if
+// But : interdire un else sans if correspondant.
+// Type d'erreur : erreur syntaxique
+// Résultat attendu : erreur de syntaxe.
+
+{
+    else {
+        print("h");
+    }
+}

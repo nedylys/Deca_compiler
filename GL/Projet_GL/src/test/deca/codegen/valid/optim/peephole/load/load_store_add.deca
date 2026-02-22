@@ -1,0 +1,13 @@
+// Test : load_store_add
+// But : tvoir si les store ne confusent pas Peephole
+// Couvre : interromption par le store sur le mem registre
+// Résultat attendu : 5
+
+{
+    int a;
+    int b;
+
+    a = 5;
+    b = 0;         
+    println(b + a);
+}

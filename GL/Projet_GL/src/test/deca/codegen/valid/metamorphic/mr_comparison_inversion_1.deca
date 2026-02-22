@@ -1,0 +1,39 @@
+// Description:
+//    Test métamorphique : comparaisons (version 1).
+//    Doit produire le même résultat que mr_comparison_inversion_2.deca
+//    en utilisant <, <=, ==, !=, >, >=.
+//
+// Resultats:
+//    Pas d'erreur. Affiche : ok (plusieurs fois)
+//    (Identique à mr_comparison_inversion_2.deca)
+
+{
+    if (3 < 5) {
+        println("ok") ;
+    }
+
+    if (1 <= 0) {
+        println("pas ok") ;
+    }
+    else {
+        println("ok") ;
+    }
+
+    if (0 == 0.0) {
+        println("ok") ;
+    }
+
+    if (0.21 != 0.22) {
+        println("pas ok") ;
+    }
+    else if (0.21 > 0.22) {
+        println("pas ok") ;
+    }
+    else {
+        println("ok") ;
+    }
+
+    if (0 >= 0) {
+        println("ok") ;
+    }
+}

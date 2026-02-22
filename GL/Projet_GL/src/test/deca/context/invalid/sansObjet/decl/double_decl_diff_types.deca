@@ -1,0 +1,11 @@
+// Test : context_invalid_double_declaration_different_types
+// But : redéclarer une variable avec un type différent.
+// Couvre : unicité des identifiants dans un même scope.
+// Résultat attendu : erreur contextuelle.
+// Erreur affichée: Variable already declared: a
+
+{
+    int a = 1;
+    float a = 2.0;
+}
+

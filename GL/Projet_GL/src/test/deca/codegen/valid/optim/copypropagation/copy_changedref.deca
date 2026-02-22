@@ -1,0 +1,41 @@
+// Description :
+// Test combiné de CopyPropagation Propagation et Dead Store Elimination,
+// dans un programme simple sans objets.
+//
+// Objectif du test :
+// - Vérifier que la propagation de copy n'est pas interrompue par un changement de réference
+// comme en sans objet il n'ya que les types primitifs qui sont déclarés (String n'est jamais déclaré)
+// et pour ces derniers on ne garde pas la réfèrence, mais on y fait une copie
+//   sont supprimées (dead stores).
+//
+// Résultat attendu après optimisations :
+// - a est propagée jusqu'à f.
+//  - b = y n'iterompe pas la propagation de a
+//
+//
+// Sortie attendue :
+// 1
+
+{
+    int a;
+    int b;
+    int c;
+    int d;
+    int e;
+    int f;
+    int y;
+
+
+    y = 2;
+    a = 1;
+    b = a;
+    c = b;
+    d = c;
+    e = d;
+
+    b = y; // la propagation ne doit pas etre interompue par cette ligne
+
+    f = e;
+
+    println(f);
+}

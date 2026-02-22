@@ -1,0 +1,12 @@
+// Description :
+// Test de constant folding sur expression parenthésée (additions/soustractions puis multiplication).
+//
+// Resultats :
+// (2+3)*(10-6) est plié à 20 : chargement immédiat de 20 (LOAD #20, R2),
+// sans ADD/SUB/MUL associées.
+
+{
+  int a;
+  a = (2 + 3) * (10 - 6);
+  println(a);
+}

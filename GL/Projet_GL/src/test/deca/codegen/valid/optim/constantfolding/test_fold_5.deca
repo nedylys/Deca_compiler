@@ -1,0 +1,11 @@
+// Description :
+// test de la constant_folding
+//
+// Resultats :
+// LOAD #45, R2 
+
+{
+  int x;
+  x = 5*9;
+  println(x);
+}

@@ -1,0 +1,19 @@
+// Description :
+// Test de dead code elimination sur if(false) avec else.
+//
+// Résultat attendu :
+// - La condition est constante (false) => la branche then est supprimée.
+// - Il ne doit rester que println("live") puis println("end").
+// - Pas de code associé à println("dead").
+//
+// Remarque :
+// - Simplification du flot : disparition du branchement conditionnel.
+
+{
+  if (false) {
+    println("dead");
+  } else {
+    println("live");
+  }
+  println("end");
+}

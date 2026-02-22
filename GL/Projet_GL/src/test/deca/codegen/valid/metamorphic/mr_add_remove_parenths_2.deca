@@ -1,0 +1,14 @@
+// Description:
+//    Test métamorphique : expression arithmétique avec parenthèses (version 2).
+//    Doit produire le même résultat que mr_add_remove_parenths_1.deca
+//    avec des parenthèses ajoutées pour expliciter les priorités.
+//    Expression : ((1 + (4 * 5) - 1) + ((7 / 2) * 3) + ((-1 * 9) - (-8)))
+//
+// Resultats:
+//    Pas d'erreur. Affiche : 28
+//    (Identique à mr_add_remove_parenths_1.deca)
+
+{
+    int n = ((1 + (4 * 5) - 1) + ((7 / 2) * 3) + ((-1 * 9) - (-8))) ;
+    println(n) ; //
+}

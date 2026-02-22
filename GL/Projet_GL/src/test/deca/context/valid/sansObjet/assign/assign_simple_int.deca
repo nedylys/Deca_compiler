@@ -1,0 +1,9 @@
+// Test : assign_simple_int
+// But : tester une affectation simple d’un entier.
+// Couvre : déclaration variable, affectation, vérification de type.
+// Résultat attendu : compilation sans erreur.
+
+{
+    int a;
+    a = 3;
+}

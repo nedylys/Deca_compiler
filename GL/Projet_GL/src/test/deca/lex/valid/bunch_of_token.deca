@@ -1,0 +1,22 @@
+class extends protected public while if else return this null true false
+int float boolean void string
+new instanceof print println readInt readFloat
+== != < <= > >= && || !
++ - * / % = ;
+{ } ( )
+
+class class class
+extends extends
+if if else else
+while while return return
+/
+{
+    public protected private
+    int float boolean
+    if else while return
+    new this null true false
+    == != <= >= && ||
+    + - * / %
+}
+
+return return return

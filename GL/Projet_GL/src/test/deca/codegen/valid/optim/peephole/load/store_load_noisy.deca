@@ -1,0 +1,16 @@
+// Test : store_load_noisy
+// But : voir si les restrictions imposées sur Peephole sont bien activées
+// Résultat attendu : 7
+
+
+{
+    int a;
+    int b;
+    int c;
+
+    a = 7;
+    b = 0;
+    c = 33;
+
+    println(b + a);
+}

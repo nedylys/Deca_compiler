@@ -1,0 +1,32 @@
+// Description:
+//    Test de lectures alternées entre readInt et readFloat avec affectations multiples,
+//    suivi d'une condition et d'un calcul arithmétique.
+//
+// Resultats:
+//    Pas d'erreur. Le programme lit alternativement des int et des float,
+//    vérifie si l'un vaut zéro, et affiche soit "zero-detected" soit le résultat de (x * 1.0) / y.
+
+
+{
+    int x;
+    float y;
+
+    println("Enter alternatively int / float :") ;
+    x = readInt();
+    y = readFloat() ;
+    x = readInt() ;
+    y = readFloat() ;
+    x = readInt() ;
+    y = readFloat() ;
+    x = readInt() ;
+    y = readFloat() ;
+    x = readInt() ;
+    y = readFloat() ;
+
+    if ((x == 0) || (y == 0.0)) {
+        println("zero-detected") ;
+    }
+    else {
+        println((x * 1.0) / y);
+    }
+}

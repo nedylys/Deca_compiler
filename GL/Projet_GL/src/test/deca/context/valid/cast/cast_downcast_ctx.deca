@@ -1,0 +1,15 @@
+// Test : cast_downcast_echec_execution
+// But : vérifier qu’un cast explicite A -> B (B sous-classe de A) est accepté au contextuel,
+//       même si l’objet réel n’est pas une instance de B.
+// Couvre : cast entre classes liées (downcast), vérification dynamique.
+// Résultat attendu : compilation sans erreur contextuelle.
+// Exécution attendue : erreur à l’exécution (échec du cast) avant le println("never").
+
+class A {}
+class B extends A {}
+
+{
+    A a = new A();
+    B b = (B) (a);   // erreur mais pas contextuelle
+    println("never");
+}

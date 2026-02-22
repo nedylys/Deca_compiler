@@ -1,0 +1,14 @@
+// Description:
+//    Test métamorphique : expression arithmétique sans parenthèses (version 1).
+//    Doit produire le même résultat que mr_add_remove_parenths_2.deca
+//    malgré l'ajout de parenthèses explicites dans la version 2.
+//    Expression : 1 + 4 * 5 - 1 + 7 / 2 * 3 + -1 * 9 - -8
+//
+// Resultats:
+//    Pas d'erreur. Affiche : 28
+//    (Identique à mr_add_remove_parenths_2.deca)
+
+{
+    int n = 1 + 4 * 5 - 1 + 7 / 2 * 3 + -1 * 9 - -8 ;
+    println(n) ;
+}

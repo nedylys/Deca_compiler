@@ -1,0 +1,18 @@
+// Test d'intégration : Calcule le pgcd de a et b 
+// Résultat attendu : PGCD = 12
+{    
+    int a = 5652 ;
+    int b = 768 ;
+    int r ;
+
+    boolean cond = true ;
+    while (cond == true) {
+        r = a % b ;
+        a = b ; 
+        b = r ;
+        if (b == 0) {
+            cond = false ;
+        }
+    }
+    println("PGCD = ", a) ;
+}

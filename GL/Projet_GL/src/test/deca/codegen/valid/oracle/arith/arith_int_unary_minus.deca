@@ -1,0 +1,11 @@
+// Test : arith_int_unary_minus
+// But : tester le moins unaire appliqué à une variable.
+// Couvre : codegen du '-' unaire, temporaires, println.
+// Résultat attendu : affiche -9, 3.
+
+{
+    int x = 9;
+    int y = -3 ;
+    println(-x);
+    println(-y) ;
+}

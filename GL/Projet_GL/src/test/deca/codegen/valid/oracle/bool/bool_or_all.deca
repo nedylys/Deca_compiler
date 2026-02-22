@@ -1,0 +1,33 @@
+// Test : bool_or_all
+// But : tester || sur les 4 cas : T || T, T || F, F || T, F || F.
+// Résultat attendu : affiche 1, 1, 1, 0.
+
+{
+    if (true || true) {
+        println(1) ;
+    }
+    else {
+        println(0) ;
+    }
+
+    if (true || false) {
+        println(1) ;
+    }
+    else {
+        println(0) ;
+    }
+
+    if (false || true) {
+        println(1) ;
+    }
+    else {
+        println(0) ;
+    }
+
+    if (false || false) {
+        println(1) ;
+    }
+    else {
+        println(0) ;
+    }
+}

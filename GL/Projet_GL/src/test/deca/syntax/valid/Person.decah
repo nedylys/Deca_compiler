@@ -1,0 +1,14 @@
+// Fichier .decah utilisé pour test_expr.deca
+
+class Person {
+    int age;
+    float height;
+
+    void f(){
+        
+    }
+
+    void g(){
+        this.f();
+    }
+}

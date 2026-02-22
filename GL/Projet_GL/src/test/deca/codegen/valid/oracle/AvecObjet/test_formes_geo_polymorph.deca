@@ -1,0 +1,109 @@
+// Description:
+//    Test de polymorphisme avec formes géométriques.
+//    Hiérarchie : FormeGeo <- Rectangle, Cercle, Triangle, Carre (extends Rectangle).
+//    Chaque forme a une méthode init(), surface() et toString() overridée.
+//
+// Resultats:
+//    Pas d'erreur. Affiche :
+//    - La surface de la forme géométrique : 0
+//    - La surface du rectangle est : 8.0 (2*4)
+//    - La surface du cercle est : 3.14 (3.14*1*1)
+//    - La surface du triangle est : 9.0 (3*6*0.5)
+
+class FormeGeo {
+    void init(float a, float b) {}
+
+    float surface() {
+        return 0 ;
+    }
+
+    void toString() {
+        println("La surface de la forme géométrique : ", 0) ;
+    }
+}
+
+class Rectrangle extends FormeGeo {
+    float longueur ;
+    float largeur ;
+
+    void init(float lo, float la) {
+        this.longueur = lo ;
+        this.largeur = la ;
+    }
+
+    float surface() {
+        return longueur * largeur ;
+    }
+
+    void toString() {
+        if (longueur != largeur ) {
+            println("La surface du rectangle est : ", surface()) ;
+        }
+        else {
+            println("La surface du carre est :", surface()) ;
+        }
+    }
+}
+
+class Cercle extends FormeGeo {
+    float rayon ;
+
+    void init(float r, float prCoherence) {
+        this.rayon = r ;
+    }
+
+    float surface() {
+        return 3.14 * rayon * rayon ;
+    }
+
+    void toString() {
+        println("La surface du cercle est : ", surface()) ;
+    }
+}
+
+class Carre extends Rectrangle {
+
+}
+
+class Triangle extends FormeGeo {
+    float hauteur ;
+    float base ; 
+
+    void init(float h, float b) {
+        this.hauteur = h ;
+        this.base = b ;
+    }
+
+    float surface() {
+        return hauteur * base * 0.5 ;
+    }
+
+    void toString() {
+        println("La surface du triangle est :", surface()) ;
+    }
+}
+
+
+{
+    FormeGeo form = new FormeGeo() ;
+    FormeGeo rect = new Rectrangle() ;
+    FormeGeo cercle = new Cercle() ;
+    FormeGeo triangle = new Triangle() ;
+
+    // initalisation 
+    rect.init(2, 4) ;
+    //rect.longueur = 2 ; 
+    //rect.largeur = 4 ;
+
+    cercle.init(1, 0) ;
+    //cercle.rayon = 1 ;
+
+    //triangle.hauteur = 3 ;
+    //triangle.base = 6 ; 
+    triangle.init(3, 6) ;
+
+    form.toString() ;
+    rect.toString() ;
+    cercle.toString() ;
+    triangle.toString() ;
+}

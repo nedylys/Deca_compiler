@@ -1,0 +1,12 @@
+// Description:
+//    Test de modulo par zéro. L'expression a % (a % b) avec b = 5 donne a % (10 % 5) = a % 0.
+//
+// Resultats:
+//    Erreur à l'exécution : division par zéro (modulo par 0).
+//    Doit brancher vers l'étiquette d'erreur de division.
+
+{
+    int a = 10 ;
+    int b = 5 ;
+    println(a % (a % b)) ;
+}

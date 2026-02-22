@@ -1,0 +1,26 @@
+// Description:
+//    Test basique de création d'objet avec setter et getter.
+//    Une classe maClasse avec setX et getX.
+//
+// Resultats:
+//    Pas d'erreur. cl.setX(7), puis println(cl.getX()).
+//    Affiche : 7
+
+
+class maClasse {
+    int x ;
+
+    void setX(int x) {
+        this.x = x ;
+    }
+
+    int getX() {
+        return this.x ;
+    }
+}
+
+{
+    maClasse cl = new maClasse() ;
+    cl.setX(7) ;
+    println(cl.getX()) ;
+}

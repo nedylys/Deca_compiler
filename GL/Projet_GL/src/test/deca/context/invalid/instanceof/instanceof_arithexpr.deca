@@ -1,0 +1,17 @@
+// Description :
+// Test contextuel : instanceof avec opérande gauche non-classe (expression float).
+//
+// Résultat attendu :
+// Erreur contextuelle : instanceof impossible car (x + 10) est de type float (primitif), pas un objet.
+// Localisation : ligne du instanceof.
+
+class A {}
+
+{
+    float x;
+    x = 1 + 2.0;
+
+    if ((x + 10) instanceof A) {
+        println("ça marche pas");
+    }
+}

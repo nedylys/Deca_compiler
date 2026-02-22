@@ -1,0 +1,13 @@
+// Description :
+// Test de dead code elimination sur while(false).
+//
+// Résultat attendu :
+// - La boucle ne s’exécute jamais => suppression complète du corps de boucle.
+// - Il ne reste que println("end") (pas d’instructions pour println("dead")).
+
+{
+  while (false) {
+    println("dead");
+  }
+  println("end");
+}

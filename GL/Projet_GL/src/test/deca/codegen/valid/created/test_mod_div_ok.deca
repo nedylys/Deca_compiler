@@ -1,0 +1,14 @@
+// Description:
+//    Test de division entière et modulo sur des entiers.
+//
+// Resultats:
+//    Pas d'erreur.
+//    - 100 / 7 = 14 (division entière)
+//    - 100 % 7 = 2 (reste de la division)
+
+{
+  int a = 100;
+  int b = 7;
+  println(a / b);   // 14
+  println(a % b);   // 2
+}

@@ -1,0 +1,14 @@
+// Description:
+//    Utilisation invalide d'un identifiant
+//
+// Resultats:
+//    Identifier A is not defined in the current scope nor in its parent scopes
+// Historique:
+//    cree le 03/01/2026
+
+class A {
+}
+{
+    A;
+}
+//Identifier A is not defined in the current scope nor in its parent scopes

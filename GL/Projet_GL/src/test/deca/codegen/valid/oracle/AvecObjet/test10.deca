@@ -1,0 +1,27 @@
+// Description:
+//    Test 10 : Héritage avec champ hérité.
+//    Classe Base avec champ val et getter, Derived extends Base avec setter.
+//
+// Resultats:
+//    Pas d'erreur. d.setVal(50), d.getVal() = 50.
+//    Affiche : val = 50
+
+class Base {
+    protected int val;
+    
+    int getVal() {
+        return val;
+    }
+}
+
+class Derived extends Base {
+    void setVal(int v) {
+        val = v;
+    }
+}
+
+{
+    Derived d = new Derived();
+    d.setVal(50);
+    println("val = ", d.getVal());
+}

@@ -1,0 +1,16 @@
+// Test : cmp_int_eq_true
+// But : tester l'opérateur == sur int (cas vrai).
+// Couvre : CMP int, branchement sur égalité, if/else.
+// Résultat attendu : affiche 1.
+
+{
+    int a = 7 ;
+    int b = 7 ;
+    boolean c = (a == b) ;
+    if (c) { 
+        println(1) ; 
+    } 
+    else { 
+        println(0) ;
+    }
+}

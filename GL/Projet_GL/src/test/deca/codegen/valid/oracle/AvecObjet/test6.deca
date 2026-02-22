@@ -1,0 +1,25 @@
+// Description:
+//    Test 6 : Utilisation de this.
+//    Une classe A avec setX et getX utilisant this.x.
+//
+// Resultats:
+//    Pas d'erreur. a.setX(100), a.getX() = 100.
+//    Affiche : this.x = 100
+
+class A {
+    int x;
+    
+    void setX(int x) {
+        this.x = x;
+    }
+    
+    int getX() {
+        return this.x;
+    }
+}
+
+{
+    A a = new A();
+    a.setX(100);
+    println("this.x = ", a.getX());
+}

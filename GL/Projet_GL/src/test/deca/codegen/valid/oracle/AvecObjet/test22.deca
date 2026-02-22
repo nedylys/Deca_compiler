@@ -1,0 +1,26 @@
+// Description:
+//    Test 22 : Deux classes indépendantes.
+//    Classes Rouge et Bleu avec chacune une méthode afficher().
+//
+// Resultats:
+//    Pas d'erreur. r.afficher() puis b.afficher().
+//    Affiche : Rouge, puis Bleu
+
+class Rouge {
+    void afficher() {
+        println("Rouge");
+    }
+}
+
+class Bleu {
+    void afficher() {
+        println("Bleu");
+    }
+}
+
+{
+    Rouge r = new Rouge();
+    Bleu b = new Bleu();
+    r.afficher();
+    b.afficher();
+}

@@ -1,0 +1,15 @@
+// Description :
+// Test contextuel : instanceof avec opérande gauche non-classe (expression arithmétique float).
+//
+// Résultat attendu :
+// Erreur contextuelle : instanceof ne s'applique qu'à une expression de type objet/classe (ou null selon les règles),
+// pas à un type primitif (ici float).
+// Localisation : ligne du instanceof.
+
+class A {}
+
+{
+    if ((3 + 2.0) instanceof A) {
+        println("ça marche pas");
+    }
+}

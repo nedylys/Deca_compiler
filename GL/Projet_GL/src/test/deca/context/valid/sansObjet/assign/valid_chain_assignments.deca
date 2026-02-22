@@ -1,0 +1,11 @@
+// Test : context_valid_chain_assignments
+// But : dépendance entre affectations successives.
+// Couvre : ordre des instructions.
+// Résultat attendu : compilation sans erreur.
+
+{
+    int a;
+    int b;
+    a = 1;
+    b = a + 2;
+}

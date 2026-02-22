@@ -1,0 +1,8 @@
+// Test : literal_int
+// But : tester la génération de code pour un littéral entier positif.
+// COuvre : LOAD immediate integer, usage de registres, println(int).
+// Résultat attendu : affiche de 42.
+
+{
+    println(42) ;
+}

@@ -1,0 +1,38 @@
+// Description:
+//    Test 23 : Hiérarchie à 3 niveaux.
+//    GrandParent → ParentX → EnfantX, chaque classe override qui().
+//
+// Resultats:
+//    Pas d'erreur.
+//    - g.qui() → "GrandParent"
+//    - p.qui() → "ParentX"
+//    - e.qui() → "EnfantX"
+//    Affiche : GrandParent, ParentX, EnfantX
+
+class GrandParent {
+    void qui() {
+        println("GrandParent");
+    }
+}
+
+class ParentX extends GrandParent {
+    void qui() {
+        println("ParentX");
+    }
+}
+
+class EnfantX extends ParentX {
+    void qui() {
+        println("EnfantX");
+    }
+}
+
+{
+    GrandParent g = new GrandParent();
+    ParentX p = new ParentX();
+    EnfantX e = new EnfantX();
+    
+    g.qui();
+    p.qui();
+    e.qui();
+}

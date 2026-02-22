@@ -1,0 +1,9 @@
+// Test : boolean_or_expression
+// But : tester l’opérateur logique ||.
+// Couvre : booléens, opérateur OR.
+// Résultat attendu : compilation sans erreur.
+
+{
+    boolean b;
+    b = true || false;
+}

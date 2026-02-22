@@ -1,0 +1,12 @@
+// Test d'intération : Calcule la somme des 100 premiers entiers
+// Résulat attendu : Somme de 0 à 100 = 5050
+
+{
+    int s = 0 ;
+    int i = 1 ;
+    while (i <= 100) {
+        s = s + i ;
+        i = i + 1 ;
+    }
+    println("Somme de ", 0, " à ", 100, " = ", s) ;
+}

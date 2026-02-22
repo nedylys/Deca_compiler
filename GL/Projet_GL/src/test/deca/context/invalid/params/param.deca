@@ -1,0 +1,15 @@
+// Description:
+//    Declaration de parametre
+//
+// Resultats:
+//    Un parametre ne peut pas etre de type void.
+//    Erreur affichée: Parameter cannot be of type void
+//
+
+class A {
+    int f(void x) {
+        return 0;
+    }
+}
+{
+}

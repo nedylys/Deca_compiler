@@ -1,0 +1,9 @@
+// Test : context_valid_boolean_equals
+// But : autoriser une comparaison d’égalité entre expressions arithmétiques.
+// Couvre : opérateur ==, typage booléen.
+// Résultat attendu : programme valide.
+
+{
+    boolean b;
+    b = (3 + 2) == 5;
+}

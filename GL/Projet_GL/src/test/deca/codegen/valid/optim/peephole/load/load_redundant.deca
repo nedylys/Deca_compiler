@@ -1,0 +1,17 @@
+// Test : load_redundant
+// But : tester la performance de Peephole optimizer dans le cas 
+// de load redandants (Load x, Ri) interompue par un println
+// Couvre : les séquences de type STORE Ri, X ... LOAD X, Ri
+// Résultat attendu : 1
+
+
+{
+    int dummy = 999;
+    int x = 1;
+    int y;
+
+    println(dummy);   
+    println(x);       
+    y = x;         
+    println(y);
+}

@@ -1,0 +1,20 @@
+// Description:
+//    Test de la grammaire des arbres de syntaxe abstraite
+//    Programme minimaliste testant le non terminal OP_BOOL de la grammaire d'arbre.
+//
+// Programme syntaxiquement et contextuellment correct.
+//
+// Historique:
+//    cree le 02/01/2026
+{
+  boolean a = true;
+  boolean b = false;
+  boolean c = true;
+  boolean d = false;
+  a = b && true;
+  d = false || true;
+  a = true  || c;
+  c = a || d;
+  d = b && c;
+  a =  a || b && c || ( a && d && c && d );
+}

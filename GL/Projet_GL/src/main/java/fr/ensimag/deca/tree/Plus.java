@@ -1,0 +1,51 @@
+package fr.ensimag.deca.tree;
+import  fr.ensimag.deca.DecacCompiler;
+import fr.ensimag.deca.codegen.BinaryArithOpHelper;
+import fr.ensimag.deca.context.ClassDefinition;
+import fr.ensimag.deca.context.ContextualError;
+import fr.ensimag.deca.context.EnvironmentExp;
+import fr.ensimag.deca.context.Type;
+import fr.ensimag.ima.pseudocode.GPRegister;
+
+
+
+/**
+ * @author gl43
+ * @date 01/01/2026
+ */
+public class Plus extends AbstractOpArith {
+    public Plus(AbstractExpr leftOperand, AbstractExpr rightOperand) {
+        super(leftOperand, rightOperand);
+    }
+ 
+
+    @Override
+    protected String getOperatorName() {
+        return "+";
+    }
+
+    //début section ajoutée
+    @Override
+    public Type verifyExpr(DecacCompiler compiler, EnvironmentExp localEnv, ClassDefinition currentClass) throws ContextualError {
+       
+        return super.verifyExpr(compiler, localEnv, currentClass);
+    }
+    //Fin section ajoutée
+
+    @Override
+    /* AT - MEA : implémentée le 03/01 */
+    public void codeGenExpr(DecacCompiler compiler, GPRegister targetReg) {
+        BinaryArithOpHelper.genCodeBinaryArithOp(compiler, getLeftOperand(), 
+        getRightOperand(), targetReg, BinaryArithOpHelper.ArithOp.ADD) ;
+    }
+
+    //extension
+    @Override
+    protected int evalInt(int a, int b) { return a + b; }
+
+    @Override
+    protected float evalFloat(float a, float b) { return a + b; }
+
+
+}
+

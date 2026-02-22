@@ -1,0 +1,18 @@
+// Description:
+//    Test basique de création d'objet et appel de méthode.
+//    Une classe FirstClass avec une méthode helloWord() qui affiche un message.
+//
+// Resultats:
+//    Pas d'erreur. Affiche : Hello world !
+
+
+class FirstClass {
+    void helloWord() {
+        println("Hello world !") ;
+    }
+}
+
+{
+    FirstClass c = new FirstClass() ;
+    c.helloWord() ;
+}

@@ -1,0 +1,35 @@
+// Description:
+//    Test complexe avec variables booléennes et conditions imbriquées.
+//    Vérifie les opérateurs NOT (!), AND implicite et les else if.
+//
+// Resultats:
+//    Pas d'erreur. a = true, b = false, c = true.
+//    !b est vrai, !a est faux, donc on va dans else if (b) qui est faux,
+//    puis else qui affiche "je ne sais pas".
+
+{
+    boolean a = true ;
+    boolean b = false ;
+    boolean c = true ;
+
+    if (!b) {
+        if (!a) {
+            println("a est vraie") ;
+            if (!c) {
+               println("c est fausse") ;
+            } 
+            else if (b) {
+               println("b est fausse") ;
+            }
+            else {
+                println("je ne sais pas") ;
+            }
+        }
+        else if (c) {
+            println("c est vraie") ;
+        }
+    }
+    else {
+       println("b est fausse") ;
+    }
+}

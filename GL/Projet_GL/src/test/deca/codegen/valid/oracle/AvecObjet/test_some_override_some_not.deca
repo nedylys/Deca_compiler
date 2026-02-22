@@ -1,0 +1,44 @@
+// Description:
+//    Test de polymorphisme avec certaines méthodes overridées et d'autres non.
+//    Classes A, B (extends A), C (extends A) avec override partiel.
+//
+// Resultats:
+//    Pas d'erreur.
+//    - x = new B() : x.f()=1, x.g()=0 (override), x.h()=3
+//    - y = new C() : y.f()=-1 (override), y.g()=2, y.h()=3
+//    Affiche : 1, 0, 3, -1, 2, 3
+
+class A {
+    int f() {
+        return 1 ;
+    }
+    int g() {
+        return 2 ;
+    }
+    int h() {
+        return 3 ;
+    }
+}
+
+class B extends A {
+    int g() {
+        return 0 ;
+    }
+}
+
+class C extends A {
+    int f() {
+        return -1 ;
+    }
+}
+
+{
+    A x = new B() ;
+    A y = new C() ;
+    println(x.f()) ;    // 1
+    println(x.g()) ;    // 0
+    println(x.h()) ;    // 3
+    println(y.f()) ;    // -1
+    println(y.g()) ;    // 2
+    println(y.h()) ;    // 3
+}

@@ -1,0 +1,12 @@
+// Description:
+//    Test d'affichage de chaînes de caractères avec print et println.
+//
+// Resultats:
+//    Pas d'erreur. Affiche "Hello", puis ", world!" avec saut de ligne,
+//    puis "Hello" et " World" sur la même ligne.
+
+{
+    print("Hello") ;
+    println(", world!") ;
+    print("Hello", " World") ;
+}

@@ -1,0 +1,10 @@
+// Test : compare_boolean_and_int
+// But : interdire la comparaison entre booléen et entier.
+// Couvre : opérateurs de comparaison, compatibilité des types.
+// Résultat attendu : erreur contextuelle.
+// Erreur affichée: Incompatible types: cannot compare  boolean with int as int is not int/float
+
+{
+    boolean b;
+    b = true < 3;
+}

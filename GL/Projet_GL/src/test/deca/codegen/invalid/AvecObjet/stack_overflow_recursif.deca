@@ -1,0 +1,18 @@
+// Description:
+//    Test de generation de Asm invalide
+//    On ajoute du code assembleur dans le .ass qui renvoie une erreur d'adressage
+//
+// Resultats:
+//    Erreur à l'exécution : Adressage indirect : la base ne contient pas une adresse
+
+class A{
+    int f(int n){
+        return f(n+1);
+    }
+}
+
+
+{
+   A a = new A();
+   a.f(1);
+}

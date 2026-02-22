@@ -1,0 +1,10 @@
+// Test : context_valid_complex_boolean
+// But : autoriser une condition booléenne complexe dans un if.
+// Couvre : &&, ||, priorités, if.
+// Résultat attendu : programme valide.
+
+{
+    if ((3 < 5 && 2 == 2) || false) {
+        println("ok");
+    }
+}

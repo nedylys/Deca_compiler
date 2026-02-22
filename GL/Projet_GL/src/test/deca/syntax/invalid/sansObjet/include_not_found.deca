@@ -1,0 +1,7 @@
+// Test : Include not Found
+// But : interdire d'include un fichier non existant.
+// Type d'erreur : erreur syntaxique
+// Résultat attendu : Include not found
+
+#include "fichier_fantome.decah"
+

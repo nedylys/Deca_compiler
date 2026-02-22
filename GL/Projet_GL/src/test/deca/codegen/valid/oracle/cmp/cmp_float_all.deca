@@ -1,0 +1,66 @@
+// Test : cmp_float_all
+// But : Tester les opérateurs de comparasion sur float.
+// Couvre : CMP float, branchement.
+// Résultat attendu: affiche 1, 1, 1, 1, 0, 0, 1.
+
+{
+    float a = 1.5 ;
+    float b = 2.0 ;
+    float x = -(-1.5) ;
+    boolean c = (a < b) ;
+    boolean d = (a <= b) ;
+    boolean e = (a == x) ;
+    boolean f = (a != b) ;
+    boolean g = (x >= b) ;
+    boolean h = (x > x) ;
+    boolean i = (((1.0 + 1.0) == (0.5 * 2 + 0.25 + 0.75))) ;
+
+    if (c) { 
+        println(1) ; 
+    } 
+    else { 
+        println(0) ; 
+    }
+
+    if (d) { 
+        println(1) ; 
+    } 
+    else { 
+        println(0) ; 
+    }
+
+    if (e) { 
+        println(1) ; 
+    } 
+    else { 
+        println(0) ; 
+    }
+
+    if (f) { 
+        println(1) ; 
+    } 
+    else { 
+        println(0) ; 
+    }
+
+    if (g) { 
+        println(1) ; 
+    } 
+    else { 
+        println(0) ; 
+    }
+
+    if (h) { 
+        println(1) ; 
+    } 
+    else { 
+        println(0) ; 
+    }
+
+    if (i) { 
+        println(1) ; 
+    } 
+    else { 
+        println(0) ; 
+    }  
+}

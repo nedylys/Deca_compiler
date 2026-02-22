@@ -1,0 +1,9 @@
+// Test : var_decl_init_float
+// But : vérifier la génération de code pour une déclaration + initialisation d'une variable float.
+// Couvre : allocation/offset, chargement float, appel printlnx (format hexadécimal).
+// Résultat attendu: affiche la représentation hexadécimale de 1.5.
+
+{
+    float f = 1.5 ;
+    printlnx(f) ;
+}

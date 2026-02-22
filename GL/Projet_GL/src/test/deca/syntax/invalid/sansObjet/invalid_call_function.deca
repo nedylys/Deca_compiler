@@ -1,0 +1,8 @@
+// Test : syntax_invalid_incomplete_function_call
+// But : interdire l’utilisation d’un identifiant de fonction sans appel.
+// Type d'erreur : erreur syntaxique
+// Résultat attendu : erreur de syntaxe.
+
+{
+    println
+}

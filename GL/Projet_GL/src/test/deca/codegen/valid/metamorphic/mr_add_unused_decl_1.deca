@@ -1,0 +1,13 @@
+// Description:
+//    Test métamorphique : programme de référence.
+//    Doit produire le même résultat que mr_add_unused_decl_2.deca
+//    malgré l'ajout de déclarations inutilisées dans la version 2.
+//
+// Resultats:
+//    Pas d'erreur. Affiche : ok, puis 8
+//    (Identique à mr_add_unused_decl_2.deca)
+
+{
+    println("ok") ;
+    println(8) ;
+}

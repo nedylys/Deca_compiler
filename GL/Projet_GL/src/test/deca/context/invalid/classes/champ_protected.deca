@@ -1,0 +1,17 @@
+// Description:
+// Test contextuel : visibilité des champs (protected).
+//
+// Resultats:
+//    Un champ protege n'est accessible que depuis une sous-classe valide.
+//    Erreur affichée: Access to x is not allowed in a main programm as it is protected
+//
+
+class A {
+   protected int x;
+}
+{
+   A a;
+
+   // Doit etre refuse.
+   a.x;
+}

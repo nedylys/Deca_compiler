@@ -1,0 +1,14 @@
+// Test : var_decl_init_bool
+// But : vérifier la génération de code pour une déclaration + initialisation d'une variable booléenne.
+// Couvre : stockage bool, chargement bool, branchement if/else.
+// Résultat attendu : affiche 1.
+
+{
+    boolean b = true ;
+    if (b) {
+        println(1) ;
+    } 
+    else {
+        println(0) ;
+    }
+}

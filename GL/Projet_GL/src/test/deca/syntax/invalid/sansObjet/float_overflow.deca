@@ -1,0 +1,8 @@
+// Test : overflow de float
+// But : interdire les overflows de float.
+// Type d'erreur : erreur syntaxique
+// Résultat attendu : Float overflow
+
+{
+  float x = 3.4028236E38;
+}

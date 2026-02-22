@@ -1,0 +1,25 @@
+// Description:
+//    Test 9 : Héritage simple.
+//    Classe Animal avec parler() qui affiche "...",
+//    Classe Chien extends Animal avec override de parler().
+//
+// Resultats:
+//    Pas d'erreur. c = new Chien(), c.parler() appelle la méthode de Chien.
+//    Affiche : Wouuuuu !!!
+
+class Animal {
+    void parler() {
+        println("...");
+    }
+}
+
+class Chien extends Animal {
+    void parler() {
+        println("Wouuuuu !!!");
+    }
+}
+
+{
+    Chien c = new Chien();
+    c.parler();
+}

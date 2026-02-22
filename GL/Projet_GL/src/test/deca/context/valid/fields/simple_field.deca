@@ -1,0 +1,10 @@
+// Test : field_declaration_int
+// But : tester une déclaration simple de champ int sans initialisation.
+// Couvre : déclaration de champ.
+// Résultat attendu : compilation sans erreur.
+
+class A {
+    int x;
+}
+{
+}

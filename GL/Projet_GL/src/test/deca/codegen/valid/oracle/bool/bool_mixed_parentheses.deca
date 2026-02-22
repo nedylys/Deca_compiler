@@ -1,0 +1,14 @@
+// Test : bool_mixed_parentheses
+// But : vérifier que les parenthèses changent l'ordre d'évaluation.
+// Résultat attendu: affiche 0.
+// Sans les (), on aurait eu 1.
+
+{
+    boolean c = (true || false) && false ;
+    if (c) { 
+        println(1) ; 
+    } 
+    else { 
+        println(0) ; 
+    }
+}

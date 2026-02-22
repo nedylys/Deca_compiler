@@ -1,0 +1,10 @@
+// Test : syntax_invalid_while_without_parentheses
+// But : interdire une condition while sans parenthèses.
+// Type d'erreur : erreur syntaxique
+// Résultat attendu : erreur de syntaxe.
+
+{
+    while true {
+        
+    }
+}

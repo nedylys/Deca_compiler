@@ -1,0 +1,16 @@
+// Test : arith_int_sub
+// But : tester la soustraction d'entiers.
+// Couvre : SUB, gestion du signe, println.
+// Résultat attendu : affiche -3, 3, 5, -5, -13, 3.
+
+{
+    int a = 5 ;
+    int b = 8 ;
+    int c = 0 ;
+    println(a - b) ;
+    println(b - a) ;
+    println(a - c) ;
+    println(c - a) ;
+    println(-b - a) ;
+    println(-a - -b) ;
+}

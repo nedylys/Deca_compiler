@@ -1,0 +1,9 @@
+// Test : init_boolean_with_int
+// But : interdire l’initialisation d’un bool avec un int.
+// Couvre : typage des initialisations.
+// Résultat attendu : erreur contextuelle.
+// Erreur affichée: Incompatible assignment: expected  boolean, got int
+
+{
+    boolean b = 3;
+}

@@ -1,0 +1,13 @@
+// Description:
+// Test contextuel : sélection d'un champ inexistant.
+//
+// Resultats:
+//    Champ non defini dans la classe.
+//    Erreur affichée: Identifier x is not defined
+//
+
+class A {}
+{
+   A a;
+   a.x;
+}

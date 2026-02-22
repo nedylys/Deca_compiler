@@ -1,0 +1,11 @@
+// Test : while_simple_condition
+// But : tester une boucle while avec condition simple.
+// Couvre : while, condition booléenne.
+// Résultat attendu : compilation sans erreur.
+
+{
+    int a;
+    while (true) {
+        a = 3;
+    }
+}

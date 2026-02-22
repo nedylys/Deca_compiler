@@ -1,0 +1,17 @@
+// Description:
+//    Test métamorphique : identités algébriques (version 2).
+//    Doit produire le même résultat que mr_algebric_identities_1.deca
+//    en utilisant des écritures équivalentes (0.0 + 7, etc.).
+//
+// Resultats:
+//    Pas d'erreur. Affiche : 7 (plusieurs fois)
+//    (Identique à mr_algebric_identities_1.deca)
+
+{
+    println(0.0 + 7) ;
+    println(7) ;
+    println(-(7)) ;
+    println(7) ;
+    println(7) ;
+    println(7) ;
+}

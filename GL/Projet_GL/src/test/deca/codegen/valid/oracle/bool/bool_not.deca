@@ -1,0 +1,31 @@
+// Test : bool_not
+// But : tester l'opérateur ! sur une variable booléenne.
+// Couvre : génération de NOT, branchement sur résultat.
+// Résultat attendu : affiche 1, 1, 1.
+
+{
+    boolean a = true ;
+    boolean b = false ;
+    
+    if (!b) {
+        println(1) ;
+    }
+    else {
+        println(0) ;
+    }
+
+    if (!!a) {
+        println(1) ;
+    }
+    else {
+        println(1) ;
+    }
+
+    if (!!!b) {
+        println(1) ;
+    }
+    else {
+        println(0) ;
+    }
+}
+

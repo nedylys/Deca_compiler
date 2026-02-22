@@ -1,0 +1,108 @@
+image: gitlab.ensimag.fr:5050/gl2026/gr8/gl43/deca-maven-ima:latest
+
+stages:
+  - build
+  - test
+  - deploy
+
+variables:
+  DEBIAN_FRONTEND: noninteractive
+
+# enfin j'ai mis ces trucs dans le dockerfile pour eviter de tout re telecharger a chaque build
+#before_script:
+#  - apt-get update -y
+#  - apt-get install -y jq
+
+#build:
+#  stage: build
+#  script:
+#    - mvn -q compile # q for a more easily readable CI (as we skip logs)
+#  rules:
+#    - changes:
+#        - src/main/** # is only executed if a change happens in src/main (in order to save energy)
+
+tests-basic:
+  stage: test
+  script:
+    - mvn -q -e test # src/test/java/** + basic-....sh + common-tests
+
+#common-tests:
+ # stage: test
+  #script:
+   # - ./src/test/script/copy-tests.sh # common-tests (pour qu'il soit visibile)
+
+
+# les tests responsables s'occupent eux meme de la détermination intélligente des fichiers à re tester
+tests-lex:
+  stage: test
+  script:
+    - mvn -q -DskipTests test-compile dependency:build-classpath
+    - ./src/test/script/test_lex_energy.sh
+  artifacts:
+    when: always
+    paths:
+      - src/test/script/report
+
+tests-synt:
+  stage: test
+  script:
+    - mvn -q -DskipTests test-compile dependency:build-classpath
+    - ./src/test/script/test_syntax_energy.sh
+  artifacts:
+    when: always
+    paths:
+      - src/test/script/report
+
+tests-context:
+  stage: test
+  script:
+    - mvn -q -DskipTests test-compile dependency:build-classpath
+    - ./src/test/script/test_context_energy.sh
+  artifacts:
+    when: always
+    paths:
+      - src/test/script/report
+
+tests-codegen:
+  stage: test
+  script:
+    - mvn -q -DskipTests test-compile dependency:build-classpath
+    - ./src/test/script/test_gencode_energy.sh
+  artifacts:
+    when: always
+    paths:
+      - src/test/script/report
+
+tests-differential:
+  stage: test
+  script:
+    - mvn -q -DskipTests test-compile dependency:build-classpath
+    - ./src/test/script/test_differential_energy.sh
+  artifacts:
+    when: always
+    paths:
+      - src/test/script/report
+
+
+pages:
+  stage: deploy
+  when: always
+  script:
+    - mkdir -p public
+    - cp -r src/test/script/report/* public/ || true
+    - |
+      # Générer un fichier index.html avec les bonnes références d'images
+      echo "<html><body>" > public/index.html
+      echo "<h1>Résultats des tests</h1>" >> public/index.html
+
+      # Ajouter les images générées dans le dossier public
+      for img in src/test/script/report/*.svg; do
+        img_name=$(basename "$img")
+        echo "<img src=\"$img_name\" alt=\"$img_name\" /><br>" >> public/index.html
+      done
+
+      echo "</body></html>" >> public/index.html
+  artifacts:
+    paths:
+      - public
+

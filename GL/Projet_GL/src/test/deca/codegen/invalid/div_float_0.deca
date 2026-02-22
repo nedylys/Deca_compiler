@@ -1,0 +1,13 @@
+// Description:
+//    Test de division par zéro avec des float.
+//    Une division par 0.0 en float doit générer une erreur d'overflow.
+//
+// Resultats:
+//    Erreur à l'exécution : division par zéro (overflow pour les float).
+//    Vérifie le branchement vers la bonne étiquette d'erreur.
+
+{
+    float a = 10.0 ;
+    float b = 0.0 ;
+    println(a / b) ;
+}

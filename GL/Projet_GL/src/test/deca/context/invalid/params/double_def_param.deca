@@ -1,0 +1,17 @@
+// Description:
+//    Declaration de parametres
+//
+// Resultats:
+//    Parametre deja declare.
+//    Erreur affichée: Parameter already declared: x
+//
+
+class A {
+    int f(int x, int x) {
+        return x;
+    }
+}
+{
+}
+
+

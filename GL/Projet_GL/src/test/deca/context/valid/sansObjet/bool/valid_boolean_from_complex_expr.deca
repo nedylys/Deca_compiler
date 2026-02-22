@@ -1,0 +1,9 @@
+// Test : valid_boolean_from_complex_expression
+// But : produire un booléen à partir d’une expression arithmétique et relationnelle.
+// Couvre : opérateurs arithmétiques et de comparaison.
+// Résultat attendu : programme valide.
+
+{
+    boolean b;
+    b = (3 + 2) * 2 > 5;
+}

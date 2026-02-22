@@ -1,0 +1,35 @@
+// Description:
+//    Test de méthodes avec plusieurs paramètres.
+//    Une classe Calculette avec sum, multiply et divide (avec vérification div par 0).
+//
+// Resultats:
+//    Pas d'erreur.
+//    - resSum = c.sum(3, 5) = 8
+//    - resMult = c.multiply(4, 2) = 8
+//    - resDiv = c.divide(24, 3) = 8
+//    Affiche : 888
+
+
+class Calculette {
+    int sum(int a, int b) {
+        return a + b ; 
+    }
+    int multiply(int a, int b) {
+        return a * b ;
+    }
+    int divide(int a, int b) {
+        if (b == 0) {
+            println("Division par 0 !") ;
+        }
+        return a / b ;
+    }
+}
+
+{
+    Calculette c = new Calculette() ;
+    int resSum = c.sum(3, 5) ;
+    int resMult = c.multiply(4, 2) ;
+    int resDiv = c.divide(24, 3) ;
+
+    println(resSum, resMult, resDiv) ;
+}

@@ -1,0 +1,19 @@
+class A {
+   int m() 
+   {
+      int a = 1, b = 2, c = 3, d = 4, x ; 
+      x = a + (b + (c + d)) ; 
+      return x ; 
+   }
+}
+
+{
+   A a ; 
+   int x ; 
+
+   a = new A() ; 
+   println("10 -> ", a.m());
+
+   x = 100 + (200 + (300 + a.m())) ; 
+   println("610 -> ", x) ; 
+}

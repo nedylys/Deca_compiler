@@ -1,0 +1,15 @@
+// Description:
+// Test contextuel : appel d'une méthode inexistante.
+//
+// Resultats:
+//    Erreur: Identifier f is not defined
+//    Ligne X: Methode inexistante.
+//
+
+
+class A {
+}
+{
+    A a;
+    a.f();
+}

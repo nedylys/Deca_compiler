@@ -1,0 +1,23 @@
+#!/bin/sh
+set -eu
+
+DECAC_HOME=$(cd "$(dirname "$0")"/../../../ && pwd)
+CP_FILE="$DECAC_HOME"/target/generated-sources/classpath.txt
+
+CP="$DECAC_HOME"/target/classes/:$(cat "$CP_FILE")
+
+# Debug optionnel
+echo "$0" "$@" >> /tmp/decac.txt
+
+# --- Jacoco (optionnel) ---
+# Active l'agent seulement si JACOCO_AGENT_JAR est défini
+# Exemple: export JACOCO_AGENT_JAR="$HOME/.m2/repository/org/jacoco/org.jacoco.agent/0.8.13/org.jacoco.agent-0.8.13-runtime.jar"
+#          export JACOCO_DESTFILE="$DECAC_HOME/target/jacoco.exec"
+JACOCO_OPTS=""
+if [ -n "${JACOCO_AGENT_JAR:-}" ]; then
+  DESTFILE="${JACOCO_DESTFILE:-$DECAC_HOME/target/jacoco.exec}"
+  JACOCO_OPTS="-javaagent:${JACOCO_AGENT_JAR}=destfile=${DESTFILE},append=true"
+fi
+# --------------------------
+
+exec java $JACOCO_OPTS -enableassertions -cp "$CP" fr.ensimag.deca.DecacMain "$@"

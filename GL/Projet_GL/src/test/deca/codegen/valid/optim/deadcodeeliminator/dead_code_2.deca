@@ -1,0 +1,16 @@
+// Description :
+// Test de dead code elimination sur variable jamais utilisée.
+//
+// Résultat attendu (dead code elimination) :
+// - La variable x n’est jamais lue => l’affectation "x = 6" (et potentiellement la déclaration) peut disparaître.
+// - Le programme ne garde que l’affichage println("ok").
+//
+// Remarque :
+// - Si votre compilateur garde les déclarations mais enlève juste le code mort, on doit au minimum ne plus voir
+//   d’instructions de chargement/stockage liées à x.
+
+{
+  int x;
+  x = 6;
+  println("ok");
+}

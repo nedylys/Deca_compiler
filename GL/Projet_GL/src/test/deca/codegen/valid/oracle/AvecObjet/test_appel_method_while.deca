@@ -1,0 +1,38 @@
+// Description:
+//    Test d'appels de méthodes dans une condition de boucle while.
+//    Une classe ComplexWhile contient les méthodes increment et decrement.
+//    La boucle tourne tant que c.increment(x) != 0.
+//    À chaque itération, x oscille entre 0 et 1 jusqu'à atteindre 100000 itérations,
+//    puis x devient -1 pour sortir de la boucle (car c.increment(-1) = 0).
+//
+// Resultats:
+//    Pas d'erreur.
+//    La boucle s'exécute 100000 fois, puis x = c.decrement(c.decrement(1)) = -1.
+//    La condition c.increment(-1) = 0 devient fausse, la boucle s'arrête.
+//    Affiche : Ok, x = -1
+
+
+class ComplexWhile {
+    int increment(int x) {
+        return x + 1 ;
+    }
+
+    int decrement(int x) {
+        return x - 1 ;
+    } 
+}
+
+{
+    ComplexWhile c = new ComplexWhile() ;
+    int x = 1 ; 
+    int nbIter = 0 ;
+    while (c.increment(x) != 0) {
+        x = c.decrement(x) ;    // x = 0
+        x = c.increment(x) ;    // x = 1
+        nbIter = nbIter + 1 ;
+        if (nbIter == 100000) {
+            x = c.decrement(c.decrement(x)) ; // x = 0 puis x = -1 puis x = 0 dans la condition de boucle  
+        }
+    }
+    println("Ok, x = ", x) ;
+}

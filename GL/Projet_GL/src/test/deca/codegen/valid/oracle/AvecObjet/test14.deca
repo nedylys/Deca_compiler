@@ -1,0 +1,24 @@
+// Description:
+//    Test 14 : Polymorphisme.
+//    Classe Forme avec dessiner(), Carre extends Forme avec override.
+//
+// Resultats:
+//    Pas d'erreur. f = new Carre(), f.dessiner() appelle la méthode de Carre.
+//    Affiche : Carre
+
+class Forme {
+    void dessiner() {
+        println("Forme");
+    }
+}
+
+class Carre extends Forme {
+    void dessiner() {
+        println("Carre");
+    }
+}
+
+{
+    Forme f = new Carre();
+    f.dessiner();
+}

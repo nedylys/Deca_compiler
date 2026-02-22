@@ -1,0 +1,12 @@
+// Description:
+//    Test de la grammaire des arbres de syntaxe abstraite
+//    Programme minimaliste testant le non terminal READ_EXPR de la grammaire d'arbre de syntaxe abstraite .
+//
+// Programme syntaxiquement correct.
+//
+// Historique:
+//    cree le 02/01/2026
+{
+  readInt();
+  readFloat();
+}

@@ -1,0 +1,36 @@
+// Description:
+//    Test d'appels de méthodes imbriqués (chaînés) sur un objet.
+//    Une classe Imbriquee contient trois méthodes : increment, double, decrement.
+//    On teste l'évaluation d'une expression complexe avec plusieurs appels
+//    de méthodes imbriqués et des opérations arithmétiques.
+//    Expression : n.decrement(n.increment(n.double(n.increment(n.increment(2))))) + n.increment(n.double(2)) - 1
+//
+// Resultats:
+//    Pas d'erreur.
+//    Calcul : n.increment(2) = 3
+//             n.increment(3) = 4
+//             n.double(4) = 8
+//             n.increment(8) = 9
+//             n.decrement(9) = 8
+//             n.double(2) = 4
+//             n.increment(4) = 5
+//             r = 8 + 5 - 1 = 12
+//    Affiche : 12
+
+class Imbriquee {
+    int increment(int x) {
+        return x + 1 ;
+    }
+    int double(int x) {
+        return 2 * x ;
+    }
+    int decrement(int x) {
+        return x - 1 ; 
+    }
+}
+
+{
+    Imbriquee n = new Imbriquee();
+    int r = n.decrement(n.increment(n.double(n.increment(n.increment(2))))) + n.increment(n.double(2)) - 1 ;
+    println(r);
+}

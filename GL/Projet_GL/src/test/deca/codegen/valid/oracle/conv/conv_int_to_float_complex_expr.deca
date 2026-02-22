@@ -1,0 +1,12 @@
+// Test : conv_int_to_float_complex_expr
+// But : tester plusieurs conversions implicites int -> float dans une même expression.
+// Couvre : conversions multiples, enchaînement opérations float, temporaires, println.
+// Résultat attendu: affiche 0.0.
+
+{
+    int a = 1 ;
+    float b = 2.0 ;
+    int c = 3 ;
+    float d = 0.0 ;
+    println(((a + b) + (c + d)) - ((a + d) + (b + c))) ;
+}

@@ -1,0 +1,10 @@
+// Test : context_invalid_modulo_with_float
+// But : utiliser l’opérateur modulo sur un float.
+// Couvre : typage des opérateurs arithmétiques (% réservé aux int).
+// Résultat attendu : erreur contextuelle.
+// Erreur affichée: Invalid left operand type for modulo operation: expected integer
+
+{
+    float x = 3.0;
+    println(x % 2);
+}

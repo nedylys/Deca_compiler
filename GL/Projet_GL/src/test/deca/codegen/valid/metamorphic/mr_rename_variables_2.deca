@@ -1,0 +1,17 @@
+// Description:
+//    Test métamorphique : renommage de variables (version 2).
+//    Doit produire le même résultat que mr_rename_variables_1.deca
+//    avec des noms de variables renommés.
+//
+// Resultats:
+//    Pas d'erreur. Affiche : 2.0, 3
+//    (Identique à mr_rename_variables_1.deca)
+
+{
+    int a = 1 ; 
+    int b = 2 ; 
+    float x = 0.25 ;
+    float y = 1.75 ; 
+    println(a + b) ;
+    println(x + y) ;
+}

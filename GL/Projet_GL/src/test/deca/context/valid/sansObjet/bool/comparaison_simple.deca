@@ -1,0 +1,9 @@
+// Test : comparison_simple
+// But : tester une comparaison simple entre entiers.
+// Couvre : <, typage boolean.
+// Résultat attendu : compilation sans erreur.
+
+{
+    boolean b;
+    b = 3 < 5;
+}

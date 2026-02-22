@@ -1,0 +1,11 @@
+// Test : arithmetic_float_to_int_assignment
+// But : interdire l’affectation d’une expression float à un int.
+// Couvre : typage des expressions et affectations.
+// Résultat attendu : erreur contextuelle.
+//Erreur affichée: Incompatible assignment: expected  int, got float
+
+{
+    int x;
+    float b = 2;
+    x = 1237 + b;
+}

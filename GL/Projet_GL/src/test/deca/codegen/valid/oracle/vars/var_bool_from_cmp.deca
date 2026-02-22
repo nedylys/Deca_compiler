@@ -1,0 +1,16 @@
+// Test : var_bool_from_cmp
+// But : vérifier la production d'un booléen via une comparaison, stocké dans une variable.
+// Couvre : CMP + branchement, stockage bool, if/else sur variable bool.
+// Résultat attendu : affiche 1.
+{
+    int a = 3 ;
+    int b = 9 ;
+    boolean c = (a < b) ;
+
+    if (c) {
+        println(1) ;
+    } 
+    else {
+        println(0) ;
+    }
+}

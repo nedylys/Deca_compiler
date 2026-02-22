@@ -1,0 +1,25 @@
+// Description:
+//    Test anti-bug pour vérifier que le registre R1 n'est pas écrasé
+//    lors d'une comparaison complexe.
+//
+// Resultats:
+//    Pas d'erreur. x = 777, l'expression ((1+2)+(3+4)+(5+6)+(7+8)) = 36.
+//    36 <= 36 est vrai, donc affiche "777 ok".
+//    Si R1 a été écrasé incorrectement, le dernier print sera faux.
+//    Affiche aussi "ok" à la fin.
+
+
+{
+    int x;
+    x = 777;
+
+    if ( ((1+2)+(3+4)+(5+6)+(7+8))
+         <= ((1+2)+(3+4)+(5+6)+(7+8)) ) {
+        println(x, " ok");
+    } else {
+        println(0);
+    }
+
+    // Si R1 a été écrasé incorrectement, ce print sera faux
+    println("ok");
+}

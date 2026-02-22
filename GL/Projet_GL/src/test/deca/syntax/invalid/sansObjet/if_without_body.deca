@@ -1,0 +1,8 @@
+// Test : syntax_invalid_if_without_body
+// But : interdire un if sans bloc associé.
+// Type d'erreur : erreur syntaxique
+// Résultat attendu : erreur de syntaxe.
+
+{
+    if (true)
+}

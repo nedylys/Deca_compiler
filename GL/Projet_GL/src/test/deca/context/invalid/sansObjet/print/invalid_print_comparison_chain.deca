@@ -1,0 +1,7 @@
+// But : chaîne de comparaisons interdite.
+
+{
+    print(3 < 4 < 5);
+}
+
+//Incompatible types: cannot compare  boolean with int as int is not int/float

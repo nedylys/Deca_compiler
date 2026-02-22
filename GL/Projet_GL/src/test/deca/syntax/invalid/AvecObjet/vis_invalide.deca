@@ -1,0 +1,14 @@
+// Test : fausse visibilité pour les fields
+// But : détecter l'utilisation de public pour la visibilité des fields
+// Type d'erreur : erreur syntaxique
+// Résultat attendu : no viable alternative at input 'publicintx'
+
+
+class Test{
+   public int x;
+
+}
+
+{
+    Test t = new Test();
+}

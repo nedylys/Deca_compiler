@@ -1,0 +1,13 @@
+// Test : control_while_count
+// But : tester une boucle while exécutée un nombre fixe de fois.
+// Couvre : étiquettes, mise à jour compteur, ordre d'exécution.
+// Résultat attendu : affiche 0, 1, 2, puis 3.
+
+{
+    int i = 0 ;
+    while (i < 3) {
+        println(i) ;
+        i = i + 1 ;
+    }
+    println(i) ;
+}

@@ -1,0 +1,32 @@
+// Description :
+// Test dead code elimination + constant folding sur conditions constantes dans if/while.
+//
+// Résultat attendu :
+// - (5+2>3) est constant et vrai => suppression de la branche else (x=2).
+// - (2*2==5) est constant et faux => suppression complète de la boucle while
+//   (donc pas de readInt(), pas de println("dead")).
+// - Il reste l’affectation x=1 (dans le if vrai) puis println("end").
+//
+// Remarques :
+// - Constant folding : (5+2>3) et (2*2==5) doivent être évalués à la compilation.
+// - Si suppression variable non utilisée : x n’est jamais lu après => x=1 et même x peuvent disparaître complètement.
+
+class A {
+  void f() {
+    int x;
+    if (5+2>3) {       // true
+      x = 1;
+    } else {
+      x = 2;
+    }
+
+    while (2*2==5) {   // false
+      x = readInt();
+      println("dead");
+    }
+    println("end");
+  }
+}
+{
+  new A().f();
+}

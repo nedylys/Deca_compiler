@@ -1,0 +1,10 @@
+// Test : arith_float_priorite
+// But : vérifier la priorité * et / sur +  et - en float (sans parenthèsage)
+// Couvre : AST float, MUL DIV puis ADD SUB, println.
+// Résultat attendu : affiche 5.0, -0.5, 17.5.
+
+{
+    println(1.0 + 2.0 * 2.0) ;
+    println(2.5 - 1.5 / 0.5) ;
+    println(10.0 + 2.5 - 2.5 / 0.5 * -1) ;
+}

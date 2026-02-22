@@ -1,0 +1,11 @@
+// Test : if_simple_condition
+// But : tester une condition simple dans un if.
+// Couvre : comparaison, branchement conditionnel.
+// Résultat attendu : compilation sans erreur.
+
+{
+    int a;
+    if (a == 0) { //commentaire
+        a = 1;
+    }
+}

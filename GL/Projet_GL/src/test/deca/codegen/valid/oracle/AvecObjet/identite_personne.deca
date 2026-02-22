@@ -1,0 +1,221 @@
+// Description:
+//    Test complet de programmation orientée objet avec héritage.
+//    Modélise des personnes (Homme, Femme) avec calcul d'IMC,
+//    vérification de majorité, et regroupement en Famille.
+//    Teste : héritage, polymorphisme, override de méthodes,
+//    getters/setters, conditions, boucles while, et appels de méthodes chaînés.
+//
+// Resultats:
+//    Pas d'erreur. Affiche :
+//    - La personne est un homme âgé de 32 ans. Il fait 190.7 cm et pèse 75 kg
+//    - La personne est une femme âgée de 30 ans. Elle fait 170 cm et pèse 55.5 kg
+//    - La personne est âgée de 13 ans. Elle fait 30.0 cm et pèse 123.7 kg
+//    - L'homme a un poids normal
+//    - La femme est majeure
+//    - IMC correct
+//    - Famille de 4 membres
+//    - On recense le membre 1
+//    - On recense le membre 2
+//    - On recense le membre 3
+//    - On recense le membre 4
+//    - Les enfants sont des jumeaux
+
+class Personne {
+    int age ;
+    float poids ;
+    float taille ;
+
+    // getter et setter 
+    void setAge(int age) {
+        if (age < 0) {
+            println("L'âge ne peut être négatif !") ;
+        }
+        this.age = age ;
+    }
+    
+    void setPoids(float poids) {
+        if (poids < 0.0) {
+            println("Le poids ne peut être négatif") ;
+        }
+        this.poids = poids ;
+    }
+
+    void setTaille(float taille) {
+        if (taille <= 0) {
+            println("La taille ne peut être négative") ;
+        }
+        this.taille = taille ;
+    }
+
+    int getAge() {
+        return age ;
+    }
+
+    float getPoids() {
+        return poids ;
+    }
+
+    float getTaille() {
+        return this.taille ;
+    }
+
+    // calcule l'imc de la personne 
+    float computeIMC() {
+        return ((poids * 10000.0) / (taille * taille)) ; 
+    }
+
+    // voir si personne obese, en sous / sur poids, etc
+    boolean isEnSousPoids() {
+        return computeIMC() < 18.5 ;
+    }
+
+    boolean isNormal() {
+        return this.computeIMC() >= 18.5 && computeIMC() <= 24.9 ;
+    }
+
+    boolean isEnSurpoids() {
+        return computeIMC() > 24.9 && this.computeIMC() <= 29.9 ;
+    }
+
+    boolean isObese() {
+        // obésité "simple" : (29.9, 34.9]
+        return this.computeIMC() > 29.9 && this.computeIMC() <= 34.9 ;
+    }
+
+    boolean isTropObese() {
+        if (this.computeIMC() > 34.9 && this.computeIMC() <= 39.9) {
+            return true ;
+        }
+        return false ;
+    }
+
+    // majeure / mineure ?
+    boolean isMajeure() {
+        return age >= 18 ;
+    }
+
+    boolean isMineure() {
+        return 18 > this.age ;
+    }
+
+    // afficher infos personne
+    void toString() {
+        println("La personne est âgée de ", age, " ans. Elle fait ", taille, " cm et pèse ", poids, " kg") ;
+    }
+}
+
+class Homme extends Personne {
+    // override de toString() 
+    void toString() {
+        println("La personne est un homme âgé de ", age, " ans. Il fait ", taille, " cm et pèse ", poids, " kg") ;
+    }
+}
+
+class Femme extends Personne {
+    void toString() {
+        println("La personne est une femme âgée de ", age, " ans. Elle fait ", taille, " cm et pèse ", poids, " kg") ;
+    }
+}
+
+class Famille {
+    Femme f = new Femme() ;
+    Homme h = new Homme() ;
+    Personne enfant1 = new Personne() ;
+    Personne enfant2 = new Personne() ;
+
+    int getNbMembers() {
+        return 4 ; 
+    }
+
+    Femme getFemme() {
+        return f ;
+    }
+
+    Homme getHomme() {
+        return h ;
+    }
+
+    Personne getEnfant1() {
+        return enfant1 ;
+    }
+
+    Personne getEnfant2() {
+        return this.enfant2 ;
+    }
+}
+
+{
+    Homme homme = new Homme() ;
+    Femme femme = new Femme() ;
+    Personne lambda = new Personne() ;
+    Famille famille = new Famille() ;
+    int i = 0 ;
+    float imcLambda  ;
+
+    // on initialise les champs 
+    homme.setAge(32) ;
+    homme.setPoids(75.0) ;
+    homme.setTaille(190.7) ;
+
+    femme.setAge(30) ;
+    femme.setTaille(170.0) ;
+    femme.setPoids(55.5) ;
+
+    lambda.setAge(13) ;
+    lambda.setPoids(30.0) ; 
+    lambda.setTaille(123.7) ;
+
+    // on remplit la famille
+    famille.f = femme ; 
+    famille.h = homme ;
+    famille.enfant1 = lambda ;
+    famille.enfant2 = lambda ;
+
+    // affichage des infos de chaque personne
+    homme.toString() ;
+    femme.toString() ;
+    lambda.toString() ;
+
+    if (homme.isEnSousPoids()) {
+        println("L'homme est en sous-poids") ;
+    }
+    else if (homme.isEnSurpoids()) {
+        println("L'homme est en sur-poids") ;
+    }
+    else if (homme.isNormal()) {
+        println("L'homme a un poids normal") ;
+    }
+    else if (homme.isObese()) {
+        println("L'homme est obèse") ;
+    }
+    else if (homme.isTropObese()) {
+      println("L'homme est en trop obèse") ;
+    }
+
+    if (femme.isMineure()) {
+        println("La femme est mineure") ;
+    }
+    else {
+        println("La femme est majeure") ;
+    }
+
+    imcLambda = lambda.computeIMC() ;
+    if (imcLambda == 0) {
+        println("IMC incorrect") ;
+    }
+    else {
+        println("IMC correct") ;
+    }
+
+    println("Famille de ", famille.getNbMembers(), " membres") ;
+    while (famille.getNbMembers() != i) {
+        i = i + 1 ;
+        println("On recense le membre ", i) ;
+    }
+
+    if (famille.getEnfant1().getAge() == famille.getEnfant2().getAge()) {
+        println("Les enfants sont des jumeaux") ;
+    }
+
+    
+}

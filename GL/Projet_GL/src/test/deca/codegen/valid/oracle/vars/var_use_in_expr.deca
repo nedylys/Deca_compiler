@@ -1,0 +1,10 @@
+// Test : var_use_in_expr
+// But : vérifier l'utilisation de variables dans une expression arithmétique.
+// Couvre : LOAD de plusieurs variables, calcul en registres, stockage du résultat, println.
+// Résultat attendu : affiche 17.
+{
+    int a = 5 ;
+    int b = 12 ;
+    int c = a + b ;
+    println(c) ;
+}

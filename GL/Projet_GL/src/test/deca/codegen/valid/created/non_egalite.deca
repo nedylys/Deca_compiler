@@ -1,0 +1,16 @@
+// Description:
+//    Test de l'opérateur de non-égalité (!=).
+//
+// Resultats:
+//    Pas d'erreur. a = 3, b = 2, donc a != b est vrai. Affiche "Ok".
+
+{
+    int a = 3 ;
+    int b = 2 ;
+    if (a != b) {
+        println("Ok") ;
+    }
+    else {
+        println("Pas ok") ;
+    }
+}

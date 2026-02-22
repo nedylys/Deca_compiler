@@ -1,0 +1,12 @@
+// Description:
+//    Test d'overflow lors de la multiplication de deux entiers.
+//    50000 * 50000 = 2500000000, qui dépasse la capacité d'un int 32 bits.
+//
+// Resultats:
+//    Erreur à l'exécution : overflow lors de la multiplication.
+
+{
+    int x = 50000 ;
+    int y = 50000 ;
+    println(x * y) ;
+}

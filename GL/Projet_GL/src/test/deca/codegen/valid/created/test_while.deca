@@ -1,0 +1,28 @@
+// Description:
+//    Test du bon comportement d'une boucle while : condition évaluée à chaque tour
+//    de boucle, i correctement incrémenté, s correctement modifié.
+//
+// Resultats:
+//    Pas d'erreur.
+//    - i avant boucle while = 1
+//    - i après boucle while = 11
+//    - ok (car i == 11)
+//    - Somme de 1 à 10 = 55
+
+{
+    int i = 1 ;
+    int s = 0 ;
+    println("i avant boucle while = ", i) ;
+    while (i <= 10) {
+        s = s + i ; 
+        i = i + 1 ;
+    }
+    println("i apres boucle while = ", i) ;//
+    if (i == 11) {
+        println("ok"); 
+    }
+    else {
+        println("pas ok") ;
+    }
+    println("Somme de 0 à 10 = ", s) ;
+}

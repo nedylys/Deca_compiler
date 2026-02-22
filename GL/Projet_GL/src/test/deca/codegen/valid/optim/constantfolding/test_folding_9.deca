@@ -1,0 +1,13 @@
+// Description :
+// Test de constant folding avec résultat négatif.
+//
+// Resultats :
+// 0-(3+4) est plié à -7 : chargement immédiat de -7 (LOAD #-7, R2),
+// sans ADD/SUB associées au calcul.
+
+{
+  int a;
+  a = 0 - (3 + 4);
+  println(a);
+}
+

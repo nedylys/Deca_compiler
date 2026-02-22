@@ -1,0 +1,17 @@
+// Description:
+//    Test de robustesse de gestion des registres/piles (option -r 4)
+//    via l'évaluation d'une condition complexe dans une boucle while utilisant
+//    les 3 opérateurs logiques : && (et), || (ou), ! (non).
+//    Condition : i < 4 et i < 16 ou i == i (toujours vrai) donc : i < 4.
+//
+// Resultats:
+//    Pas d'erreur. Affiche 0, 1, 2, 3, puis "ok".
+
+{
+  int i = 0;
+  while ( !((i+1) >= 5) && (((i+10) < (20 + (1+2+3))) || ((i+2) == (i+3-1))) ) {
+    println(i);
+    i = i + 1;
+  }
+  println("ok");//
+}

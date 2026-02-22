@@ -1,0 +1,16 @@
+// Test : cast_upcast_explicit
+// But : vérifier qu’un cast explicite B -> A (upcast) est accepté.
+// Couvre : relation de sous-typage, conversion vers super-classe.
+// Résultat attendu : compilation sans erreur.
+
+class A {}
+class B extends A {}
+
+{
+    B b;
+    A a;
+
+    b = new B();
+    a = (A) (b);
+
+}

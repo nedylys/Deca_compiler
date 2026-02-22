@@ -1,0 +1,28 @@
+// Description:
+//    Test de la méthode equals dans une condition de boucle while.
+//    Deux objets A initialement égaux (même référence), puis b devient un nouvel objet.
+//
+// Resultats:
+//    Pas d'erreur. La boucle s'exécute 3 fois (tant que a.equals(b) est vrai),
+//    puis b = new A() rend a.equals(b) faux.
+//    Affiche : "encore en boucle" (3 fois), puis "sortie de boucle"
+
+
+class A {
+    int a ;
+}
+
+{
+    A a = new A() ;
+    A b = a ;
+    int i = 0 ;
+    while (a.equals(b)) {
+        println("encore en boucle") ;
+        i = i + 1 ;
+        if (i == 3) {
+            b = new A() ;
+        }
+    }
+    println("sortie de boucle") ;
+}
+

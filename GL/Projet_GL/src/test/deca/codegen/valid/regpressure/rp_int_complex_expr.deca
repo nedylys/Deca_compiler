@@ -1,0 +1,15 @@
+// Test : rp_int_complex_exp
+// à tester surtout avec l'option -r (c'est plus parlant)
+// But : mettre une forte pression sur les registres avec une expression 
+// entière profonde.
+// Couvre : plusieurs temporaires, évaluation gauche/droite, ADD/MUL/SUB/DIV, push/pop éventuels.
+// Résultat attendu : affiche 707.
+
+{
+    int x = ((((1 + 2) * (3 + 4)) + ((5 + 6) * (7 + 8))) * (((9 + 1) * (2 + 3)) + ((4 + 5) * (6 + 7)))) / ((8 + 7) + (6 + 5) + (4 + 3)) ;
+
+    int y = 1000 - (7 * 100 + 6 * 10 + 6) ; 
+
+    println(x - y) ;
+}
+

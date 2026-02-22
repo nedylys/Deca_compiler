@@ -1,0 +1,38 @@
+// Description:
+//    Test exhaustif de construction des tables virtuelles (vtables).
+//    Chaîne d'héritage A→B→C→D avec overrides et nouvelles méthodes à chaque niveau.
+//    Vérifie que les indices des méthodes sont correctement maintenus.
+//
+// Resultats:
+//    Pas d'erreur. Le programme compile et s'exécute correctement.
+//    Les vtables sont construites avec les bons indices pour les méthodes.
+
+
+class A {
+    void m1() { }
+    void m2() { }
+    void m3() { }
+}
+
+
+class B extends A {
+    void m2() { }   // override
+    void b1() { }   // new
+    void b2() { }   // new
+}
+
+class E{
+    void e(){}
+}
+class C extends B {
+    void m1() { }   // override de A.m1
+    void b2() { }   // override de B.b2
+    void c1() { }   // new
+}
+class D extends C {
+    void m2() { }   // override en cascade (A puis B puis D)
+    boolean equals(Object other) { }  // override de Object.equals
+    void d1() { }   // new
+}
+
+{ }

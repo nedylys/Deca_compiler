@@ -1,0 +1,8 @@
+// Test : arith_int_left_associativity
+// But : vérifier l'associativité à gauche de -.
+// Couvre : parsing/AST, enchaînement SUB, temporaires.
+// Résultat attendu : affiche 5.
+
+{
+    println(10 - 3 - 2) ;
+}

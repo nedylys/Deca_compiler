@@ -1,0 +1,9 @@
+// Test : boolean_and_expression
+// But : tester l’opérateur logique &&.
+// Couvre : booléens, opérateur AND.
+// Résultat attendu : compilation sans erreur.
+
+{
+    boolean b;
+    b = true && false;
+}

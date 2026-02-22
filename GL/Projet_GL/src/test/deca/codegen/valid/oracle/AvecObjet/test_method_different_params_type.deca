@@ -1,0 +1,20 @@
+// Description:
+//    Test de méthode avec paramètres de types différents (float et int).
+//    Une classe Polynome2D qui évalue a*n*n + b*n + c.
+//
+// Resultats:
+//    Pas d'erreur.
+//    res = p.evalN(1.0, 1.0, 1.0, 2) = 1.0*2*2 + 1.0*2 + 1.0 = 4 + 2 + 1 = 7.0
+//    Affiche : 7.0
+
+class Polynome2D {
+    float evalN(float a, float b, float c, int n) {
+        return (a * n * n) + (b * n) + c ;
+    }
+}
+
+{
+    Polynome2D p = new Polynome2D() ;
+    float res = p.evalN(1.0, 1.0, 1.0, 2) ;
+    println(res) ;
+}

@@ -1,0 +1,10 @@
+// Description:
+//    Test d'affichage de littéraux float positif et négatif.
+//
+// Resultats:
+//    Pas d'erreur. Affiche 4.5 puis -2.1.
+
+{
+    println(4.5);
+    print(-2.1) ;//
+}

@@ -1,0 +1,9 @@
+// Test : undefined_type
+// But : détecter l’utilisation d’un type non défini.
+// Couvre : environnement des types.
+// Résultat attendu : erreur contextuelle.
+// Erreur affichée: Type uint is not defined in the environmentType
+
+{
+    uint a = 3;
+}

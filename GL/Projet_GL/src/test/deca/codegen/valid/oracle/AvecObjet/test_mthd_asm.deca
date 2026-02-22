@@ -1,0 +1,31 @@
+// Test simpliste pour tester l'utilisation des méthodes asm
+// Les instructions sont plutôt simple afin de génerer .ass valide
+
+class A {
+    int i = 8;
+
+    void setI(int i){
+        this.i = i;
+    }     
+    
+    void asmA() asm("WSTR \"JE SUIS UN A \"");
+}
+
+class B {
+    int i = 17;
+
+    void asmB() asm("WSTR \"JE SUIS UN B \"");
+
+    void printvalI() asm("LOAD #17,R15
+    LOAD R15,R1
+    WINT");
+}
+
+{ 
+    A a = new A();
+    B b = new B();
+
+    a.asmA();
+    b.asmB();
+    b.printvalI(); 
+}

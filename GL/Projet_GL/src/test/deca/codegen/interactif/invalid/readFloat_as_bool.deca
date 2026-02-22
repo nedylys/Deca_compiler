@@ -1,0 +1,16 @@
+// Description:
+//    Lecture, booléens et court-circuit
+//
+// Resultats:
+//    Erreur contextuelle : l'opérateur && attend des booléens, readFloat() est de type float.
+// 
+// Historique:
+//    cree le 01/01/2026
+
+{
+    boolean b;
+    b = readFloat() && false ;
+    if (!b) {
+        println("ok") ;
+    }
+}

@@ -1,0 +1,32 @@
+// Description :
+// Test combiné de Constant Propagation et Dead Store Elimination,
+// dans un programme avecobjets.
+//
+// Résultat attendu après optimisations :
+// - Aucune optimisation ne doit etre faite par DeadStoreOptimization et ConstantPropagation.
+//
+// Remarques :
+// - Constant propagation : c reçoit directement la valeur 3.
+// - Dead store elimination : a et b peuvent être totalement éliminées.
+// - Test volontairement simple, sans objets, pour isoler le comportement
+//   des optimisations.
+//
+// Sortie attendue :
+// 42
+
+class A {
+    void run() {
+        int a;
+        int b;
+
+        a = 42;  
+        b = a; 
+        a = 100;
+        println(b);
+    }
+}
+
+{
+    A t = new A();
+    t.run();
+}

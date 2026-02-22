@@ -1,0 +1,12 @@
+// Test : simple_method_ok
+// But : vérifier une définition simple de méthode dans une classe.
+// Couvre : déclaration de classe + méthode.
+// Résultat attendu : compilation sans erreur.
+
+class A {
+    int f() {
+        return 1;
+    }
+}
+{
+}

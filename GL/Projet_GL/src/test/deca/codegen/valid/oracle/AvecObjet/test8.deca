@@ -1,0 +1,19 @@
+// Description:
+//    Test 8 : Méthode avec plusieurs paramètres.
+//    Classe Calc avec méthode add(int a, int b) qui retourne a + b.
+//
+// Resultats:
+//    Pas d'erreur. c.add(5, 7) = 12.
+//    Affiche : 5 + 7 = 12
+
+class Calc {
+    int add(int a, int b) {
+        return a + b;
+    }
+}
+
+{
+    Calc c = new Calc();
+    int r = c.add(5, 7);
+    println("5 + 7 = ", r);
+}

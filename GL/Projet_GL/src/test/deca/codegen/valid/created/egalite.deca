@@ -1,0 +1,16 @@
+// Description:
+//    Test de l'opérateur d'égalité (==).
+//
+// Resultats:
+//    Pas d'erreur. a = 3, b = 3, donc a == b est vrai. Affiche "Ok".
+
+{
+    int a = 3 ; 
+    int b = 3 ;
+    if (a == b) {
+        println("Ok") ;
+    }
+    else {
+        println("Pas ok") ;
+    }
+}

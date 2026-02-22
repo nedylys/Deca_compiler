@@ -1,0 +1,22 @@
+// Description:
+//    Test de comparaison complexe dans une condition if.
+//    Compare (a+b) * (c+d) avec une expression arithmétique complexe.
+//
+// Resultats:
+//    Pas d'erreur. Avec a=1, b=2, c=3, d=4 : (3)*(7)=21.
+//    L'expression droite vaut ((11)+(22)) - ((33)+(44)) = 33 - 77 = -44.
+//    21 < -44 est faux, donc affiche 222.
+
+
+{
+  int a = 1;
+  int b = 2;
+  int c = 3;
+  int d = 4;
+
+  if ( ((a+b) * (c+d)) < (((a+10)+(b+20)) - ((c+30)+(d+40))) ) {
+    println(111);
+  } else {
+    println(222);
+  }
+}

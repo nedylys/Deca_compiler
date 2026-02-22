@@ -1,0 +1,25 @@
+// Description:
+//    Test 12 : Méthode retournant un float.
+//    Classe FloatBox avec set(float) et get() retournant float.
+//
+// Resultats:
+//    Pas d'erreur. fb.set(3.14), fb.get() = 3.14.
+//    Affiche : f = 3.14
+
+class FloatBox {
+    float f;
+    
+    void set(float v) {
+        f = v;
+    }
+    
+    float get() {
+        return f;
+    }
+}
+
+{
+    FloatBox fb = new FloatBox();
+    fb.set(3.14);
+    println("f = ", fb.get());
+}

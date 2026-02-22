@@ -1,0 +1,10 @@
+// Test : compare_int_and_string
+// But : interdire la comparaison entre int et string.
+// Couvre : opérateurs relationnels.
+// Résultat attendu : erreur contextuelle.
+// Erreur affichée: Incompatible types: cannot compare  int with string as string is not int/float
+
+{
+    boolean a;
+    a = 3 < "hello";
+}

@@ -1,0 +1,13 @@
+// Description :
+// Test contextuel : cast explicite d'un int vers une classe (A).
+//
+// Résultat attendu :
+// Erreur contextuelle : cast impossible (type source int incompatible avec type cible A).
+// Localisation : ligne du cast.
+
+class A {}
+
+{
+    int x = 1;
+    A a = (A) (x);
+}

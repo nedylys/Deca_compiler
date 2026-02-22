@@ -1,0 +1,9 @@
+// Test : print_invalid_expression
+// But : interdire l’impression d’une expression booléenne invalide.
+// Couvre : vérification des arguments de print.
+// Résultat attendu : erreur contextuelle.
+// Erreur affichée: Invalid right operand type for boolean operation: expected boolean
+
+{
+    print(true && 3);
+}

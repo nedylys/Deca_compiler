@@ -1,0 +1,16 @@
+// Test : manque de l'accolade fermante pour la décl de class
+// But : détecter quand il n'y a pas d'accolade fermante pour la déclaration de 
+// classe
+// Type d'erreur : erreur syntaxique
+// Résultat attendu : missing '}' at '{'
+
+
+class Point2D{
+   float x;
+   float y;
+
+
+
+{
+    Point2D a = new Point2D();
+}

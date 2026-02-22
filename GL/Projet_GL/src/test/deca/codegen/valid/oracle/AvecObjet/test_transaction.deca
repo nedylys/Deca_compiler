@@ -1,0 +1,83 @@
+// Description:
+//    Test de simulation bancaire avec compte, virements et retraits.
+//    Une classe CompteBancaire avec méthodes de gestion de solde,
+//    vérification de solde suffisant, retrait et virement.
+//
+// Resultats:
+//    Pas d'erreur. Affiche :
+//    - Solde initial = 200
+//    - Solde insuffisant, il vous faut : 50
+//    - Virement réussi
+//    - Nombre de retraits total jusqu'à épuisement : 10 (1000/100)
+
+class CompteBancaire {
+    int numCompte ;
+    int soldeCourant ;
+
+    void setSoldeInit(int s) {
+        soldeCourant = s ;
+    }
+
+
+
+    int getSoldeCourant() {
+        return this.soldeCourant ;
+    }
+
+    void verserDansCompte(int depot) {
+        soldeCourant = soldeCourant + depot ;
+    }
+
+    boolean soldeSuffisant(int montant) {
+        if (getSoldeCourant() >= montant) {
+            return true ;
+        }
+        else {
+            return false ;
+        }
+    }
+
+    boolean retirerArgent(int montant) {
+        if (soldeSuffisant(montant)) {
+            soldeCourant = soldeCourant - montant ;
+            return true ;
+        }
+        else {
+            return false ;
+        }
+    }
+
+    boolean faireVirement(int montant) {
+        return retirerArgent(montant) ;
+    }
+}
+
+{
+    CompteBancaire c = new CompteBancaire() ;
+    int nbRetrait = 0 ;
+    int diff = 0 ;
+    c.setSoldeInit(200) ;
+    println("Solde initial = ", c.getSoldeCourant()) ;
+    if (c.faireVirement(250)) {
+        println("Un virement a été fait d'un montant de : ", 250) ;
+    }
+    else {
+        diff = 250 - c.getSoldeCourant() ;
+        println("Solde insuffisant, il vous faut : ", diff) ;
+        c.verserDansCompte(diff) ;
+        if (c.faireVirement(250)) {
+            println("Virement réussi") ;
+        }
+        else {
+            println("Différentiel rajouté insuffisant") ;
+        }
+    }
+
+    c.soldeCourant = 1000 ;
+
+    while (c.soldeSuffisant(100)) {
+        c.retirerArgent(100) ;
+        nbRetrait = nbRetrait + 1 ;
+    }
+    println("Nombre de retraits total jusqu'à épuisement : ", nbRetrait) ;
+}

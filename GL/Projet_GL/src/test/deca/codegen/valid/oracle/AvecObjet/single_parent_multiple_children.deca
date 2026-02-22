@@ -1,0 +1,90 @@
+// Description:
+//    Ce test comprend plusieurs classes qui sont toutes sous-classes
+//    d'une même et unique classe (Point4D).
+//    On teste ici la bonne correspondance entre les indices des méthodes
+//    dans la table des méthodes et la gestion des registres pour les méthodes.
+//    Modélise des points de différentes dimensions (4D, 3D, 2D, 1D).
+//
+// Resultats:
+//    Pas d'erreur. Affiche : (1.0,1.0,1.0,1.0)
+//    Les classes Point3D, Point2D, Point1D héritent de Point4D
+//    avec des dimensions nulles par défaut.
+
+class Point4D {
+    float w ;
+    float x ;
+    float y ;
+    float z ;
+
+    void setW(float w1) {
+        this.w = w1 ; 
+    }
+
+    void setX(float x1) {
+        this.x = x1 ;
+    }
+
+    void setY(float y1) {
+        this.y = y1 ; 
+    }
+
+    void setZ(float z1) {
+        this.z = z1 ;
+    }
+
+    float getW() {
+        return w ;
+    }
+
+    float getX() {
+        return x ;
+    }
+
+    float getY() {
+        return y ;
+    }
+
+    float getZ() {
+        return z ; 
+    }
+
+    // Override de equals
+    boolean equals(Object p) {
+        //return (this.w == p.w) && (this.x == p.x) && (this.y == p.y) && (this.z == p.z) ;
+    }
+
+    void toString() {
+        println("(", this.w, ",", this.x, ",", this.y, ",", this.z, ")") ;
+    }
+}
+
+
+class Point3D extends Point4D {
+    float w ; 
+    float x ;
+    float y ;
+    float z = 0 ; // dimension nulle
+}
+
+class Point2D extends Point4D {
+    float w ;
+    float x ; 
+    float y = 0 ;
+    float z = 0 ;
+}
+
+class Point1D extends Point4D {
+    float w ; 
+    float x = 0 ;
+    float y = 0 ;
+    float z = 0 ;
+}
+
+{
+    Point4D p4D = new Point4D() ;
+    p4D.setW(1) ;
+    p4D.setX(1) ;
+    p4D.setY(1) ;
+    p4D.setZ(1) ;
+    p4D.toString() ;
+}

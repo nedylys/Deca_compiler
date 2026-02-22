@@ -1,0 +1,17 @@
+// Description:
+//    Test 2 : Classe avec champ et accès.
+//    Création d'un objet Acces, affectation et lecture d'un champ.
+//
+// Resultats:
+//    Pas d'erreur. c.value = 1.
+//    Affiche : Valeur: 1
+
+class Acces {
+    int value;
+}
+
+{
+    Acces c = new Acces();
+    c.value = 1;
+    println("Valeur: ", c.value);
+}

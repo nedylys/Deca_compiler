@@ -1,0 +1,23 @@
+// Description :
+// Test de dead code elimination sur affectation écrasée (dead store) dans une méthode.
+//
+// Résultat attendu (dead store elimination) :
+// - x = 1 est écrasé par x = 2 avant tout usage => la première affectation peut être supprimée.
+// - Le reste (println("ok")) doit rester.
+//
+// Remarque :
+// - Suppression variable non utilisée : x n’est jamais lu => selon vos optims, "x = 2" (et même x) peut aussi disparaître.
+
+class A {
+  int f() {
+    int x;
+    x = 1;
+    x = 2;
+    println("ok");
+  }
+}
+
+{
+  A a = new A();
+  a.f();
+}

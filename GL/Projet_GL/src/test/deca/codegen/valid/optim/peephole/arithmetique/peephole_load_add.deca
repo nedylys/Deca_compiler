@@ -1,0 +1,10 @@
+// Test : peephole_load_add
+// But : tester la performance du Peephole optimizer dans le cas
+//      d’additions constantes successives
+// Couvre : le cas de LOAD suivis de ADD immédiats optimisables (après des éventuels STORE)
+// Résultat attendu : 11
+
+
+{
+    println((1 + 2) + 3 + 5) ;
+}

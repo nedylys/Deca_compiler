@@ -1,0 +1,10 @@
+// Test : print_multi_args
+// But : tester println  et print avec plusieurs arguments hétérogènes (string + int).
+// Couvre : ordre d'évaluation des arguments, appels successifs de print.
+// Résultat attendu : affiche "int(x) = 7, mais, float(x) = 7.0", puis "123 ...n | 15.2525".
+
+{
+    println("int(x) = ", 7, ", mais, float(x) = ", 7.0) ;
+    print(1, 2, 3, "...n | ", 15.25, " ") ;
+    println(25) ;
+}

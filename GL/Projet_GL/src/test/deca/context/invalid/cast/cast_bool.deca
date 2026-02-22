@@ -1,0 +1,11 @@
+// Description :
+// Test contextuel : cast explicite d'un boolean vers int.
+//
+// Resultats :
+// Erreur contextuelle
+// Ligne 10 : cast impossible : type source boolean incompatible avec le type cible int.
+
+{
+    boolean b = true;
+    int x = (int) (b);
+}

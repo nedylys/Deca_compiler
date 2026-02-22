@@ -1,0 +1,12 @@
+// Description:
+//    Heritage invalide
+//
+// Resultats:
+//    Ligne 7: Le type int n'est pas une classe.
+//
+
+class A extends int {
+}
+
+{
+}

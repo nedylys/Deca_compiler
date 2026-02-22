@@ -1,0 +1,11 @@
+// Test : instanceof_same_class
+// But : vérifier instanceof sur une instance de la même classe.
+// Couvre : instanceof, types objets, affectation d’un booléen.
+// Résultat attendu : compilation sans erreur.
+// Exécution attendue : l’expression vaut true.
+
+class A {}
+
+{
+    boolean b = (new A() instanceof A);
+}

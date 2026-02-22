@@ -1,0 +1,9 @@
+// Test : syntax_invalid_incomplete_assignment
+// But : interdire une expression incomplète après un opérateur.
+// Type d'erreur : erreur syntaxique
+// Résultat attendu : erreur de syntaxe.
+
+{
+    int a;
+    a == ;
+}

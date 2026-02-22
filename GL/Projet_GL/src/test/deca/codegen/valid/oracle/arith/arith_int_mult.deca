@@ -1,0 +1,15 @@
+// Test : arith_int_mult
+// But : tester la multiplication d'entiers.
+// Couvre : MUL, temporaires, println.
+// Résultat attendu : affiche 42, 42, -42, 0, -7.
+{
+    int a = 6 ;
+    int b = 7 ;
+    int c = 0 ;
+    int d = -1 ;
+    println(a * b) ;
+    println(-a * -b) ;
+    println(-b * a) ;
+    println(c * a) ;
+    println(d * b) ;
+}

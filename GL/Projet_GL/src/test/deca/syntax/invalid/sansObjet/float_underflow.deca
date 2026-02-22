@@ -1,0 +1,8 @@
+// Test : Underflow de float
+// But : interdire les underflows de float.
+// Type d'erreur : erreur syntaxique
+// Résultat attendu : Float underflow
+
+{
+  float x = 1.4012984e-48;
+}

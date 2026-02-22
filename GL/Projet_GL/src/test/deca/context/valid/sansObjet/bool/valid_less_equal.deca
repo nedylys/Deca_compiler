@@ -1,0 +1,9 @@
+// Test : valid_less_equal_operator
+// But : autoriser l’opérateur <= entre entiers.
+// Couvre : opérateur relationnel.
+// Résultat attendu : programme valide.
+
+{
+    boolean b;
+    b = 3 <= 4;
+}

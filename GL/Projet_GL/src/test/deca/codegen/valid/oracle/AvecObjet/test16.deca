@@ -1,0 +1,20 @@
+// Description:
+//    Test 16 : Champ initialisé.
+//    Classe Init avec champ x initialisé à 10 et getter.
+//
+// Resultats:
+//    Pas d'erreur. i.getX() = 10 (valeur d'initialisation).
+//    Affiche : x init = 10
+
+class Init {
+    int x = 10;
+    
+    int getX() {
+        return x;
+    }
+}
+
+{
+    Init i = new Init();
+    println("x init = ", i.getX());
+}

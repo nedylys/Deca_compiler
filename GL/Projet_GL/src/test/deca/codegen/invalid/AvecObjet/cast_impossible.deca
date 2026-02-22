@@ -1,0 +1,22 @@
+// Description:
+//    Test de cast 
+//
+// Resultats:
+//    Erreur à l'exécution : Cast Impossible
+
+class A{
+    int x;
+}
+
+class B extends A{
+    int y;
+}
+
+class C extends A{
+    int z;
+}
+
+{
+   A c = new C();
+   B b = (B) (c);
+}

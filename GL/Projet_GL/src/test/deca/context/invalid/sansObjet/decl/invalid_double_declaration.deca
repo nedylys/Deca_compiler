@@ -1,0 +1,11 @@
+// Test : double_variable_declaration
+// But : interdire la double déclaration d’une variable.
+// Couvre : environnement des variables, détection des doublons.
+// Résultat attendu : erreur contextuelle.
+// Erreur affichée: Variable already declared: a
+
+{
+    int a;
+    int a;
+}
+

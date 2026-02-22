@@ -1,0 +1,10 @@
+// Test : var_assign_float
+// But : vérifier la génération de code pour une affectation float après déclaration.
+// Couvre : STORE float, rechargement float, println.
+// Résultat attendu : affiche 2.0.
+
+{
+    float f = 1.5;
+    f = 2.0;
+    println(f);
+}

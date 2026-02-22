@@ -1,0 +1,9 @@
+// Test : syntax_invalid_missing_operator
+// But : détecter l’absence d’opérateur entre deux expressions.
+// Type d'erreur : erreur syntaxique
+// Résultat attendu : erreur de syntaxe.
+
+{
+    int a;
+    a = 3 4;
+}

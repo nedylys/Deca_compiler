@@ -1,0 +1,51 @@
+// Test : cmp_float_int_all
+// But : tester comparaison mixte int/float (conversion implicite int -> float).
+// Couvre : conversion + CMP float + branchement à la bonne étiquette
+// Résultat attendu : affiche 1, 1, 1, 0, 1, 1
+
+{
+    int i = 2 ;
+    float f = 2.5 ;
+    boolean c = (i < f) ;
+    if (c) { 
+        println(1) ; 
+    } 
+    else { 
+        println(0) ; 
+    }
+
+    if (2 + 3 - 3 <= 1 * 2.0) {
+        println(1) ;
+    }
+    else {
+        println(0) ;
+    }
+
+    if (0.25 * 4 / 0.5 == 10 / 5 * 1) {
+        println(1) ;
+    }
+    else {
+        println(0) ;
+    }
+
+    if (0 != 0.0) {
+        println(1) ;
+    }
+    else {
+        println(0) ;
+    }
+
+    if (0.25 - 0.75 + 1.5 > 0) {
+        println(1) ;
+    }
+    else {
+        println(0) ;
+    }
+
+    if (1 / 1.0 >= 1.0 / 1) {
+        println(1) ;
+    }
+    else {
+        println(0) ;
+    }
+}

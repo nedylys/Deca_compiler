@@ -1,0 +1,25 @@
+// Description:
+//    Test 13 : Méthode retournant un boolean.
+//    Classe BoolTest avec isPositive() qui retourne x > 0.
+//
+// Resultats:
+//    Pas d'erreur. bt.x = 5, bt.isPositive() = true.
+//    Affiche : Positif
+
+class BoolTest {
+    int x;
+    
+    boolean isPositive() {
+        return x > 0;
+    }
+}
+
+{
+    BoolTest bt = new BoolTest();
+    bt.x = 5;
+    if (bt.isPositive()) {
+        println("Positif");
+    } else {
+        println("Non positif");
+    }
+}

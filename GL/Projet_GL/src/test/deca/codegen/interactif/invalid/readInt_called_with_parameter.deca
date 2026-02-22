@@ -1,0 +1,9 @@
+// Description:
+//    Appel de readInt avec un paramètre
+//
+// Resultats:
+//    Erreur contextuelle : readInt ne prend aucun paramètre (appel avec 1 argument alors que la fonction n'en attend aucun).
+
+{
+    int x = readInt(1);
+}

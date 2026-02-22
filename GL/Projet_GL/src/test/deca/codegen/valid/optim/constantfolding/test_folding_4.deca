@@ -1,0 +1,10 @@
+// Description :
+// Test de constant folding directement dans println.
+//
+// Resultats :
+// println(3+4) devient println(7) : chargement immédiat de 7 avant l’appel d’affichage (LOAD #7, R1),
+// sans ADD associée.
+
+{
+  println(3 + 4);
+}

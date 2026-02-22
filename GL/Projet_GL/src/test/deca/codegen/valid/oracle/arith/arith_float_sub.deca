@@ -1,0 +1,15 @@
+// Test : arith_float_sub
+// But : tester la soustraction de floats.
+// Couvre : opérations float, déclaration / affectation, registres, println.
+// Résultat attendu : affiche 23.5, -15.25, 11.5, 0.0, -11.5
+
+{
+    float a = -17.5 ;
+    float b = 6.0 ;
+    float c = -2.25 ;
+    println(b - a) ;
+    println(a - c) ;
+    println(-a - b) ;
+    println(-c - -c) ;
+    println(a - -b) ;
+}

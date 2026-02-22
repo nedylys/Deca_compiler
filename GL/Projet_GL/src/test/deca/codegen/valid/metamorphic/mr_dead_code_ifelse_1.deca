@@ -1,0 +1,24 @@
+// Description:
+//    Test métamorphique : code mort if/else (version 1).
+//    Doit produire le même résultat que mr_dead_code_ifelse_2.deca
+//    malgré les conditions if(true) et else if(false) qui sont du code mort.
+//
+// Resultats:
+//    Pas d'erreur. Affiche : ok 1, ok 2
+//    (Identique à mr_dead_code_ifelse_2.deca)
+
+{
+    if (true) {
+        println("ok 1") ;
+    }
+    else if (false) {
+        println("pas ok") ;
+    }
+
+    if (false) {
+        println("pas ok") ;
+    }
+    else {
+        println("ok 2") ;
+    }
+}

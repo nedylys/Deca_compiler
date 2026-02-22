@@ -1,0 +1,10 @@
+// Test : context_invalid_assign_readFloat_to_int
+// But : affecter le résultat de readFloat() à une variable int.
+// Couvre : typage des fonctions natives, assignCompatible.
+// Résultat attendu : erreur contextuelle.
+// Erreur affichée: Incompatible assignment: expected  int, got float
+
+{
+    int x;
+    x = readFloat();
+}

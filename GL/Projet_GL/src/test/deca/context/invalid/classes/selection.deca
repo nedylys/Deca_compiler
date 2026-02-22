@@ -1,0 +1,15 @@
+// Description:
+//    Selection de champ
+//
+// Resultats:
+//    Impossible de selectionner un champ sur un type non classe.
+//    Erreur affichée: Can't select a field from fr.ensimag.deca.tree.Identifier@2b98378d, It must be a Class
+//
+
+{
+   int a;
+
+   // Doit etre refuse.
+   a.x;
+}
+

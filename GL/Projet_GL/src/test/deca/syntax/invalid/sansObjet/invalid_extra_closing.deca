@@ -1,0 +1,9 @@
+// Test : syntax_invalid_extra_closing_brace
+// But : détecter une accolade fermante supplémentaire.
+// Type d'erreur : erreur syntaxique
+// Résultat attendu : erreur de syntaxe.
+
+{
+    int a;
+}
+}

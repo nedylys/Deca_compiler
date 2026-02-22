@@ -1,0 +1,10 @@
+// Test : context_valid_reassign_variable
+// But : autoriser plusieurs affectations sur une même variable.
+// Couvre : affectation, environnement des variables.
+// Résultat attendu : programme valide.
+
+{
+    int a;
+    a = 1;
+    a = 2;
+}

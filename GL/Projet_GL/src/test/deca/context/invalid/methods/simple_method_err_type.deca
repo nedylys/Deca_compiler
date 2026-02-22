@@ -1,0 +1,23 @@
+// Description:
+//    Redefinition invalide de methode (type de retour)
+//
+// Resultats:
+//    Ligne 11: La methode f redéfinie n'a pas un type de retour compatible.
+//    Erreur: Overrided method type must be a subtype of the super class method's type
+//
+
+class A {
+    float f() {
+        return 1.0;
+    }
+}
+
+class B extends A {
+    // Doit etre refuse.
+    int f() {
+        return 1;
+    }
+}
+
+{
+}

@@ -1,0 +1,9 @@
+// Test : valid_not_operator
+// But : autoriser l’opérateur logique ! sur un booléen.
+// Couvre : opérateur unaire logique.
+// Résultat attendu : programme valide.
+
+{
+    boolean b;
+    b = !false;
+}

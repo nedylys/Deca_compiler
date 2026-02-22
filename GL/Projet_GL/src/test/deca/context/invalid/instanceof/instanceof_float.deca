@@ -1,0 +1,15 @@
+// Description :
+// Test contextuel : instanceof appliqué à un float.
+//
+// Résultat attendu :
+// Erreur contextuelle : instanceof ne s'applique pas aux types primitifs (ici float).
+// Localisation : ligne du instanceof.
+
+class A {}
+
+{
+    float f = 2.71;
+    if (f instanceof A) {
+        println("ça marche pas");
+    }
+}

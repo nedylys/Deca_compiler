@@ -1,0 +1,19 @@
+// Description:
+//    Test métamorphique : assignations (version 1).
+//    Doit produire le même résultat que mr_crash_assign_2.deca
+//    avec des assignations directes.
+//
+// Resultats:
+//    Pas d'erreur. Affiche : 7, 0.25, ok
+//    (Identique à mr_crash_assign_2.deca)
+
+{
+    int x = 7 ;
+    float y = 0.25 ;
+    boolean c = true ;
+    println(x) ;
+    println(y) ;
+    if (c) {
+        println("ok") ;
+    }
+}

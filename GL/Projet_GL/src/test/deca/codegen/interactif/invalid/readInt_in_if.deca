@@ -1,0 +1,11 @@
+// Description:
+//    Lecture readInt utilisée comme condition dans une structure if
+//
+// Resultats:
+//    Erreur contextuelle : readInt retourne un int, qui ne peut pas être utilisé directement comme condition booléenne.
+
+{
+    if (readInt()) {
+        println("ok");
+    }
+}

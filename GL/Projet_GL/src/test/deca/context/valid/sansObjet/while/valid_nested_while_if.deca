@@ -1,0 +1,14 @@
+// Test : valid_while_if_nesting
+// But : autoriser l’imbrication d’un if dans un while.
+// Couvre : structures de contrôle imbriquées.
+// Résultat attendu : programme valide.
+
+{
+    int a;
+    a = 0;
+    while (a < 1) {
+        if (true) {
+            a = a + 1;
+        }
+    }
+}

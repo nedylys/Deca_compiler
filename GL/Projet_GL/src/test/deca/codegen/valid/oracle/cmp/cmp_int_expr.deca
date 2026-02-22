@@ -1,0 +1,15 @@
+// Test : cmp_int_expr
+// But : comparer deux expressions arithmétiques (pas juste des variables).
+// Couvre : calcul temporaires + CMP + branchement.
+// Résultat attendu: affiche 1.
+
+{
+    boolean c = ((2 + 3 * 4) == (20 - 6)) ;
+
+    if (c) { 
+        println(1) ; 
+    } 
+    else { 
+        println(0) ; 
+    }
+}

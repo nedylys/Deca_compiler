@@ -1,0 +1,27 @@
+// Description:
+//    Test de division par zéro cachée dans des conditions if imbriquées.
+//    La division 1/0.0 est atteinte après traversée de multiples conditions booléennes.
+//
+// Resultats:
+//    Erreur à l'exécution : division par zéro (overflow). Le programme doit crasher
+//    car on atteint la profondeur des conditions imbriquées qui contient 1/0.0.
+
+{
+    if (true) {
+        if (!false) {
+            if (!!true) {
+                if (!!!false) {
+                    if (!!!!true) {
+                        if (!!!!!false) {
+                            if (false || true) {
+                                if (!false && !!!!!!!!!!true) {
+                                    println(1/0.0) ;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

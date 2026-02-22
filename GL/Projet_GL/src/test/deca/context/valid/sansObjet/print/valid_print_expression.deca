@@ -1,0 +1,10 @@
+// Test : valid_print_expression
+// But : autoriser l’impression d’une expression arithmétique valide.
+// Couvre : évaluation d’expression, print.
+// Résultat attendu : programme valide.
+
+{
+    int a;
+    a = 3;
+    print(a + 2);
+}

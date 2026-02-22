@@ -1,0 +1,32 @@
+// Description:
+//    Test 11 : Deux objets de même classe.
+//    Classe Compteur avec inc() et get(). Vérifie l'indépendance des instances.
+//
+// Resultats:
+//    Pas d'erreur. c1.inc() 2 fois, c2.inc() 1 fois.
+//    c1 = 2, c2 = 1.
+//    Affiche : c1 = 2, c2 = 1
+
+class Compteur {
+    int n;
+    
+    void inc() {
+        n = n + 1;
+    }
+    
+    int get() {
+        return n;
+    }
+}
+
+{
+    Compteur c1 = new Compteur();
+    Compteur c2 = new Compteur();
+    
+    c1.inc();
+    c1.inc();
+    c2.inc();
+    
+    println("c1 = ", c1.get());
+    println("c2 = ", c2.get());
+}

@@ -1,0 +1,19 @@
+// Description:
+// Test contextuel : appel de méthode avec mauvais nombre d'arguments.
+//
+// Resultats:
+//    Erreur affichée: Nombre incorrect d'arguments : attendu 1, trouvé 0
+//    Les parametres effectifs doivent correspondre a la signature.
+//
+
+class A {
+   int f(int x) {
+      return x;
+   }
+}
+{
+   A a;
+
+   // Doit etre refuse.
+   a.f();
+}

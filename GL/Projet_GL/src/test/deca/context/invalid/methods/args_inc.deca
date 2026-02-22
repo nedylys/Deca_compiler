@@ -1,0 +1,17 @@
+// Description:
+//    Appel de methode
+//
+// Resultats:
+//    Type d'argument incompatible.
+//    Erreur affichée: Incompatible assignment: expected int, got boolean
+//
+
+class A {
+   int f(int x) {
+      return x;
+   }
+}
+{
+   A a;
+   a.f(true);
+}

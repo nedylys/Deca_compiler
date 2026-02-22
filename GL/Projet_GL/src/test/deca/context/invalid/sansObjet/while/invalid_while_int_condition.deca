@@ -1,0 +1,12 @@
+// Test : while_condition_int
+// But : interdire une condition while non booléenne.
+// Couvre : typage des conditions.
+// Résultat attendu : erreur contextuelle.
+
+{
+    while (1) {
+        println("x");
+    }
+}
+
+//While condition must be of type boolean

@@ -1,0 +1,30 @@
+// Description:
+//    Test métamorphique : lois de De Morgan (version 2).
+//    Doit produire le même résultat que mr_De_Morgan_rules_1.deca
+//    en utilisant (!t || !f) et (!t && !f).
+//
+// Resultats:
+//    Pas d'erreur. Affiche : ok, ok
+//    (Identique à mr_De_Morgan_rules_1.deca)
+
+{
+    boolean t = true ;
+    boolean f = false ; 
+
+    boolean c_1 = (!t  || !f) ;
+    boolean c_2 = (!t && !f) ;
+
+    if (c_1) {
+        println("ok") ;
+    }
+    else {
+        println("pas ok") ;
+    }
+
+    if (c_2) {
+        println("pas ok") ;
+    }
+    else {
+        println("ok") ;
+    }
+}

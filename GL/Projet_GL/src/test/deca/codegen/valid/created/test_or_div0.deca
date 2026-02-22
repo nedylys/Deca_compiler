@@ -1,0 +1,17 @@
+// Description:
+//    Test de l'évaluation paresseuse (short-circuit) du OR (||).
+//    Si x == 0, la condition est vraie et la division 10/x n'est pas évaluée.
+//
+// Resultats:
+//    Pas d'erreur. x = 0, donc (x == 0) est vrai.
+//    Grâce à l'évaluation paresseuse, (10 / x) > 1 n'est pas évaluée.
+//    Affiche 3 (branche if).
+
+{
+  int x = 0;
+  if ( (x == 0) || ((10 / x) > 1) ) {
+    println(3);
+  } else {
+    println(4);// comment
+  }
+}

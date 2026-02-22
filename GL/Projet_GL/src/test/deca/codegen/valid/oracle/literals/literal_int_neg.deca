@@ -1,0 +1,8 @@
+// Test : literal_int_neg
+// But : tester la génération de code pour un littéral entier négatif.
+// Couvre : exactitude de Unary Minus, println(int).
+// Résultat attendu : affiche -17.
+
+{
+    println(-17) ;
+}

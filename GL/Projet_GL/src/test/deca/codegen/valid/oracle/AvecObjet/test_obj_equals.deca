@@ -1,0 +1,21 @@
+// Description:
+//    Test de la méthode equals entre deux objets (même référence).
+//
+// Resultats:
+//    Pas d'erreur. a et b pointent vers le même objet, donc a.equals(b) est vrai.
+//    Affiche : ok
+
+class A {
+    boolean b ;
+}
+
+{
+    A a = new A() ;
+    A b = a ;
+    if (a.equals(b)) {
+        println("ok") ;
+    }
+}
+
+
+

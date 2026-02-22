@@ -1,0 +1,25 @@
+// Description:
+//    Test 20 : Chaînage d'appels (builder pattern).
+//    Classe Builder avec setVal(int) qui retourne this.
+//
+// Resultats:
+//    Pas d'erreur. b.setVal(77).getVal() = 77.
+//    Affiche : val = 77
+
+class Builder {
+    int val;
+    
+    Builder setVal(int v) {
+        val = v;
+        return this;
+    }
+    
+    int getVal() {
+        return val;
+    }
+}
+
+{
+    Builder b = new Builder();
+    println("val = ", b.setVal(77).getVal());
+}

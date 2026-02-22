@@ -1,0 +1,19 @@
+// Test : instanceof_classes_non_liees
+// But : tester instanceof entre classes non liées (A et B).
+// Couvre : instanceof, vérification dynamique, branchement if/else.
+// Résultat attendu : compilation sans erreur.
+// Exécution attendue : affiche "false" (car a référence un A, pas un B).
+
+class A {}
+class B {}
+
+{
+    A a;
+    a = new A();
+
+    if (a instanceof B) {
+        println("true");
+    } else {
+        println("false");
+    }
+}

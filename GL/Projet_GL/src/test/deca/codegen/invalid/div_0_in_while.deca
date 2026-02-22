@@ -1,0 +1,12 @@
+// Description:
+//    Test de division par zéro dans la condition d'une boucle while.
+//    L'expression (5 - 3 - 1 - 2 + 1) = 0, donc 1/0 provoque une erreur.
+//
+// Resultats:
+//    Erreur à l'exécution : division par zéro lors de l'évaluation de la condition du while.
+
+{
+    while ((1 / (5 - 3 - 1 - 2 + 1) == 1)) {
+        println("QUOI ?") ;
+    }
+}

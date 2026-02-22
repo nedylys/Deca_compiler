@@ -1,0 +1,13 @@
+// Test : control_while_no_iter
+// But : tester une boucle while qui ne s'exécute jamais (condition fausse dès le départ).
+// Couvre : test initial de condition, saut direct vers fin.
+// Résultat attendu : affiche "ok".
+
+{
+    int i = 0 ;
+    while (i < 0) {
+        println("pas ok") ;
+        i = i + 1 ;
+    }
+    println("ok") ;
+}

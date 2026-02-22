@@ -1,0 +1,34 @@
+// Description :
+// Test de dead code elimination (branches et boucles à condition constante).
+//
+// Résultat attendu (dead code elimination) :
+// - La branche "if (false)" est supprimée : aucune instruction associée à "x = 99" ne doit apparaître.
+// - La boucle "while (false)" est supprimée : aucune instruction associée à "x = 42" ne doit apparaître.
+// - Dans le else : seul le code “vivant” reste. L’affectation "y = 5" est écrasée par "y = 6"
+//   => seule la dernière écriture utile peut rester.
+//
+// Remarques (autres optims possibles) :
+// - Constant folding : "1 + 2*3" peut être plié en 7 (chargement immédiat).
+// - DCE/suppression variables non utilisées : a, x, y ne sont jamais lus après => leurs déclarations/affectations
+//   peuvent être supprimées totalement (donc plus de LOAD/STORE liés à a/x/y).
+// - Simplification : le if devient un bloc direct (pas de branchement).
+
+{
+  int a;
+  int x = 1;
+  int y = 2;
+
+  if (false) {
+    x = 99;
+  } else {
+    a = 1 + 2 * 3;
+    y = 5;
+    y = 6;
+  }
+
+  while (false) {
+    x = 42;
+  }
+
+  println("ok");
+}

@@ -1,0 +1,9 @@
+// Test : cast_float_to_int
+// But : tester un cast explicite float -> int.
+// Couvre : conversions explicites entre types primitifs.
+// Résultat attendu : compilation sans erreur.
+
+{
+    float x = 1.3;
+    int y = (int) (x);
+}

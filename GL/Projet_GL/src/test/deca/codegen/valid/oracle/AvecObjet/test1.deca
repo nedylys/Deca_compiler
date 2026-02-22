@@ -1,0 +1,15 @@
+// Description:
+//    Test 1 : Classe simple avec un champ.
+//    Création d'un objet Point avec un champ int x.
+//
+// Resultats:
+//    Pas d'erreur. Affiche : Objet Point cree
+
+class Point {
+    int x;
+}
+
+{
+    Point p = new Point();
+    println("Objet Point cree");
+}

@@ -1,0 +1,9 @@
+// Test : var_assign_int
+// But : vérifier la génération de code pour une affectation après déclaration.
+// Couvre : stockage initial, STORE lors de l'affectation, rechargement, println.
+// Résultat attendu : affiche 9.
+{
+    int x = 2 ;
+    x = 9 ;
+    println(x) ; 
+}

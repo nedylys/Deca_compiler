@@ -1,0 +1,9 @@
+// Test : valid_multiple_boolean_operations
+// But : autoriser plusieurs opérations booléennes dans une même expression.
+// Couvre : &&, ||, priorités.
+// Résultat attendu : programme valide.
+
+{
+    boolean b;
+    b = true && false || true;
+}

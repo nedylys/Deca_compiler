@@ -1,0 +1,26 @@
+// Description :
+// test de la constant_folding
+//
+// Resultats :
+// - x = 2*(5-1) pliée en x = 8 : chargement immédiat de 8 (LOAD #8, R2), sans SUB/MUL.
+// - a = (5+2 < 2) pliée en a = false : chargement immédiat de 0 (LOAD #0, R2), sans ADD/CMP.
+// - b = (5+4 == 2) pliée en b = false : chargement immédiat de 0, sans ADD/CMP.
+// - b = (5+5 != 4-1) pliée en b = true : chargement immédiat de 1, sans ADD/SUB/CMP.
+// - println(3*(4+5)) : l’expression est pliée à 27, donc chargement immédiat de 27, sans ADD/MUL.
+//
+// Remarque (si DCE/suppression de code mort activée en plus) :
+// a, b, c ne sont jamais utilisés => leurs déclarations/affectations peuvent disparaître entièrement.
+
+
+{
+  int x;
+  boolean a;
+  boolean b;
+  boolean c;
+  x = 2 * (5 - 1);
+  a = (5+2 < 2) ;
+  b = (5+4 == 2) ;
+  b = (5+5 != 4-1) ;
+  println(x);
+  println(3 * (4 + 5));
+}

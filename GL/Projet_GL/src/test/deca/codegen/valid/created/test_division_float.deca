@@ -1,0 +1,13 @@
+// Description:
+//    Test de division entre deux float.
+//
+// Resultats:
+//    Pas d'erreur. a = 5.0, b = 2.0, affiche 5.0/2.0 = 2.5.
+
+{
+    float a ;
+    float b ; 
+    a = 5.0 ;
+    b = 2.0 ;
+    println(a/b) ;
+}

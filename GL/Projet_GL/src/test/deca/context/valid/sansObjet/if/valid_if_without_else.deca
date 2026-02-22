@@ -1,0 +1,11 @@
+// Test : valid_if_without_else
+// But : autoriser un if sans branche else.
+// Couvre : structure conditionnelle.
+// Résultat attendu : programme valide.
+
+{
+    int a;
+    if (true) {
+        a = 1;
+    }
+}

@@ -1,0 +1,9 @@
+// Test : undeclared_identifier
+// But : détecter l’utilisation d’une variable non déclarée.
+// Couvre : résolution des identifiants.
+// Résultat attendu : erreur contextuelle.
+// Erreur affichée: Identifier a is not defined in the current scope nor in its parent scopes
+
+{
+    a = 3;
+}

@@ -1,0 +1,8 @@
+// Test : arith_int_parentheses
+// But : vérifier que les parenthèses changent l'ordre de calcul.
+// Couvre : bonne construction AST, temporaires, println.
+// Résultat attendu : affiche 20, -2.
+{
+    println((2 + 3) * 4) ;
+    println((5 + 5) / -5) ;
+}

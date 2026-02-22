@@ -1,0 +1,12 @@
+// Description :
+// Test contextuel : cast explicite d'un objet (classe A) vers int.
+//
+// Resultats :
+// Erreur contextuelle
+// Ligne 11 : cast impossible : type source A (classe) incompatible avec le type cible int.
+class A {}
+
+{
+    A a = new A();
+    int x = (int) (a);
+}

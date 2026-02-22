@@ -1,0 +1,11 @@
+// Test : if_condition_float
+// But : interdire une condition if non booléenne.
+// Couvre : typage des conditions.
+// Résultat attendu : erreur contextuelle.
+// Erreur affichée: If condition must be of type boolean
+
+{
+    if (3.14) {
+        println("x");
+    }
+}

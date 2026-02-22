@@ -1,0 +1,9 @@
+// Test : print_string_print
+// But : Tester print puis println sur chaîne de caractères.
+// Couvre : print(string) sans saut de ligne + println(string) avec saut de ligne.
+// Résultat attendu: affiche "Hello, this world is somehow beautiful !" sur une seule ligne.
+
+{
+    print("Hello,", " this world ", "is somehow") ;
+    println(" beautiful !") ;
+}

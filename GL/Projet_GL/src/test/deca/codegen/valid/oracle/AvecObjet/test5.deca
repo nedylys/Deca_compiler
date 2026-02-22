@@ -1,0 +1,25 @@
+// Description:
+//    Test 5 : Méthode avec paramètre (setter).
+//    Une classe Affect avec setX(int v) et getX().
+//
+// Resultats:
+//    Pas d'erreur. a.setX(25), a.getX() = 25.
+//    Affiche : x = 25
+
+class Affect {
+    int x;
+    
+    void setX(int v) {
+        x = v;
+    }
+    
+    int getX() {
+        return x;
+    }
+}
+
+{
+    Affect a = new Affect();
+    a.setX(25);
+    println("x = ", a.getX());
+}

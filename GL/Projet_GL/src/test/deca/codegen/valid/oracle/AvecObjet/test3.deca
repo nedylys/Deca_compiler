@@ -1,0 +1,17 @@
+// Description:
+//    Test 3 : Méthode simple sans paramètre.
+//    Une classe Hello avec une méthode dire() qui affiche un message.
+//
+// Resultats:
+//    Pas d'erreur. Affiche : Hello World!
+
+class Hello {
+    void dire() {
+        println("Hello World!");
+    }
+}
+
+{
+    Hello h = new Hello();
+    h.dire();
+}

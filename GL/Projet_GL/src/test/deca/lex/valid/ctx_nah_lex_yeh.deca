@@ -1,0 +1,6 @@
+{
+    int x;
+    x = 4.9; // ctx error but who care we test lex
+}
+// Bro
+//Buddy

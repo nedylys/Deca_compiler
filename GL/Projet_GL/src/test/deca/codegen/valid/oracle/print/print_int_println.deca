@@ -1,0 +1,9 @@
+// Test : print_int_println
+// But : tester println sur un entier.
+// Couvre : chargement d'un int, appel println(int), ajout du saut de ligne.
+// Résultat attendu : affiche 1 puis 2 sur la ligne suivante.
+
+{
+    println(1) ;
+    println(2) ;
+}

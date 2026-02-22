@@ -1,0 +1,11 @@
+// Test : cast_identity_class
+// But : vérifier qu’un cast vers le même type (A -> A) est accepté.
+// Couvre : cast redondant, types objets.
+// Résultat attendu : compilation sans erreur.
+
+class A {}
+
+{
+    A a = new A();
+    A b = (A) (a);
+}

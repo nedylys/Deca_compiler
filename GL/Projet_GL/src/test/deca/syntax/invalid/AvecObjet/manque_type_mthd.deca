@@ -1,0 +1,17 @@
+// Test : manque du type de retour d'une méthode
+// But : détecter quand une méthode n'a pas de type de retour
+// Type d'erreur : erreur syntaxique
+// Résultat attendu : no viable alternative at input 'Class'
+
+Class A{
+    int i;
+    setI(int i){
+        this.i = i;
+    }
+}
+
+
+
+{
+    A a = new A();
+}

@@ -1,0 +1,11 @@
+// Description:
+//    Test de division entière simple.
+//
+// Resultats:
+//    Pas d'erreur. Affiche 4/2 = 2 (division entière).
+
+{
+    int a = 4 ;
+    int b = 2 ;
+    println(a/b) ;//
+}

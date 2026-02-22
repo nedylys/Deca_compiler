@@ -1,0 +1,99 @@
+// Test d'intégration : capteur météo simulé
+
+
+{
+    int n = 30 ;    // résultats recueillis sur 1 mois
+    int i = 0 ;     // compteur de jours
+
+    // pour stocker les températures et humidités simulées
+    int temp ;
+    int humid ; 
+
+    int maxTemp = 0 ;       // température max 
+    int minTemp = 0 ;       // température min 
+    int accTemp = 0 ;       // accumulation des températures pour calculer la moyenne
+    int accHum = 0 ;        // idem pour l'humidité 
+
+    // pour compter les jours chauds, froids, humides
+    int nbHotDays = 0 ;     // temp >= 30
+    int nbColdDays = 0 ;    // temp <= 0
+    int nbHumidDays = 0 ;   // humid >= 75 %
+
+    // pour avoir les statistiques 
+    float avgTemp = 0.0 ;
+    float avgHum = 0.0 ;
+
+    // booléens pour synthétiser (plus de jours chauds que froids par exemple...)
+    boolean hotMounth = false ;
+    boolean coldMounth = false ;
+    boolean humidMounth = false ;
+
+    // simulations 
+    while (i < n) {
+        // génération déterministe des mesures
+
+        // temp entre -10 et 45
+        temp = ((i * 17) + 23) % 56 ;
+        temp = temp - 10 ;
+
+        // humid entre 0 et 100
+        humid = ((i * 31) + 7) % 101 ;
+
+        // accumulations des températures / humidités
+        accTemp = accTemp + temp ;
+        accHum = accHum + humid ;
+
+        // màj des températures min / max
+        if (temp > maxTemp) {
+            maxTemp = temp ;
+        }
+        else if (temp < minTemp) {
+            minTemp = temp ; 
+        }
+        
+        // màj de nb de jours chauds / froids / humides
+        if (temp >= 30) {
+            nbHotDays = nbHotDays + 1 ;
+        }
+        else if (temp <= 0) {
+            nbColdDays = nbColdDays + 1 ;
+        }
+
+        if (humid >= 75) {
+            nbHumidDays = nbHumidDays + 1 ;
+        }
+
+        i = i + 1 ;
+    }
+
+    // calcul des moyennes
+    avgTemp = accTemp / (n * 1.0) ;
+    avgHum = accHum / (n * 1.0) ;
+
+    hotMounth = (nbHotDays > 15) || (maxTemp >= 40) ;
+    coldMounth = (nbColdDays > 15) || (minTemp <= -5) ;
+    humidMounth = (nbHumidDays > 15) || (avgHum >= 75.0) ;
+
+    println("Température moyenne : ", avgTemp) ;
+    println("Humidité moyenne : ", avgHum) ;
+
+    println("Pic température chaude : ", maxTemp) ;
+    println("Pic température froide : ", minTemp) ;
+
+    println("Nombre de jours froids : ", nbColdDays) ;
+    println("Nombre de jours chauds : ", nbHotDays) ;
+
+    if (hotMounth) {
+        println("Mois plutôt chaud") ;
+    }
+    else if (coldMounth) {
+        println("Mois plutôt froid") ;
+    }
+    if (humidMounth) {
+        println("Mois plutôt humide") ;
+    }
+    else {
+        println("Mois plutôt pas humide") ;
+    }
+
+}

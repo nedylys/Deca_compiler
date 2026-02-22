@@ -1,0 +1,17 @@
+// Description:
+//    Test simple d'appel de méthode via accès objet.
+//
+// Resultats:
+//    Pas d'erreur. p.returnSeven() retourne 7.
+//    Affiche : 7
+
+class PrintViaAccess {
+    int returnSeven() {
+        return 7 ;
+    }
+}
+
+{
+    PrintViaAccess p = new PrintViaAccess() ;
+    println(p.returnSeven()) ;
+}

@@ -1,0 +1,16 @@
+// Description:
+//    Test de condition if avec expression arithmétique complexe.
+//
+// Resultats:
+//    Pas d'erreur. a = 3, (1 + 2 + 3) + (4) + 5 = 15.
+//    3 < 15 est vrai, donc affiche "ok".
+
+{
+    int a = 3 ;
+    if (a < (1 + 2 + 3) + (4) + 5) {
+        println("ok") ;
+    }
+    else {
+        println("pas ok") ;
+    }
+}

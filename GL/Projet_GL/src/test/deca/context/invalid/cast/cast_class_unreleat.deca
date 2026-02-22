@@ -1,0 +1,15 @@
+// Description :
+// Test contextuel : cast explicite entre deux classes non liées (A -> B).
+//
+// Résultat attendu :
+// Erreur contextuelle sur le cast : conversion impossible car A et B ne sont pas dans une relation de sous-typage
+// (ni A <: B, ni B <: A).
+// Ligne 6 : cast impossible : les classes A et B ne sont pas dans une relation de sous-typage.
+
+class A {}
+class B {}
+
+{
+    A a = new A();
+    B b = (B) (a);
+}

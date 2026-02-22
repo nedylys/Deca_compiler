@@ -1,0 +1,20 @@
+// Description:
+//    Test de la grammaire des arbres de syntaxe abstraite
+//    Programme minimaliste testant le non terminal PRINT de la grammaire d'arbre .
+//
+
+// Programme est syntaxiquement correcte
+//
+// Historique:
+//    cree le 02/01/2026
+{
+    boolean a;
+    boolean b;
+    int x;
+    int y;
+    x = -y;
+    a = !a;
+    b = !a;
+    b = !(a);
+    y = -y;
+}

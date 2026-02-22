@@ -1,0 +1,16 @@
+// Test : manque du mot clé Class
+// But : détecter quand une classe n'est pas déclarée avec le mot clé Class
+// Type d'erreur : erreur syntaxique
+// Résultat attendu : no viable alternative at input 'A'
+
+
+A{
+    int i;
+    boolean p;
+}
+
+
+
+{
+    A a = new A();
+}

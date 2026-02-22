@@ -1,0 +1,10 @@
+// Test : field_init_float_from_int_literal
+// But : tester l’initialisation d’un champ float avec une constante entière.
+// Couvre : initialisation de champ, conversion numérique (selon règles du langage).
+// Résultat attendu : compilation sans erreur.
+
+class A {
+    float x = 3;
+}
+{
+}

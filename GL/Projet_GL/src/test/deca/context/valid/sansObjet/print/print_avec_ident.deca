@@ -1,0 +1,10 @@
+// Test : print_variable_int
+// But : vérifier qu’une variable entière peut être affichée.
+// Couvre : déclaration, affectation, utilisation dans print.
+// Résultat attendu : affiche 1.
+
+{
+    int a;
+    a = 1;
+    print(a);
+}

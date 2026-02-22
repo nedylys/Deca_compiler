@@ -1,0 +1,18 @@
+// Description:
+//    Test métamorphique : inversion if/else (version 1).
+//    Doit produire le même résultat que mr_ifelse_inversion_2.deca
+//    en utilisant if(b) pour la condition vraie.
+//
+// Resultats:
+//    Pas d'erreur. Affiche : Correct !
+//    (Identique à mr_ifelse_inversion_2.deca)
+
+{
+    boolean b = true ;
+    if (b) {
+        println("Correct !") ;
+    }
+    else {
+        println("Incorrect !") ;
+    }
+}

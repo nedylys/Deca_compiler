@@ -1,0 +1,14 @@
+// Test : method_call_internal_this
+// But : vérifier les appels de méthodes dans une même classe (g appelle f).
+// Couvre : résolution de méthodes, appel implicite via this.
+// Résultat attendu : compilation sans erreur.
+// Exécution attendue : affiche 2.
+
+class A {
+  int f() { return 2; }
+  int g() { return f(); }
+}
+{
+  A a = new A();
+  println(a.g());
+}

@@ -1,0 +1,14 @@
+// Test : bool_from_cmp_all
+// But : tester la combinaison de booléens produits par des comparaisons.
+// Couvre : CMP int, production bool, && / ||, branchement final.
+// Résultat attendu: affiche 1.
+
+{
+    boolean c = ((3 < 5) && (10 == 10) || (2 > 7) && !(5 != 5)) || ((3 <= 4) && (4 >= 3));
+    if (c == true) {
+        println(1) ;
+    }
+    else {
+        println(0) ;
+    }
+}

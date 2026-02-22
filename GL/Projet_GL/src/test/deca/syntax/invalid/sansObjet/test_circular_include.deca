@@ -1,0 +1,7 @@
+// Test : Circular include
+// But : interdire les include circulaire.
+// Type d'erreur : erreur syntaxique
+// Résultat attendu : Circular Include
+
+#include "fichier_1.decah"
+

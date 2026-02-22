@@ -1,0 +1,14 @@
+// Description :
+// Test contextuel : instanceof avec "type" de droite non-classe (int).
+//
+// Résultat attendu :
+// Erreur contextuelle : le type à droite de instanceof doit être une classe (pas un type primitif).
+// Localisation : ligne du instanceof.
+
+{
+    int x = 3;
+
+    if (x instanceof int) {
+        println("ça marche pas");
+    }
+}

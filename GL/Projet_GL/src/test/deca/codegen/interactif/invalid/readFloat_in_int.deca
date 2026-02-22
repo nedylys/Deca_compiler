@@ -1,0 +1,14 @@
+// Description:
+//    Lecture readFloat, affectation et typage
+//
+// Resultats:
+//    Erreur contextuelle : affectation de types incompatibles (readFloat retourne un float, x est de type int).
+// 
+// Historique:
+//    cree le 01/01/2026
+
+{
+    int x;
+    x = readFloat();
+    println(x);
+}

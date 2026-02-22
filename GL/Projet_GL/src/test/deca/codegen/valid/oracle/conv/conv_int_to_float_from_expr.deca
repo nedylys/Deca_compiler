@@ -1,0 +1,9 @@
+// Test : conv_int_to_float_from_expr
+// But : tester la conversion implicite int -> float appliquée au résultat d'une expression entière.
+// Couvre : évaluation int (ADD), puis conversion en float, puis println.
+// Résultat attendu : affiche 22.0
+
+{
+    float f = 2 + 3 * 5 - 8 / 4 + 7 ;
+    println(f) ;
+}

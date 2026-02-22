@@ -1,0 +1,15 @@
+/// Ce fichier ne doit pas etre simplifier par le peephole
+
+{
+    int a;
+    int b;
+    int c;
+
+    a = 2;
+    b = 0;
+    c = 3;
+
+    // b = 0  → LOAD #0
+
+    println(b + (a * c));
+}

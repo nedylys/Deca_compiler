@@ -1,0 +1,15 @@
+// Test : valid_nested_if
+// But : autoriser des structures if imbriquées.
+// Couvre : imbrication de structures conditionnelles.
+// Résultat attendu : programme valide.
+
+{
+    int a;
+    if (true) {
+        if (false) {
+            a = 1;
+        } else {
+            a = 2;
+        }
+    }
+}

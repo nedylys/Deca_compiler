@@ -1,0 +1,10 @@
+// Test : not_on_int
+// But : interdire l’opérateur logique ! sur un entier.
+// Couvre : opérateur unaire logique, typage.
+// Résultat attendu : erreur contextuelle.
+// Erreur affichée: Invalid operand type for Not operation: expected boolean
+
+{
+    int a;
+    a = !3;
+}

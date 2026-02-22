@@ -1,0 +1,9 @@
+// Test : invalid_identifier_int_assignment
+// But : tester l’utilisation d’un mot-clé comme identifiant.
+// Couvre : résolution des identifiants, environnement des variables.
+// Résultat attendu : erreur contextuelle (identifiant non déclaré).
+//Erreur affichée: Identifier int is not defined in the current scope nor in its parent scopes
+
+{
+    int = 3;
+}

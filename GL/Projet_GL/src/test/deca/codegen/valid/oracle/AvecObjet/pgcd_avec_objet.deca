@@ -1,0 +1,26 @@
+// Test récursif du calcul de pgcd.
+class Calc{
+
+    int pgcd(int a,int b){
+        if (b == 0){
+            return a;
+        } else {
+           return pgcd(b,a % b);
+        }
+    }
+}
+{
+    Calc c = new Calc();
+    
+    int a = c.pgcd(45,9);
+    int b = c.pgcd(89,7);
+    int d = c.pgcd(657,89);
+    int e = c.pgcd(48,18);
+    int f = c.pgcd(270,192);
+
+    println("pgcd(45,9) = ",a);
+    println("pgcd(89,7) = ",b);
+    println("pgcd(657,98) = ",d);
+    println("pgcd(48,18) = ",e);
+    println("pgcd(270,192) = ",f);
+}

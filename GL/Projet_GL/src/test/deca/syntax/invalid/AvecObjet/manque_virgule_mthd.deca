@@ -1,0 +1,17 @@
+// Test : Oubli d'une virhule dans les parametres d'une méthode.
+// But : détecter l'oubli de la virgule entre les param d'une méthode
+// Type d'erreur : erreur syntaxique
+// Résultat attendu : mismatched input 'int' expecting {')', ','}
+
+
+class A{
+   boolean val;
+   int z;
+   void f(int x int y){
+      this.z = x + y;  
+   }
+}
+
+{
+    A a = new A();
+}

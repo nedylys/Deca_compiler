@@ -1,0 +1,14 @@
+// Description:
+//    Test de l'opérateur modulo (%).
+//
+// Resultats:
+//    Pas d'erreur.
+//    - 9 % 3 = 0
+//    - 12 % 5 = 2
+//    (ligne commentée : 1 % 0 provoquerait une erreur)
+
+{
+    println(9 % 3) ;
+    println(12 % 5) ;
+    //println(1 % 0) ;
+}

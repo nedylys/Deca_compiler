@@ -1,0 +1,12 @@
+// Description :
+// test de la constant_folding
+//
+// Resultats :
+// LOAD #7, R2 au lieu de allouer la place pr 3 puis pour 4 puis faire le calcul
+
+
+{
+  int x;
+  x = 10*9;
+  println(x);
+}

@@ -1,0 +1,18 @@
+// Description:
+//    Test de casts multiples dans une expression arithmétique.
+//    Calcule (float)(a) / (float)(b) + (float)(a % b) avec a=10 et b=3.
+//
+// Resultats:
+//    Pas d'erreur.
+//    Calcul : (float)(10) / (float)(3) + (float)(10 % 3)
+//           = 10.0 / 3.0 + 1.0
+//           = 3.333... + 1.0
+//           ≈ 4.333...
+//    Affiche : 4.333333 (ou valeur approchée selon précision float)
+
+{
+    int a = 10;
+    int b = 3;
+    float result = (float)(a) / (float)(b) + (float)(a % b);
+    println(result);
+}

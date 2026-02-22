@@ -1,0 +1,10 @@
+// Test : arith_int_priorite
+// But : vérifier la priorité * et / sur + et - (sans parenthèses) .
+// Couvre : construction AST correcte, ordre de calcul, MUL puis ADD, 
+// QUO puis SUB.
+// Résultat attendu : affiche 14, 1.
+
+{ 
+    println(2 + 3 * 4) ;
+    println(3 - 4 / 2) ;
+}

@@ -1,0 +1,17 @@
+// Test : instanceof_dynamic_downcast_check
+// But : vérifier instanceof sur une variable de type A contenant réellement un B.
+// Couvre : polymorphisme, instanceof (test de type dynamique).
+// Résultat attendu : compilation sans erreur.
+// Exécution attendue : true, affiche "ça marche".
+
+class A {}
+class B extends A {}
+
+{
+    A a = new B();
+    B b = new B();
+
+    if (a instanceof B) {
+        println("ça marche");
+}
+}

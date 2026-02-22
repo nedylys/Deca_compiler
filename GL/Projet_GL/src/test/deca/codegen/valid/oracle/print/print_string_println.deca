@@ -1,0 +1,8 @@
+// Test : print_string_println
+// But : tester println sur plusieurs chaînes.
+// Couvre : appel println sur plusieurs string séparées.
+// Résultat attendu : affiche "Hello, it's apparently perfectly working !".
+
+{
+    println("Hello", ", it's apparently ", "perfectly", " working !") ;
+}

@@ -1,0 +1,4 @@
+{
+    Object o;
+    o = new Object();
+}

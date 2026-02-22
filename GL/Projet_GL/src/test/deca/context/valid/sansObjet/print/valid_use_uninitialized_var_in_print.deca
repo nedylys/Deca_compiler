@@ -1,0 +1,10 @@
+// Test : context_valid_use_uninitialized_variable_in_print
+// But : utiliser une variable non initialisée dans print.
+// Couvre : règle d’initialisation des variables.
+// Résultat attendu : 
+
+{
+    int a;
+    print(a);
+}
+

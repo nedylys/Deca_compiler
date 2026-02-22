@@ -1,0 +1,12 @@
+// Test : control_if_else_false
+// But : tester if/else avec condition fausse (branche else).
+// Couvre : branchement vers else, saut vers end.
+// Résultat attendu : affiche "ok".
+{
+    if (3 == 4) {
+        println("pas ok") ;
+    } 
+    else {
+        println("ok") ;
+    }
+}

@@ -1,0 +1,8 @@
+// Test : Overflow de int
+// But : interdire les overflow de int.
+// Type d'erreur : erreur syntaxique
+// Résultat attendu : Int overflow
+
+{
+  int x = 2147483648;
+}

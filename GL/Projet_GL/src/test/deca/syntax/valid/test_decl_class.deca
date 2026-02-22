@@ -1,0 +1,64 @@
+// Description:
+//    Test de la grammaire des arbres de syntaxe abstraite
+//    Programme minimaliste testant les non terminaux concernant les classes 
+//     de la grammaire d'arbre .
+// Programme syntaxiquement correct.
+//
+// Historique:
+//    cree le 01/01/2026
+class A{
+    int x;
+    int y = 9;
+    float z;
+    
+    int getX(){
+      return this.x;
+    }
+
+    int translate(int b){
+        x = x + b;
+        y = y + b;
+        z = z + b;
+    }
+}
+class B extends A{
+    protected int x = 5;
+    protected int d;
+
+    boolean verify(int c,int m){
+        return c == m;
+    }
+
+    boolean equals(B other){
+        if (this.x == other.x && this.y == other.y && this.z == other.z){
+            return true;
+        }else if (this.d != other.d){
+            return true;
+        } else{
+            return false;
+        }
+    } 
+}
+
+class C extends B{
+    void asmC() asm( 
+        "LOAD #1,R0 
+        WSTR : 'OK' 
+        HALT");
+}
+{
+    A c = new C();
+    C c = (C) (a);
+    c.x = 45;
+    c.translate(23);
+
+    if (c instanceof C){
+        println("c'est un C");
+    } else if (c instanceof B) {
+        println("c'est un B");
+    } else{
+        println("c'est un A");
+    }
+
+    println("JE SUIS UNE STRING");
+}

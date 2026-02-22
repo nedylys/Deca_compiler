@@ -1,0 +1,18 @@
+// Description:
+//    Test de la grammaire des arbres de syntaxe abstraite
+//    Programme minimaliste testant le non terminal OP_ARITH de la grammaire d'arbre.
+//
+// Programme syntaxiquement correct.
+//
+// Historique:
+//    cree le 02/01/2026
+{
+  int x = 4;
+  int y = 6;
+  int z = x / y;
+  int p = x*y*z;
+  int r;
+  int m;
+  r = (x + y*z) % p; 
+  m = x - y;
+}

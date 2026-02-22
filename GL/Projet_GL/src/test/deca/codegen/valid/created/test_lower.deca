@@ -1,0 +1,26 @@
+// Description:
+//    Test de l'opérateur inférieur (<) avec des int et des float.
+//
+// Resultats:
+//    Pas d'erreur.
+//    - a = 3, b = 5 : a < b est vrai, affiche "ok int"
+//    - x = 3.5, y = 4.5 : x < y est vrai, affiche "ok float"
+
+{
+    int a = 3;
+    int b = 5;
+    float x = 3.5;
+    float y = 4.5;
+
+    if (a < b) {
+        println("ok int");
+    } else {
+        println("pas ok int");
+    }
+
+    if (x < y) {
+        println("ok float");
+    } else {
+        println("pas ok float");
+    }
+}

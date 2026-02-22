@@ -1,0 +1,83 @@
+// Description:
+//    Ce test comprend plusieurs classes qui sont toutes sous-classes
+//    d'une même et unique classe (Point4D).
+//    On teste ici la bonne correspondance entre les indices des méthodes
+//    dans la table des méthodes.
+//    Modélise des points de différentes dimensions avec héritage.
+//    Le bloc principal est vide (test de compilation uniquement).
+//
+// Resultats:
+//    Pas d'erreur. Aucune sortie (bloc principal vide).
+//    Vérifie que la compilation avec héritage et redéfinition de champs
+//    se passe correctement.
+
+
+class Point4D {
+    float w ;
+    float x ;
+    float y ;
+    float z ;
+
+    void setW(float w) {
+        this.w = w ; 
+    }
+
+    void setX(float x) {
+        this.x = x ;
+    }
+
+    void setY(float y) {
+        this.y = y ; 
+    }
+
+    void setZ(float z) {
+        this.z = z ;
+    }
+
+    float getW() {
+        return w ;
+    }
+
+    float getX() {
+        return x ;
+    }
+
+    float getY() {
+        return y ;
+    }
+
+    float getZ() {
+        return z ; 
+    }
+
+    // Override de equals
+    //boolean equals(Object p) {
+        //return (this.w == p.w) && (this.x == p.x) && (this.y == p.y) && (this.z == p.z) ;
+    //}
+}
+
+
+class Point3D extends Point4D {
+    float w ; 
+    float x ;
+    float y ;
+    float z = 0 ; // dimension nulle
+}
+
+class Point2D extends Point4D {
+    float w ;
+    float x ; 
+    float y = 0 ;
+    float z = 0 ;
+}
+
+class Point1D extends Point4D {
+    float w ; 
+    float x = 0 ;
+    float y = 0 ;
+    float z = 0 ;
+}
+
+{
+
+}

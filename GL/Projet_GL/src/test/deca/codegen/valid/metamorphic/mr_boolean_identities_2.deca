@@ -1,0 +1,31 @@
+// Description:
+//    Test métamorphique : identités booléennes (version 2).
+//    Doit produire le même résultat que mr_boolean_identities_1.deca
+//    en utilisant !!true et des conditions équivalentes.
+//
+// Resultats:
+//    Pas d'erreur. Affiche : ok (4 fois)
+//    (Identique à mr_boolean_identities_1.deca)
+
+{
+    boolean b = !!true ; 
+    
+    if (true) {
+        println("ok") ;
+    }
+
+    if (b) {
+        println("ok") ;
+    }
+
+    if (false) {
+        println("pas ok") ;
+    }
+    else {
+        println("ok") ;
+    }
+
+    if (true) {
+        println("ok") ;
+    }
+}

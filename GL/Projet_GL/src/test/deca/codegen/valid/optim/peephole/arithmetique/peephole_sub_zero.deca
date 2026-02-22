@@ -1,0 +1,33 @@
+// Test : peephole_sub_one
+// But : tester la performance du Peephole optimizer dans le cas
+//      de soustractions répétées par 0
+// Couvre : l’élimination de MUL #1 inutiles et la propagation de constantes
+// Résultat attendu : 1
+{
+    int x;
+    int y;
+    int z;
+    int w;
+
+    x = 1 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0;
+    y = 2 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0;
+    z = 3 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0;
+    w = 4 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0;
+    
+    x = 1 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0;
+    y = 2 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0;
+    z = 3 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0;
+    w = 4 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0;
+    
+    x = 1 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0;
+    y = 2 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0;
+    z = 3 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0;
+    w = 4 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0;
+    
+    x = 1 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0;
+    y = 2 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0;
+    z = 3 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0;
+    w = 4 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0;
+
+    println(x);
+}

@@ -1,0 +1,30 @@
+// Description:
+//    Test du calcul de la suite de Fibonacci avec récursion.
+//    Une classe Fib avec une méthode compute(n) qui calcule le n-ième terme.
+//
+// Resultats:
+//    Pas d'erreur. Affiche les 10 premiers termes de Fibonacci :
+//    0 1 1 2 3 5 8 13 21 34
+
+
+// test_fibonacci.deca
+class Fib {
+    int compute(int n) {
+        if (n <= 1) {
+            return n;
+        } else {
+            return compute(n - 1) + compute(n - 2);
+        }
+    }
+}
+
+{
+    Fib f = new Fib();
+    int i = 0;
+    while (i < 10) {
+        print(f.compute(i));
+        print(" ");
+        i = i + 1;
+    }
+    println();
+}

@@ -1,0 +1,103 @@
+// Description:
+//    Ce test comprend plusieurs classes pour tester la bonne construction
+//    des initialisations de classes. Teste l'imbrication de classes,
+//    les champs initialisés avec new, l'héritage, le cast, et l'accès
+//    aux champs via des chaînes d'objets (fBoss.d.a.x).
+//
+// Resultats:
+//    Pas d'erreur. Affiche :
+//    - fBoss.d.a.x = 45
+//    - fBoss.d.c.p = 0.0 (valeur par défaut float)
+//    - fBoss.e.a.x = 0 (valeur par défaut int)
+//    - fBoss.e.b.y = 6
+//    - fBoss.e.c.p = 0.0
+//    - fBoss.e.d.a.x = 0
+//    - fBoss.e.d.b.y = 6
+//    - Je suis un Ebis
+//    - ebisObj.a2.x = 0
+//    - ebisObj.b2.y = 6
+//    - ebisObj.c2.p = 0.0
+//    - fBoss.a.x = 0
+//    - fBoss.b.y = 6
+//    - fBoss.c.p = 0.0
+
+class A {
+    int x;
+    void setX(int val){
+        this.x = val;
+    }
+}
+class B {
+    int y = 6;
+}
+class C {
+    float p;
+    boolean a = true;
+}
+class D{
+   int m;
+   int x;
+   int y;
+   A a = new A();
+   B b = new B();
+   C c = new C();
+}
+
+class E{
+    int val;
+    A a = new A();
+    B b = new B();
+    C c = new C();
+    D d = new D();
+}
+
+class EBis extends E{
+    A a2 = new A();
+    B b2 = new B();
+    C c2 = new C();
+    boolean isEbis = true;
+}
+
+class FinalBoss{
+    boolean r;
+    int x;
+    int y;
+    float f;
+    A a = new A();
+    B b = new B();
+    C c = new C();
+    D d = new D();
+    E e = new E();
+    E ebis = new EBis(); 
+}
+
+{
+    FinalBoss fBoss = new FinalBoss();
+    EBis ebisObj = (EBis) (fBoss.ebis);
+    
+    fBoss.d.a.setX(45);             
+    
+    println("fBoss.d.a.x = ",fBoss.d.a.x);
+    println("fBoss.d.c.p = ",fBoss.d.c.p);            
+
+    println("fBoss.e.a.x = ",fBoss.e.a.x);        
+    println("fBoss.e.b.y = ",fBoss.e.b.y);        
+    println("fBoss.e.c.p = ",fBoss.e.c.p);              
+    println("fBoss.e.d.a.x = ",fBoss.e.d.a.x);    
+    println("fBoss.e.d.b.y = ",fBoss.e.d.b.y);     
+
+   
+    if (ebisObj.isEbis){
+       println("Je suis un Ebis");  
+    }
+    
+    println("ebisObj.a2.x = ",ebisObj.a2.x);      
+    println("ebisObj.b2.y = ",ebisObj.b2.y);      
+    println("ebisObj.c2.p = ",ebisObj.c2.p);      
+    
+
+    println("fBoss.a.x = ",fBoss.a.x);           
+    println("fBoss.b.y = ",fBoss.b.y);           
+    println("fBoss.c.p = ",fBoss.c.p);                    
+
+}

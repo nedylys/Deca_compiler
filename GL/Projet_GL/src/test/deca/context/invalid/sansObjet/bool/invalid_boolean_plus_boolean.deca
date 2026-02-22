@@ -1,0 +1,9 @@
+// Test : boolean_addition
+// But : interdire l’addition entre deux booléens.
+// Couvre : typage des opérateurs arithmétiques.
+// Résultat attendu : erreur contextuelle.
+
+{
+    boolean b;
+    b = true + false;
+}

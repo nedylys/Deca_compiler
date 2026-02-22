@@ -1,0 +1,25 @@
+// Description:
+//    Calcul de la somme de n entiers entrés par l'utilisateur avec une boucle while.
+//
+// Resultats:
+//    Pas d'erreur. Le programme demande le nombre d'entrées, puis lit n entiers
+//    et affiche leur somme.
+
+{
+    int n ;
+    int x ;
+    int i = 0 ;
+    int s = 0 ;
+    println("Calcule la somme des entrées fournies (après la première)") ;
+    println("Entrer le nombre d'entrées :") ;
+    n = readInt() ;
+
+    while (i < n) {
+        println("Donner un entier :") ;
+        x = readInt() ;
+        s = s + x ;
+        i = i + 1 ;
+    }
+
+    println("Somme des entiers entrées = ", s) ;
+}

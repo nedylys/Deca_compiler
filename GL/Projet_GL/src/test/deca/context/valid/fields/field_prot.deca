@@ -1,0 +1,23 @@
+// Test : protected_access_in_subclass
+// But : vérifier qu’une sous-classe peut accéder à un champ protected via this.
+// Couvre : protected, héritage, accès membre depuis sous-classe.
+// Résultat attendu : compilation sans erreur.
+// Exécution attendue : affiche 1.
+
+class A {
+  protected int x;
+  int getX() { return x; }
+}
+
+class B extends A {
+  int f() {
+    this.x = 1;
+    return this.x;
+  }
+}
+
+{
+  B b = new B();
+  println(b.f());
+}
+

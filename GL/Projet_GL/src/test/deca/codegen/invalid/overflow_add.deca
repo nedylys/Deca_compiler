@@ -1,0 +1,13 @@
+// Description:
+//    Test d'overflow lors de l'addition de deux grands entiers.
+//    2000000000 + 2000000000 dépasse la capacité d'un int 32 bits (max: 2147483647).
+//
+// Resultats:
+//    Erreur à l'exécution : overflow lors de l'addition.
+//    Doit brancher vers la bonne étiquette d'erreur.
+
+{
+    int x = 2000000000 ;
+    int y = 2000000000 ;
+    println(x + y) ;
+}

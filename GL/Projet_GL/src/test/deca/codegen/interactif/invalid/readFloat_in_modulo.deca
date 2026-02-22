@@ -1,0 +1,12 @@
+// Description:
+//    Lecture readFloat, operateur modulo (%) et typage
+//
+// Resultats:
+//    Erreur contextuelle : l'operateur % n'est applicable qu'aux entiers (readFloat donné en paramètre).
+// 
+// Historique:
+//    cree le 01/01/2026
+
+{
+    println(readFloat() % 2);
+}

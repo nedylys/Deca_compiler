@@ -1,0 +1,15 @@
+// Test : Decl class avant les declaration de main
+// But : détecter la déclaration de main avant les décls de classe
+// Type d'erreur : erreur syntaxique
+// Résultat attendu : mismatched input 'class' expecting {';', ',', '=', '+', '-', '*', '/', '%', '==', '!=', '<=', '>=', '>', '<', '&&', '||', '.'}
+
+
+{
+    Test t = new Test();
+}
+
+class Test{
+   int x;
+
+}
+

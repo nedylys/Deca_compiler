@@ -1,0 +1,12 @@
+// Test : cast_null_to_class
+// But : vérifier qu’un cast d’un objet null vers une classe est autorisé.
+// Couvre : null, cast entre types objets.
+// Résultat attendu : compilation sans erreur.
+// Exécution attendue : b vaut null.
+
+class A {}
+
+{
+    A a = null;
+    A b = (A) (a);
+}

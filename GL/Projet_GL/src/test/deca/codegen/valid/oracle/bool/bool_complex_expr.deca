@@ -1,0 +1,14 @@
+// Test : bool_complex_expr
+// But : tester une expression booléenne complexe (enchaînement &&, ||, !).
+// Couvre : temporaires, étiquettes multiples, ordre d'évaluation, robustesse codegen.
+// Résultat attendu: affiche 1.
+
+{
+    boolean c = !false && (true || false) && (3 < 4) || (1.0 == 1) ;
+    if (c) { 
+        println(1) ; 
+    } 
+    else { 
+        println(0) ; 
+    }
+}

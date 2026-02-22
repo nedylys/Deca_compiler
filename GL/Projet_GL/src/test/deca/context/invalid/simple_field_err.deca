@@ -1,0 +1,14 @@
+class A {
+    int f() {
+        return 0;
+    }
+}
+class B extends A {
+    int f;
+}
+{
+}
+
+
+// Champ cache une méthode de la superclasse
+// Name already used for a method in super class

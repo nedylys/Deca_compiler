@@ -1,0 +1,51 @@
+// Description :
+// Test combiné de Constant Propagation et Dead Store Elimination,
+// dans un programme simple sans objets.
+//
+// Objectif du test :
+// - Vérifier que la propagation de constantes permet de remplacer
+//   les copies successives (a -> b -> c) par une valeur constante.
+// - Vérifier que les affectations intermédiaires devenues inutiles
+//   sont supprimées (dead stores).
+//
+// Résultat attendu après optimisations :
+// - La constante 3 est propagée jusqu'à c.
+// - Les variables a et b ne sont jamais utilisées directement après propagation.
+// - Les affectations a = 3 et b = a deviennent mortes et peuvent être supprimées.
+// - Le print affiche toujours 3.
+//
+// Remarques :
+// - Constant propagation : c reçoit directement la valeur 3.
+// - Dead store elimination : a et b peuvent être totalement éliminées.
+// - Test volontairement simple, sans objets, pour isoler le comportement
+//   des optimisations.
+//
+// Sortie attendue :
+// 3
+
+{
+    int a;
+    int b;
+    int c;
+    int d;
+    int e;
+    int f;
+    int g;
+    int h;
+    int i;
+    int j;
+
+    a = 3;
+    b = a;   
+    c = b;
+    d = c;
+    e = d;
+    f = e;
+    g = f;
+    h = g;
+    i = h;
+    j = i;
+
+
+    print(c); 
+}

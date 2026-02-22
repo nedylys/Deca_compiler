@@ -1,0 +1,18 @@
+// Description:
+//    Test pour l'acces à un champ d'un null object
+//
+// Resultats:
+//    Erreur à l'exécution : dereferencement de null
+
+class A{
+    int x;
+}
+
+class B{
+    A a;
+}
+
+{
+   B b = new B();
+   println(b.a.x);
+}

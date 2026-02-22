@@ -1,0 +1,16 @@
+// Test : bool_priorite
+// But : vérifier la priorité : ! puis && puis || (sans parenthèses).
+// Couvre : AST correct, génération des sauts, temporaires.
+// Résultat attendu : 1.
+
+{
+    boolean t = true ;
+    boolean f = false ;
+    if (!t || f || !f && t && t && f || !f && t) {
+        println(1) ;
+    }
+    else {
+        println(0) ;
+    }
+
+}

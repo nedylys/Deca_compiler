@@ -1,0 +1,13 @@
+// Test : control_if_else_true
+// But : tester if/else avec condition vraie (branche then).
+// Couvre : gestion des étiquettes, branchement correct.
+// Résultat attendu : affiche "ok".
+
+{
+    if (2 <= 2) {
+        println("ok") ;
+    } 
+    else {
+        println("pas ok") ;
+    }
+}

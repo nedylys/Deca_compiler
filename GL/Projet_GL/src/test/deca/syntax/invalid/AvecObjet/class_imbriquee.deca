@@ -1,0 +1,20 @@
+// Test : pas de déclaration de classe dans une autre classe
+// But : détecter des decls classes dans des decls classe.
+// Type d'erreur : erreur syntaxique
+// Résultat attendu : missing '}' at 'class'
+
+
+class A{
+   boolean val;
+
+   class B{
+    float x;
+   }
+    
+   
+
+}
+
+{
+    A a = new A();
+}

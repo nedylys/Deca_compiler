@@ -1,0 +1,18 @@
+// Test : control_while_with_if
+// But : tester un if/else à l'intérieur d'un while (alternance des branches).
+// Couvre : interaction labels while + if, multiples sauts, mise à jour compteur.
+// Résultat attendu : affiche ok 0, ok 1, ok 2, ok all.
+
+{
+    int i = 0 ;
+    while (i < 3) {
+        if (i == 1) {
+            println("ok ", i) ;
+        } 
+        else {
+            println("ok ", i) ;
+        }
+        i = i + 1 ;
+    }
+    println("ok all") ;
+}

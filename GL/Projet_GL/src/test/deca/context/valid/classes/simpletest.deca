@@ -1,0 +1,9 @@
+// Test : empty_class_declaration
+// But : vérifier qu’une déclaration de classe vide est acceptée.
+// Couvre : déclaration de classe sans membres.
+// Résultat attendu : compilation sans erreur.
+
+class A {
+}
+{
+}

@@ -1,0 +1,9 @@
+// Test : print_int_print
+// But : tester print sur un entier (sans saut de ligne) puis println.
+// Couvre : appel print(int) puis println(int), concaténation sur la même ligne.
+// Résultat attendu : affiche 123.
+
+{
+    print(12) ;
+    println(3) ;
+}

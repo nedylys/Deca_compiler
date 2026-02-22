@@ -1,0 +1,13 @@
+// Description :
+// Test de constant folding sur addition constante.
+//
+// Resultats :
+// L’expression 3+4 est pliée à la compilation.
+// On observe LOAD #7, R2 
+// et aucune instruction ADD liée à ce calcul.
+
+{
+  int x;
+  x = 3 + 4;
+  println(x);
+}

@@ -1,0 +1,12 @@
+// Test : valid_computed_boolean_condition
+// But : autoriser une condition booléenne calculée dans un while.
+// Couvre : expressions booléennes, boucle while.
+// Résultat attendu : programme valide.
+
+{
+    boolean b;
+    b = true;
+    while (b && true) {
+        b = false;
+    }
+}

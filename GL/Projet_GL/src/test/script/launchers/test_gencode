@@ -1,0 +1,70 @@
+#!/bin/sh
+set -eu
+
+# Usage: test_gencode [-o] [-r X] <file.deca>
+# Teste la génération de code pour UN fichier Deca :
+#  1) compilation avec decac
+#  2) exécution avec ima
+#  3) normalisation + comparaison (.out / .expected)
+
+OPT=""
+REGS=""
+DECA=""
+
+# Lecture des options
+while [ "$#" -gt 0 ]; do
+    case "$1" in
+        -o)
+            OPT="-o"
+            shift
+            ;;
+        -r)
+            shift
+            if [ -z "$1" ]; then
+                echo "ERREUR : -r nécessite un argument (nombre de registres)" >&2
+                exit 1
+            fi
+            REGS="$1"
+            shift
+            ;;
+        *)
+            if [ -z "$DECA" ]; then
+                DECA="$1"
+                shift
+            else
+                echo "Usage: $0 [-o] [-r X] <file.deca>" >&2
+                exit 1
+            fi
+            ;;
+    esac
+done
+
+if [ -z "$DECA" ]; then
+    echo "Usage: $0 [-o] [-r X] <file.deca>" >&2
+    exit 1
+fi
+
+# Si -r n’a pas été donné, utiliser 16 par défaut
+[ -z "$REGS" ] && REGS=16
+
+ASS="${DECA%.deca}.ass"
+OUT="${DECA%.deca}.out"
+EXPECTED="${DECA%.deca}.expected"
+
+########## Compilation ###########
+./src/main/bin/decac $OPT -r "$REGS" "$DECA"
+
+########## Exécution IMA #########
+ima "$ASS" > "$OUT"
+
+######### Normalisation ##########
+DECAC_HOME=$(cd "$(dirname "$0")"/../../../../ && pwd)
+CP_FILE="$DECAC_HOME"/target/generated-sources/classpath.txt
+
+CP="$DECAC_HOME"/target/test-classes/:\
+"$DECAC_HOME"/target/classes/:\
+$(cat "$CP_FILE")
+
+java -cp "$CP" \
+    fr.ensimag.deca.codegen.ImaNormalizeAndCompare \
+    "$OUT" "$EXPECTED"

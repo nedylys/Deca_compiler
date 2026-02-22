@@ -1,0 +1,12 @@
+// Description:
+//    Test métamorphique : boucle while morte (version 2).
+//    Doit produire le même résultat que mr_dead_while_1.deca
+//    avec la boucle morte supprimée.
+//
+// Resultats:
+//    Pas d'erreur. Affiche : ok
+//    (Identique à mr_dead_while_1.deca)
+
+{
+    println("ok") ;
+}

@@ -1,0 +1,10 @@
+// Test : expr_arithmetic_precedence
+// But : tester la priorité des opérateurs arithmétiques.
+// Couvre : +, *, associativité, typage expression.
+// Résultat attendu : compilation sans erreur.
+
+{
+    int a;
+    a = 3 + 4 * 2;
+    print(a);
+}

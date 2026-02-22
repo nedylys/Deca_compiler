@@ -1,0 +1,14 @@
+// Test : instanceof_subclass_is_super
+// But : vérifier instanceof avec une sous-classe testée contre une super-classe.
+// Couvre : héritage, instanceof.
+// Résultat attendu : compilation sans erreur.
+// Exécution attendue : condition vraie, affiche "ça marche".
+
+class A {}
+class B extends A {}
+
+{
+    if (new B() instanceof A) {
+        println("ça marche");
+    }
+}

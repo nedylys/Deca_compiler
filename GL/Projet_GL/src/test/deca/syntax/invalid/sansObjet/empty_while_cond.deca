@@ -1,0 +1,10 @@
+// Test : syntax_invalid_empty_while_condition
+// But : interdire une condition vide dans un while.
+// Type d'erreur : erreur syntaxique
+// Résultat attendu : erreur de syntaxe.
+
+{
+    while () {
+        
+    }
+}

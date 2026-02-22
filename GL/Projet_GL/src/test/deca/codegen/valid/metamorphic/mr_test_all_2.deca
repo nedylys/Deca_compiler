@@ -1,0 +1,113 @@
+// Description:
+//    Test métamorphique d'intégration : simulation météo (version 2 - transformée).
+//    Doit produire le même résultat que mr_test_all_1.deca
+//    avec variables renommées, conditions réécrites via transformations métamorphiques
+//    (De Morgan, inversion de comparaisons, etc.).
+//
+// Resultats:
+//    Pas d'erreur. Affiche les statistiques météo simulées.
+//    (Identique à mr_test_all_1.deca)
+
+{
+    int nbJoursMois = 30 ;    // résultats recueillis sur 1 mois
+
+
+
+    int tempAcc = 0 ;       // accumulation des températures pour calculer la moyenne
+    int humAcc = 0 ;        // idem pour l'humidité 
+    int tempMax = 0 ;       // température max 
+    int tempMin = 0 ;       // température min 
+
+
+    // pour compter les jours chauds, froids, humides
+    int nbJoursHumides = 0 ; 
+    int nbJoursFroids = 0 ;  
+    int nbJoursChauds = 0 ;   
+ 
+  
+
+    // pour avoir les statistiques 
+    float tempMoyenne = 0.0 ;
+    float humidMoyenne = 0.0 ;
+
+    // booléens pour synthétiser (plus de jours chauds que froids par exemple...)
+    boolean moisChaud = false ;
+    boolean moisFroid = false ;
+    boolean moisHumide = false ;
+
+    // pour stocker les températures et humidités simulées
+    int temp ;
+    int humid ; 
+    int j = 0 ;     // compteur de jours
+
+    // simulations 
+    while (!!(j < nbJoursMois)) {
+        // génération déterministe des mesures
+
+        // humid entre 0 et 100
+        humid = ((j * 31) + 7) % 101 ;
+
+        // temp entre -10 et 45
+        temp = (((j * 17) + 23) % 56) - 10 ;
+
+        // accumulations des températures / humidités
+        humAcc = humAcc + humid ;
+        tempAcc = tempAcc + temp ;
+
+
+        // màj des températures min / max
+        if (tempMax < temp) {
+            tempMax = temp ;
+        }
+        else if (!(temp >= tempMin)) {
+            tempMin = temp ; 
+        }
+        
+        // màj de nb de jours chauds / froids / humides
+        if (temp >= 30) {
+            nbJoursChauds = nbJoursChauds + 1 ;
+        }
+        else if (!!!(temp > 0)) {
+            nbJoursFroids = nbJoursFroids + 1 ;
+        }
+
+        if (75 <= humid) {
+            nbJoursHumides = nbJoursHumides + 1 ;
+        }
+        j = j + 1 ;
+    }
+
+    // calcul des moyennes
+    tempMoyenne = tempAcc / (nbJoursMois * 1.0) ;
+    humidMoyenne = humAcc / (nbJoursMois * 1.0) ;
+
+    moisChaud = (tempMax >= 40) || (nbJoursChauds > 15) ;
+
+    moisFroid = !(nbJoursFroids > 5) && (tempMin > -5) ;
+    // moisFroid = (nbJoursFroids > 15) || (tempMin <= -5) ;
+
+    moisHumide = !(nbJoursHumides <= 15) || !(humidMoyenne < 75.0) ;
+
+    println("Température moyenne : ", tempMoyenne) ;
+    println("Humidité moyenne : ", humidMoyenne) ;
+
+    println("Pic température chaude : ", tempMax) ;
+    println("Pic température froide : ", tempMin) ;
+
+    println("Nombre de jours froids : ", nbJoursFroids) ;
+    println("Nombre de jours chauds : ", nbJoursChauds) ;
+
+    if (!!!!moisChaud) {
+        println("Mois plutôt chaud") ;
+    }
+    else if (moisFroid == true) {
+        println("Mois plutôt froid") ;
+    }
+    if (moisHumide || false) {
+        println("Mois plutôt humide") ;
+    }
+    else {
+        println("Mois plutôt pas humide") ;
+    }
+
+}

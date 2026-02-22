@@ -1,0 +1,15 @@
+// Description:
+//    Test de lecture d'un entier avec valeur extrême (valeur max int sur 32 bits).
+//    Donner 2147483647 en entrée, +1 pour provoquer un overflow.
+//
+// Resultats:
+//    Pas d'erreur à la compilation. Comportement dépendant de l'entrée utilisateur
+//    (overflow si on dépasse la valeur max).
+
+// donner : 2147483647 en entree (valeur max int sur 32 bits)
+// + 1 pour avoir erreur
+{
+    int x;
+    x = readInt();
+    println(x);
+}

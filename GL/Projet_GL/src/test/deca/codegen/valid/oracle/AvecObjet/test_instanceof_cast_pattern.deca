@@ -1,0 +1,38 @@
+// Description:
+//    Test de instanceof et cast avec pattern matching.
+//    Hiérarchie : Animal <- Chien (4 pattes), Chat (12 moustaches).
+//    Vérifie si un Animal est un Chien ou un Chat et accède aux champs spécifiques.
+//
+// Resultats:
+//    Pas d'erreur. a = new Chat(), donc a instanceof Chien est faux,
+//    a instanceof Chat est vrai. Affiche : 12 (moustaches du chat)
+
+class Animal {
+    int age = 5;
+}
+
+class Chien extends Animal {
+    int pattes = 4;
+}
+
+class Chat extends Animal {
+    int moustaches = 12;
+}
+
+{
+    Animal a = new Chat();
+    Chien c;
+    Chat ch;
+    
+    if (a instanceof Chien) {
+        c = (Chien)(a);
+        println(c.pattes);
+    } else {
+        if (a instanceof Chat) {
+            ch = (Chat)(a);
+            println(ch.moustaches);
+        } else {
+            println(0);
+        }
+    }
+}

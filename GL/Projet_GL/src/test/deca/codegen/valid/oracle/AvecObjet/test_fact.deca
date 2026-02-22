@@ -1,0 +1,17 @@
+// Test pour calculer factoriel
+
+class Fact {
+    int fact(int n){
+        if (n == 0){
+            return 1;
+        }else{
+            return n*fact(n-1);
+        }
+    }
+}
+
+{
+    Fact f = new Fact();
+    println("10! = ",f.fact(10));
+    println("9! = ",f.fact(9));
+}

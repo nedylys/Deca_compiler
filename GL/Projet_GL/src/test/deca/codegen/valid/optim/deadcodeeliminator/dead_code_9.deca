@@ -1,0 +1,22 @@
+// Description :
+// Test DCE dans une méthode void sans code mort apparent.
+//
+// Résultat attendu :
+// - Rien à éliminer ici côté dead code (println("hello") est vivant).
+// - On s’attend à voir uniquement le code nécessaire à l’appel de méthode + l’affichage.
+//
+// Remarque :
+// - Selon vos optimisations, l’objet "a" peut être éliminé au profit de "new A().f()" si vous faites de la simplification,
+//
+
+class A {
+  void f() {
+    
+    println("hello");
+  }
+}
+
+{
+  A a = new A();
+  a.f();
+}

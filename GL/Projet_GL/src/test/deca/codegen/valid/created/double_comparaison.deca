@@ -1,0 +1,21 @@
+// Description:
+//    Test de double comparaison avec >= et > sur la même expression.
+//
+// Resultats:
+//    Pas d'erreur. L'expression ((1+2)+(3+4)+(5+6)) = 21.
+//    - 21 >= 21 est vrai, donc affiche "ok"
+//    - 21 > 21 est faux, donc affiche "ok"
+
+{
+    if ( ((1+2)+(3+4)+(5+6)) >= ((1+2)+(3+4)+(5+6)) ) {
+        println("ok");
+    } else {
+        println("pas ok");
+    }
+
+    if ( ((1+2)+(3+4)+(5+6)) > ((1+2)+(3+4)+(5+6)) ) {
+        println("pas ok");
+    } else {
+        println("ok");
+    }
+}

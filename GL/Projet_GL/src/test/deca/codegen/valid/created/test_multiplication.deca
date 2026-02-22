@@ -1,0 +1,13 @@
+// Description:
+//    Test de multiplication avec trois variables, incluant des valeurs négatives.
+//
+// Resultats:
+//    Pas d'erreur. a = 3, b = -3, c = -1.
+//    a * b * c = 3 * (-3) * (-1) = 9. Affiche 9.
+
+{
+    int a = 3 ;
+    int b = - 3 ;
+    int c = -1 ; 
+    println(a * b * c) ;
+}

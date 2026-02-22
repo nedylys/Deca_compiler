@@ -1,0 +1,4 @@
+{
+    int x // there is no ; so syntax is invalid but lex is
+    x = 3;
+}

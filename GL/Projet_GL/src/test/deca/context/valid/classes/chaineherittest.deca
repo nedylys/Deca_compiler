@@ -1,0 +1,27 @@
+// Test : protected_access_via_methods
+// But : vérifier que l’accès à un champ protected est OK via des méthodes de la classe.
+// Couvre : protected, this.x, appel de méthodes get/set depuis main.
+// Résultat attendu : compilation sans erreur.
+// Exécution attendue : affiche la valeur écrite (ici 1).
+
+class A {
+    protected int x;
+    int getX(){
+        return x;
+    }
+
+    int setX(int x) {
+        this.x = x;
+        return 0;
+    }
+}
+class B extends A {
+}
+class C extends B {
+}
+{
+    A a = new A();
+    a.setX(1);
+    println("a.getX() = ", a.getX());
+}
+

@@ -1,0 +1,20 @@
+// Test : rp_int_complex_expr_with_vars
+// But : expression complexe utilisant beaucoup de variables (loads/stores répétés).
+// Couvre : offsets variables, nombreux LOAD, temporaires, ordre d'évaluation.
+// Résultat attendu : affiche 165.
+
+{
+    int a = 1 ; 
+    int b = 2 ; 
+    int c = 3 ;
+    int d = 4 ; 
+    int e = 5 ; 
+    int f = 6 ; 
+    int g = 7 ; 
+    int h = 8 ;
+    int i = 9 ;
+
+    int x = ((a + b + c) * (d + e)) ;
+    int y = ((f + g) * (h + i)) ;
+    println((y - x) - 2) ;
+}

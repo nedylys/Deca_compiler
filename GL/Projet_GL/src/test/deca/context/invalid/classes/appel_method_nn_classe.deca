@@ -1,0 +1,16 @@
+// Description:
+// Test contextuel : appel de méthode sur un type non-classe (int).
+//
+// Resultats:
+//    Impossible d'appeler une methode sur un type non classe.
+//    Erreur affichée: Can't Call a method on a non class object
+//
+
+{
+   int a;
+
+   // Doit etre refuse.
+   a.f();
+}
+
+

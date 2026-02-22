@@ -1,0 +1,17 @@
+// Description:
+//    Test métamorphique : réordonnancement des déclarations (version 1).
+//    Doit produire le même résultat que mr_reorder_variables_2.deca
+//    malgré un ordre de déclaration différent.
+//
+// Resultats:
+//    Pas d'erreur. Affiche : 3, 2.0
+//    (Identique à mr_reorder_variables_2.deca)
+
+{
+    float b = 1.75 ; 
+    int x = 1 ; 
+    float a = 0.25 ;
+    int y = 2 ; 
+    println(x + y) ;
+    println(a + b) ;
+}

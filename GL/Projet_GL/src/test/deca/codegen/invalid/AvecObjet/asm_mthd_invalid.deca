@@ -1,0 +1,20 @@
+// Description:
+//    Test de generation de Asm invalide
+//    On ajoute du code assembleur dans le .ass qui renvoie une erreur d'adressage
+//
+// Resultats:
+//    Erreur à l'exécution : Adressage indirect : la base ne contient pas une adresse
+
+class A{
+    void asmA() asm("LOAD #null,R9
+    LOAD #3,R10
+    STORE R10,0(R9)");
+}
+
+
+{
+   A a = new A();
+   a.asmA();
+   readFloat();
+   readInt();
+}

@@ -1,0 +1,24 @@
+// Description:
+//    Test de la grammaire des arbres de syntaxe abstraite
+//    Programme minimaliste testant le non terminal INST de la grammaire d'arbre .
+//
+// Programme syntaxiquement correct.
+//
+// Historique:
+//    cree le 01/01/2026
+
+{
+  if (true){
+    return "abc";
+  } else if (false){
+    return 45;
+  } else if (false || true){
+    ;
+  } else{
+    ;
+  }
+  while (false){
+     return 9;
+  }
+
+}

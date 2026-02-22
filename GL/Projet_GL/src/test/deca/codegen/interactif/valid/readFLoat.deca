@@ -1,0 +1,10 @@
+// Description:
+//    Lecture d'un float et affichage avec addition.
+//
+// Resultats:
+//    Pas d'erreur. Le programme lit un float y et affiche y + 1.
+
+{
+    float y = readFloat() ;
+    println(y + 1) ;
+}

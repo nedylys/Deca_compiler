@@ -1,0 +1,9 @@
+// Test : expr_parentheses
+// But : tester les parenthèses dans une expression.
+// Couvre : parenthèses, ordre d’évaluation.
+// Résultat attendu : compilation sans erreur.
+
+{
+    int a;
+    a = (1 + 2) * 3;
+}

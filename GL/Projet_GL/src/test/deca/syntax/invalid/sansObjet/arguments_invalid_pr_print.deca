@@ -1,0 +1,8 @@
+// Test : syntax_invalid_trailing_comma_in_print
+// But : détecter une virgule finale invalide dans un appel de fonction.
+// Type d'erreur : erreur syntaxique
+// Résultat attendu : erreur de syntaxe.
+
+{
+    print(3,);
+}

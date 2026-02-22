@@ -1,0 +1,12 @@
+// Description:
+//    Appel de methode inexistante
+//
+// Resultats:
+//    Methode non definie dans la classe.
+//    Erreur affichée: Identifier f is not defined
+//
+class A {}
+{
+   A a;
+   a.f();
+}

@@ -1,0 +1,45 @@
+// Description:
+//    Test de sélections multiples chaînées (f.e.d.c.b.a).
+//    Classes A→B→C→D→E→F où chaque classe contient une instance de la précédente.
+//    Vérifie l'accès aux méthodes via une longue chaîne de sélections.
+//
+// Resultats:
+//    Pas d'erreur. Affiche : It worked !
+
+
+class A {
+    void sayIt() {
+        println("It worked !") ;
+    }
+}
+
+class B {
+    A a ;
+}
+
+class C {
+    B b ;
+}
+
+class D {
+    C c ;
+}
+
+class E {
+    D d ; 
+}
+
+class F {
+    E e ;
+}
+
+{
+    F f = new F() ;
+    f.e = new E() ;
+    f.e.d = new D() ;
+    f.e.d.c = new C() ;
+    f.e.d.c.b = new B() ;
+    f.e.d.c.b.a = new A() ;
+
+    f.e.d.c.b.a.sayIt() ;
+}

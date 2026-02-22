@@ -1,0 +1,25 @@
+// Description:
+//    Test de sélection de champs via composition.
+//    Classe B contient une instance de A avec ses champs x, y, z.
+//
+// Resultats:
+//    Pas d'erreur. a.a.x = 1, a.a.y = 2, a.a.z = 3.
+//    Affiche : 1, 2, 3
+
+class A {
+    int x = 1 ;
+    int y = 2 ; 
+    int z = 3 ; 
+}
+
+class B {
+    A a = new A() ;
+}
+
+{
+    B a = new B() ;
+    println(a.a.x) ;
+    println(a.a.y) ;
+    println(a.a.z) ; 
+    
+}

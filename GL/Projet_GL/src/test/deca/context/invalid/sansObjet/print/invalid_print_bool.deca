@@ -1,0 +1,10 @@
+// Test : print_boolean
+// But : interdire l’impression d’un booléen.
+// Couvre : vérification des types acceptés par print.
+// Résultat attendu : erreur contextuelle.
+// Erreur affichée: Print only accepts string, int, and float arguments
+
+{
+    print(true);
+}
+

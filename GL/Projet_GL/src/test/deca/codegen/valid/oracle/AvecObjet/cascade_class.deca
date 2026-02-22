@@ -1,0 +1,49 @@
+// Description:
+//    Ce test comprend plusieurs classes dont l'une étend l'autre.
+//    But : tester la bonne construction des tables des méthodes
+//    et la cohérence entre les index des méthodes.
+//    Vérifie que les méthodes overridées gardent le même indice,
+//    même si elles ne sont pas déclarées dans le même ordre.
+//
+// Resultats:
+//    Pas d'erreur. Le programme compile et s'exécute correctement.
+//    Les tables de méthodes sont construites avec les bons indices :
+//    - Classe A : method1, methode2, method3
+//    - Classe B extends A : override method3, method4, method5, override method1
+//    - Classe C extends B : override method1, override method4, override method2
+//    - Classe D extends C : override equals
+//    - Classe E : classe indépendante avec methodE
+
+class A {
+    void method1() {}
+    void methode2() {}
+    void method3() {}
+} 
+
+// vérifier le cohérence entre indices des méthodes
+// (methodes overridées au meme indice, meme si pas 
+// au mm ordre de declaration)
+
+class B extends A {
+    void method3() {}        // override de method3
+    void method4() {}
+    void method5() {}
+    void method1() {}       // override de method1
+}
+
+class C extends B {
+    void method1() {}         //override dans l'ordre
+    void method4() {}         // override de method 4 de B 
+    void method2() {}         // override de method2 de A 
+}
+
+
+class D extends C {
+    boolean equals(Object o) {}         // override de equals 
+}
+
+// class indépendante
+class E {
+    void methodE() {}
+}
+

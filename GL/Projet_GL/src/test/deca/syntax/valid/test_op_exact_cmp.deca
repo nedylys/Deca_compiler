@@ -1,0 +1,15 @@
+// Description:
+//    Test de la grammaire des arbres de syntaxe abstraite
+//    Programme minimaliste testant le non terminal OP_EXACT_CMP de la grammaire d'arbre.
+//
+// Programme syntaxiquement et contextuellment correct.
+//
+// Historique:
+//    cree le 02/01/2026
+{
+    int a = 6;
+    int b = 23;
+    boolean c;
+    c = a != b;
+    c = a == b;
+}

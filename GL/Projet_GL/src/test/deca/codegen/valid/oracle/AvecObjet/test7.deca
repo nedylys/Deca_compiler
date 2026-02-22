@@ -1,0 +1,20 @@
+// Description:
+//    Test 7 : Plusieurs champs.
+//    Classe Point2D avec deux champs int x et y.
+//
+// Resultats:
+//    Pas d'erreur. p.x = 3, p.y = 4.
+//    Affiche : x = 3, puis y = 4
+
+class Point2D {
+    int x;
+    int y;
+}
+
+{
+    Point2D p = new Point2D();
+    p.x = 3;
+    p.y = 4;
+    println("x = ", p.x);
+    println("y = ", p.y);
+}
